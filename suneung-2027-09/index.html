@@ -161,7 +161,13 @@ a.wb-nbtn{display:block}
 .wb-sol .ansbox .lbl{color:var(--rule);font-weight:700}
 .wb-sol .sol-head{font-size:17px;font-weight:700;color:var(--rule);margin:18px 0 6px}
 .wb-hint{font-size:16px;color:var(--wb-muted);margin:18px 0 0}
-.pgnav{display:flex;gap:10px;margin:28px 0 0}
+.pgnav{display:none;gap:10px;margin:28px 0 0}
+table.anskey a{color:inherit;text-decoration:none;display:block}
+table.anskey a:hover{color:var(--red)}
+.relbox{margin:30px 0 0;border-top:1px solid var(--rule);padding-top:14px}
+.relbox .rt{font-size:16px;font-weight:700;color:var(--rule);margin:0 0 8px}
+.relbox a{display:block;font-size:16px;color:var(--wb-muted);text-decoration:none;padding:4px 0}
+.relbox a:hover{color:var(--red)}
 .pgnav a{flex:1;text-align:center;font-size:16px;font-weight:700;
   color:var(--rule);text-decoration:none;border:1px solid var(--rule);padding:12px 8px;background:#fff}
 .pgnav a:hover{background:var(--red-soft);color:var(--red);border-color:var(--red)}
@@ -184,6 +190,7 @@ a.wb-nbtn{display:block}
   .wb-q{display:block;height:auto}
   .wb-prob{border-right:none;border-bottom:1px solid var(--rule);padding:22px 18px 26px}
   .wb-sol{padding:22px 18px 50px}
+  .pgnav{display:flex}
 }
 @media print{
   html,body{overflow:visible}
@@ -207,15 +214,15 @@ a.wb-nbtn{display:block}
       <div class="wb-prob"><h1>2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 풀이·정답 (전 문항)</h1><div class="qtext" style="margin-top:14px">왼쪽 번호를 누르면 문항별 풀이로 이동합니다. 각 문항 페이지에 단계별 풀이가 미리 펼쳐져 있고, 그래프가 있는 문항은 슬라이더를 직접 움직여 볼 수 있습니다.</div><div class="wb-hint">키보드 ←/→ 로도 문항을 이동할 수 있습니다. <a href="../index.html">다른 시험 풀이 보기</a></div></div>
       <div class="wb-sol"><h2 class="sec" id="anskey">정답표</h2>
 <div class="anskey-sec">공통과목 (수학 Ⅰ · 수학 Ⅱ)</div>
-<table class="anskey"><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr><tr><td class="k">④</td><td class="k">③</td><td class="k">②</td><td class="k">②</td><td class="k">①</td><td class="k">⑤</td><td class="k">②</td><td class="k">③</td><td class="k">①</td><td class="k">③</td></tr></table>
-<table class="anskey"><tr><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th></tr><tr><td class="k">③</td><td class="k">④</td><td class="k">⑤</td><td class="k">⑤</td><td class="k">④</td><td class="k">6</td><td class="k">11</td><td class="k">38</td><td class="k">15</td><td class="k">17</td></tr></table>
-<table class="anskey"><tr><th>21</th><th>22</th></tr><tr><td class="k">12</td><td class="k">97</td></tr></table>
+<table class="anskey"><tr><th><a href="common-1.html">1</a></th><th><a href="common-2.html">2</a></th><th><a href="common-3.html">3</a></th><th><a href="common-4.html">4</a></th><th><a href="common-5.html">5</a></th><th><a href="common-6.html">6</a></th><th><a href="common-7.html">7</a></th><th><a href="common-8.html">8</a></th><th><a href="common-9.html">9</a></th><th><a href="common-10.html">10</a></th></tr><tr><td class="k"><a href="common-1.html">④</a></td><td class="k"><a href="common-2.html">③</a></td><td class="k"><a href="common-3.html">②</a></td><td class="k"><a href="common-4.html">②</a></td><td class="k"><a href="common-5.html">①</a></td><td class="k"><a href="common-6.html">⑤</a></td><td class="k"><a href="common-7.html">②</a></td><td class="k"><a href="common-8.html">③</a></td><td class="k"><a href="common-9.html">①</a></td><td class="k"><a href="common-10.html">③</a></td></tr></table>
+<table class="anskey"><tr><th><a href="common-11.html">11</a></th><th><a href="common-12.html">12</a></th><th><a href="common-13.html">13</a></th><th><a href="common-14.html">14</a></th><th><a href="common-15.html">15</a></th><th><a href="common-16.html">16</a></th><th><a href="common-17.html">17</a></th><th><a href="common-18.html">18</a></th><th><a href="common-19.html">19</a></th><th><a href="common-20.html">20</a></th></tr><tr><td class="k"><a href="common-11.html">③</a></td><td class="k"><a href="common-12.html">④</a></td><td class="k"><a href="common-13.html">⑤</a></td><td class="k"><a href="common-14.html">⑤</a></td><td class="k"><a href="common-15.html">④</a></td><td class="k"><a href="common-16.html">6</a></td><td class="k"><a href="common-17.html">11</a></td><td class="k"><a href="common-18.html">38</a></td><td class="k"><a href="common-19.html">15</a></td><td class="k"><a href="common-20.html">17</a></td></tr></table>
+<table class="anskey"><tr><th><a href="common-21.html">21</a></th><th><a href="common-22.html">22</a></th></tr><tr><td class="k"><a href="common-21.html">12</a></td><td class="k"><a href="common-22.html">97</a></td></tr></table>
 <div class="anskey-sec">확률과 통계</div>
-<table class="anskey"><tr><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th></tr><tr><td class="k">①</td><td class="k">④</td><td class="k">⑤</td><td class="k">②</td><td class="k">③</td><td class="k">⑤</td><td class="k">190</td><td class="k">170</td></tr></table>
+<table class="anskey"><tr><th><a href="prob-23.html">23</a></th><th><a href="prob-24.html">24</a></th><th><a href="prob-25.html">25</a></th><th><a href="prob-26.html">26</a></th><th><a href="prob-27.html">27</a></th><th><a href="prob-28.html">28</a></th><th><a href="prob-29.html">29</a></th><th><a href="prob-30.html">30</a></th></tr><tr><td class="k"><a href="prob-23.html">①</a></td><td class="k"><a href="prob-24.html">④</a></td><td class="k"><a href="prob-25.html">⑤</a></td><td class="k"><a href="prob-26.html">②</a></td><td class="k"><a href="prob-27.html">③</a></td><td class="k"><a href="prob-28.html">⑤</a></td><td class="k"><a href="prob-29.html">190</a></td><td class="k"><a href="prob-30.html">170</a></td></tr></table>
 <div class="anskey-sec">미적분</div>
-<table class="anskey"><tr><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th></tr><tr><td class="k">④</td><td class="k">①</td><td class="k">③</td><td class="k">②</td><td class="k">⑤</td><td class="k">④</td><td class="k">81</td><td class="k">49</td></tr></table>
+<table class="anskey"><tr><th><a href="calc-23.html">23</a></th><th><a href="calc-24.html">24</a></th><th><a href="calc-25.html">25</a></th><th><a href="calc-26.html">26</a></th><th><a href="calc-27.html">27</a></th><th><a href="calc-28.html">28</a></th><th><a href="calc-29.html">29</a></th><th><a href="calc-30.html">30</a></th></tr><tr><td class="k"><a href="calc-23.html">④</a></td><td class="k"><a href="calc-24.html">①</a></td><td class="k"><a href="calc-25.html">③</a></td><td class="k"><a href="calc-26.html">②</a></td><td class="k"><a href="calc-27.html">⑤</a></td><td class="k"><a href="calc-28.html">④</a></td><td class="k"><a href="calc-29.html">81</a></td><td class="k"><a href="calc-30.html">49</a></td></tr></table>
 <div class="anskey-sec">기하</div>
-<table class="anskey"><tr><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th></tr><tr><td class="k">①</td><td class="k">②</td><td class="k">④</td><td class="k">⑤</td><td class="k">③</td><td class="k">②</td><td class="k">60</td><td class="k">457</td></tr></table><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+<table class="anskey"><tr><th><a href="geo-23.html">23</a></th><th><a href="geo-24.html">24</a></th><th><a href="geo-25.html">25</a></th><th><a href="geo-26.html">26</a></th><th><a href="geo-27.html">27</a></th><th><a href="geo-28.html">28</a></th><th><a href="geo-29.html">29</a></th><th><a href="geo-30.html">30</a></th></tr><tr><td class="k"><a href="geo-23.html">①</a></td><td class="k"><a href="geo-24.html">②</a></td><td class="k"><a href="geo-25.html">④</a></td><td class="k"><a href="geo-26.html">⑤</a></td><td class="k"><a href="geo-27.html">③</a></td><td class="k"><a href="geo-28.html">②</a></td><td class="k"><a href="geo-29.html">60</a></td><td class="k"><a href="geo-30.html">457</a></td></tr></table><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>

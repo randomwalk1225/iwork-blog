@@ -162,7 +162,13 @@ a.wb-nbtn{display:block}
 .wb-sol .ansbox .lbl{color:var(--rule);font-weight:700}
 .wb-sol .sol-head{font-size:17px;font-weight:700;color:var(--rule);margin:18px 0 6px}
 .wb-hint{font-size:16px;color:var(--wb-muted);margin:18px 0 0}
-.pgnav{display:flex;gap:10px;margin:28px 0 0}
+.pgnav{display:none;gap:10px;margin:28px 0 0}
+table.anskey a{color:inherit;text-decoration:none;display:block}
+table.anskey a:hover{color:var(--red)}
+.relbox{margin:30px 0 0;border-top:1px solid var(--rule);padding-top:14px}
+.relbox .rt{font-size:16px;font-weight:700;color:var(--rule);margin:0 0 8px}
+.relbox a{display:block;font-size:16px;color:var(--wb-muted);text-decoration:none;padding:4px 0}
+.relbox a:hover{color:var(--red)}
 .pgnav a{flex:1;text-align:center;font-size:16px;font-weight:700;
   color:var(--rule);text-decoration:none;border:1px solid var(--rule);padding:12px 8px;background:#fff}
 .pgnav a:hover{background:var(--red-soft);color:var(--red);border-color:var(--red)}
@@ -185,6 +191,7 @@ a.wb-nbtn{display:block}
   .wb-q{display:block;height:auto}
   .wb-prob{border-right:none;border-bottom:1px solid var(--rule);padding:22px 18px 26px}
   .wb-sol{padding:22px 18px 50px}
+  .pgnav{display:flex}
 }
 @media print{
   html,body{overflow:visible}
@@ -211,7 +218,7 @@ a.wb-nbtn{display:block}
 <li>(가): \((a_2-a_1)^2=36(a_3)^2\) → \(a_1^2(r-1)^2=36a_1^2r^4\) → \(1-r=6r^2\) (\(r\lt1\)) → \((3r-1)(2r+1)=0\), \(r=-\dfrac{1}{2}\).</li>
 <li>(나): \(b_1=0\), \(b_2=a_2-a_1=-\dfrac{3}{2}a_1\), \(\displaystyle\sum_{n\ge3}(a_n)^2=\frac{a_1^2r^4}{1-r^2}=\frac{a_1^2}{12}\). 합 \(-\dfrac{3}{2}a_1+\dfrac{a_1^2}{12}=12\)에서 \(a_1^2-18a_1-144=0\), \(a_1=24\) (\(a_1\gt0\)).</li>
 <li>확인: \(\lvert a_2\rvert=12\ge10\), \(\lvert a_3\rvert=6\lt10\) — 가정과 일치.</li>
-<li>\(a_4=24\left(-\dfrac{1}{2}\right)^3=-3,\ a_6=24\left(-\dfrac{1}{2}\right)^5=-\dfrac{3}{4}\) → \(36\times(-3)\times\left(-\dfrac{3}{4}\right)=81\)</li></ol><div class="pgnav"><a href="calc-28.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="calc-30.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+<li>\(a_4=24\left(-\dfrac{1}{2}\right)^3=-3,\ a_6=24\left(-\dfrac{1}{2}\right)^5=-\dfrac{3}{4}\) → \(36\times(-3)\times\left(-\dfrac{3}{4}\right)=81\)</li></ol><div class="relbox"><div class="rt">함께 보면 좋은 풀이</div><a href="calc-28.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 미적분 28번 풀이 (4점)</a><a href="calc-30.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 미적분 30번 풀이 (4점)</a><a href="calc-26.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 미적분 26번 풀이 (3점)</a></div><div class="pgnav"><a href="calc-28.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="calc-30.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>

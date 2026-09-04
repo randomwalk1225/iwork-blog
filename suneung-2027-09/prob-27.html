@@ -162,7 +162,13 @@ a.wb-nbtn{display:block}
 .wb-sol .ansbox .lbl{color:var(--rule);font-weight:700}
 .wb-sol .sol-head{font-size:17px;font-weight:700;color:var(--rule);margin:18px 0 6px}
 .wb-hint{font-size:16px;color:var(--wb-muted);margin:18px 0 0}
-.pgnav{display:flex;gap:10px;margin:28px 0 0}
+.pgnav{display:none;gap:10px;margin:28px 0 0}
+table.anskey a{color:inherit;text-decoration:none;display:block}
+table.anskey a:hover{color:var(--red)}
+.relbox{margin:30px 0 0;border-top:1px solid var(--rule);padding-top:14px}
+.relbox .rt{font-size:16px;font-weight:700;color:var(--rule);margin:0 0 8px}
+.relbox a{display:block;font-size:16px;color:var(--wb-muted);text-decoration:none;padding:4px 0}
+.relbox a:hover{color:var(--red)}
 .pgnav a{flex:1;text-align:center;font-size:16px;font-weight:700;
   color:var(--rule);text-decoration:none;border:1px solid var(--rule);padding:12px 8px;background:#fff}
 .pgnav a:hover{background:var(--red-soft);color:var(--red);border-color:var(--red)}
@@ -185,6 +191,7 @@ a.wb-nbtn{display:block}
   .wb-q{display:block;height:auto}
   .wb-prob{border-right:none;border-bottom:1px solid var(--rule);padding:22px 18px 26px}
   .wb-sol{padding:22px 18px 50px}
+  .pgnav{display:flex}
 }
 @media print{
   html,body{overflow:visible}
@@ -217,7 +224,7 @@ a.wb-nbtn{display:block}
   <div class="desmos-calc" id="dg-1" style="height:340px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -0.3, "right": 2.3, "bottom": -0.4, "top": 2.6}, "expressions": [{"latex": "s=0.286", "sliderBounds": {"min": 0.05, "max": 1, "step": 0.001}}, {"latex": "p(x)=\\frac{1}{s\\sqrt{2\\pi}}e^{-\\frac{(x-1)^2}{2s^2}}", "color": "#184f7d"}, {"latex": "0\\le y\\le p(x)\\left\\{\\frac{3}{2}s\\le x\\le2s\\right\\}", "color": "#c74440"}, {"latex": "x=1", "color": "#666666", "lineStyle": "DASHED"}, {"latex": "\\left(\\frac{3}{2}s,0\\right)", "color": "#c74440", "label": "1.5σ", "showLabel": true, "labelOrientation": "below", "dragMode": "NONE"}, {"latex": "\\left(2s,0\\right)", "color": "#c74440", "label": "2σ", "showLabel": true, "labelOrientation": "belowRight", "dragMode": "NONE"}, {"latex": "\\left(1,p(1)\\right)", "color": "#666666", "label": "평균 m=1", "showLabel": true, "labelOrientation": "above", "dragMode": "NONE"}], "degreeMode": false, "squareAxes": false, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>σ를 움직여 보세요. 색칠 구간 [1.5σ, 2σ]는 σ에 따라 평균 1의 왼쪽·오른쪽으로 이동합니다. σ=2/7≈0.286일 때 구간이 표준화 척도로 [−2, −1.5]가 되어 확률이 0.044.</div>
-</div><div class="pgnav"><a href="prob-26.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="prob-28.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이</div><a href="prob-28.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 28번 풀이 (4점)</a><a href="prob-29.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 29번 풀이 (4점)</a><a href="prob-30.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 30번 풀이 (4점)</a></div><div class="pgnav"><a href="prob-26.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="prob-28.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>

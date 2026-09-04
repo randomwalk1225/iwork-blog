@@ -162,7 +162,13 @@ a.wb-nbtn{display:block}
 .wb-sol .ansbox .lbl{color:var(--rule);font-weight:700}
 .wb-sol .sol-head{font-size:17px;font-weight:700;color:var(--rule);margin:18px 0 6px}
 .wb-hint{font-size:16px;color:var(--wb-muted);margin:18px 0 0}
-.pgnav{display:flex;gap:10px;margin:28px 0 0}
+.pgnav{display:none;gap:10px;margin:28px 0 0}
+table.anskey a{color:inherit;text-decoration:none;display:block}
+table.anskey a:hover{color:var(--red)}
+.relbox{margin:30px 0 0;border-top:1px solid var(--rule);padding-top:14px}
+.relbox .rt{font-size:16px;font-weight:700;color:var(--rule);margin:0 0 8px}
+.relbox a{display:block;font-size:16px;color:var(--wb-muted);text-decoration:none;padding:4px 0}
+.relbox a:hover{color:var(--red)}
 .pgnav a{flex:1;text-align:center;font-size:16px;font-weight:700;
   color:var(--rule);text-decoration:none;border:1px solid var(--rule);padding:12px 8px;background:#fff}
 .pgnav a:hover{background:var(--red-soft);color:var(--red);border-color:var(--red)}
@@ -185,6 +191,7 @@ a.wb-nbtn{display:block}
   .wb-q{display:block;height:auto}
   .wb-prob{border-right:none;border-bottom:1px solid var(--rule);padding:22px 18px 26px}
   .wb-sol{padding:22px 18px 50px}
+  .pgnav{display:flex}
 }
 @media print{
   html,body{overflow:visible}
@@ -216,7 +223,7 @@ a.wb-nbtn{display:block}
   <div class="desmos-calc" id="dg-1" style="height:380px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -6.5, "right": 4.5, "bottom": -3, "top": 7}, "expressions": [{"latex": "\\operatorname{segment}\\left((0,0),(-3.15,-1.96)\\right)", "color": "#666666"}, {"latex": "\\operatorname{segment}\\left((-5,0),(3,0)\\right)", "color": "#666666"}, {"latex": "\\operatorname{segment}\\left((0,0),(0,6)\\right)", "color": "#666666"}, {"latex": "(-3.15,-1.96)", "color": "#666666", "label": "x", "showLabel": true, "pointStyle": "OPEN", "dragMode": "NONE"}, {"latex": "(3,0)", "color": "#666666", "label": "y", "showLabel": true, "pointStyle": "OPEN", "dragMode": "NONE"}, {"latex": "(0,6)", "color": "#666666", "label": "z", "showLabel": true, "pointStyle": "OPEN", "dragMode": "NONE"}, {"latex": "A_1=(-4.45,-0.28)", "color": "#184f7d", "label": "A(1, −4, 0)", "showLabel": true, "dragMode": "NONE"}, {"latex": "B_1=(-1.7,3.32)", "color": "#184f7d", "label": "B(6, 1, 5)", "showLabel": true, "dragMode": "NONE"}, {"latex": "\\operatorname{segment}(A_1,B_1)", "color": "#184f7d"}, {"latex": "P_1=(-2.8,1.88)", "color": "#c74440", "label": "P(4, −1, 3)", "showLabel": true, "dragMode": "NONE"}, {"latex": "s=0.6", "sliderBounds": {"min": 0, "max": 1, "step": 0.01}}, {"latex": "X=\\left((1-s)\\cdot(-4.45)+s\\cdot(-1.7),(1-s)\\cdot(-0.28)+s\\cdot3.32\\right)", "color": "#388c46", "label": "X", "showLabel": true}], "degreeMode": false, "squareAxes": true, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>공간을 비스듬히 본 그림(사교투영)입니다 — 투영은 직선과 내분비를 그대로 보존합니다. s를 움직여 보세요. s=3/5, 즉 3:2 자리에서 움직이는 점이 내분점 P(4,−1,3)과 정확히 겹칩니다.</div>
-</div><div class="pgnav"><a href="geo-23.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="geo-25.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이</div><a href="geo-29.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 기하 29번 풀이 (4점)</a><a href="geo-30.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 기하 30번 풀이 (4점)</a><a href="geo-25.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 기하 25번 풀이 (3점)</a></div><div class="pgnav"><a href="geo-23.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="geo-25.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>

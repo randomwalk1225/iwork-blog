@@ -162,7 +162,13 @@ a.wb-nbtn{display:block}
 .wb-sol .ansbox .lbl{color:var(--rule);font-weight:700}
 .wb-sol .sol-head{font-size:17px;font-weight:700;color:var(--rule);margin:18px 0 6px}
 .wb-hint{font-size:16px;color:var(--wb-muted);margin:18px 0 0}
-.pgnav{display:flex;gap:10px;margin:28px 0 0}
+.pgnav{display:none;gap:10px;margin:28px 0 0}
+table.anskey a{color:inherit;text-decoration:none;display:block}
+table.anskey a:hover{color:var(--red)}
+.relbox{margin:30px 0 0;border-top:1px solid var(--rule);padding-top:14px}
+.relbox .rt{font-size:16px;font-weight:700;color:var(--rule);margin:0 0 8px}
+.relbox a{display:block;font-size:16px;color:var(--wb-muted);text-decoration:none;padding:4px 0}
+.relbox a:hover{color:var(--red)}
 .pgnav a{flex:1;text-align:center;font-size:16px;font-weight:700;
   color:var(--rule);text-decoration:none;border:1px solid var(--rule);padding:12px 8px;background:#fff}
 .pgnav a:hover{background:var(--red-soft);color:var(--red);border-color:var(--red)}
@@ -185,6 +191,7 @@ a.wb-nbtn{display:block}
   .wb-q{display:block;height:auto}
   .wb-prob{border-right:none;border-bottom:1px solid var(--rule);padding:22px 18px 26px}
   .wb-sol{padding:22px 18px 50px}
+  .pgnav{display:flex}
 }
 @media print{
   html,body{overflow:visible}
@@ -220,7 +227,7 @@ a.wb-nbtn{display:block}
   <div class="desmos-calc" id="dg-1" style="height:340px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -4.5, "right": 2.5, "bottom": -4, "top": 9}, "expressions": [{"latex": "t=1.5", "sliderBounds": {"min": 0.1, "max": 3, "step": 0.01}}, {"latex": "f(x)=\\left(x+2\\right)\\left(x+\\frac{1}{2}\\right)", "color": "#666666", "lineStyle": "DOTTED"}, {"latex": "g(x)=f(x)+f(x-t)", "color": "#184f7d"}, {"latex": "\\left(-\\frac{1}{2},0\\right)", "color": "#c74440"}], "degreeMode": false, "squareAxes": false, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>분모 g(x)=f(x)+f(x−t)를 그렸습니다. t를 움직여 보세요 — t가 1.5보다 작으면 x축과 두 점에서 만나(극한이 없는 a 발생), t=1.5에서 x=−1/2에 접하고, 그보다 크면 x축 위로 떠서 모든 a에서 극한이 존재합니다.</div>
-</div><div class="pgnav"><a href="common-14.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="common-16.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이</div><a href="common-10.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 10번 풀이 (4점)</a><a href="common-12.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 12번 풀이 (4점)</a><a href="common-13.html">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 13번 풀이 (4점)</a></div><div class="pgnav"><a href="common-14.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="common-16.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
