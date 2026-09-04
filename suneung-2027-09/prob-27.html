@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 27번 풀이·정답 | 아이워크수학</title>
+<meta name="description" content="2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 27번(3점) 문제 풀이 — 정답 ③. 단계별 해설과 직접 움직여 보는 그래프.">
+<link rel="canonical" href="https://randomwalk1225.github.io/iwork-blog/suneung-2027-09/prob-27.html">
+<meta property="og:title" content="2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 27번 풀이·정답">
+<meta property="og:description" content="2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 27번(3점) 문제 풀이 — 정답 ③. 단계별 해설과 직접 움직여 보는 그래프.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://randomwalk1225.github.io/iwork-blog/suneung-2027-09/prob-27.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 27번 풀이·정답", "description": "2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 27번(3점) 문제 풀이 — 정답 ③. 단계별 해설과 직접 움직여 보는 그래프.", "inLanguage": "ko", "author": {"@type": "Organization", "name": "아이워크수학"}, "publisher": {"@type": "Organization", "name": "아이워크수학"}, "mainEntityOfPage": "https://randomwalk1225.github.io/iwork-blog/suneung-2027-09/prob-27.html"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+window.MathJax = {
+  tex: { inlineMath:[['\\(','\\)']], displayMath:[['\\[','\\]']],
+         processEscapes:true },
+  options: { skipHtmlTags:['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+:root {
+  --accent:#184f7d; --accent-soft:#f4f8fc; --ink:#17191c; --muted:#616a74;
+  --line:#dfe3e8; --soft:#f7f9fb; --warn-bg:#fff8e6; --warn-line:#b25f00;
+  --fs-base:18px; --fs-meta:16px;
+}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+  font-size:var(--fs-base);line-height:1.88;color:var(--ink);background:#fff;margin:0}
+.wrap{max-width:920px;margin:0 auto;padding:36px 28px 80px}
+h1{font-size:26px;font-weight:700;color:var(--accent);margin:0 0 6px}
+.doc-sub{font-size:var(--fs-meta);color:var(--muted);margin:0 0 4px}
+.doc-note{font-size:var(--fs-meta);color:var(--muted);background:var(--soft);
+  border-radius:8px;padding:10px 14px;margin:14px 0 28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:18px 22px;margin:0 0 20px}
+.card-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:10px}
+.qid{font-weight:700;color:var(--accent);font-size:20px}
+.chip{font-size:var(--fs-meta);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.chip-src{background:#eef2f7;color:#3a4a5e}
+.chip-hi{background:#e8f3ec;color:#2f6f48}
+.chip-mid{background:#fdf2e2;color:#9a6712}
+.chip-lo{background:#fdecec;color:#b23b3b}
+.qtext{margin:4px 0 12px;font-size:var(--fs-base)}
+ul.choices{list-style:none;padding:0;margin:0 0 12px;display:flex;flex-wrap:wrap;gap:4px 24px}
+ul.choices li{font-size:var(--fs-base)}
+.ansbox{background:var(--accent-soft);border-radius:8px;padding:9px 14px;
+  margin:6px 0 12px;font-weight:700;color:var(--accent);font-size:var(--fs-base)}
+.ansbox .lbl{font-size:var(--fs-meta);font-weight:400;margin-right:6px;color:var(--muted)}
+.sol-head{font-weight:700;color:#33425a;margin:4px 0 4px;font-size:var(--fs-meta)}
+ol.steps{margin:0 0 6px;padding-left:1.6em}
+ol.steps li{margin:7px 0;padding-left:4px;font-size:var(--fs-base)}
+.note-box{background:var(--accent-soft);
+  padding:10px 14px;border-radius:7px;margin:10px 0;font-size:16px}
+.warn-box{background:var(--warn-bg);
+  padding:10px 14px;border-radius:7px;margin:10px 0;font-size:16px}
+.warn-box .wlbl,.note-box .nlbl{font-weight:700;font-size:var(--fs-meta);
+  margin-right:6px;display:inline}
+.warn-box .wlbl{color:var(--warn-line)}
+.note-box .nlbl{color:var(--accent)}
+.topic{font-size:var(--fs-meta);color:var(--muted);margin:2px 0 10px}
+.topic .tu{color:var(--accent);font-weight:500}
+h2.sec{font-size:22px;color:var(--accent);border-bottom:2px solid var(--line);
+  padding-bottom:6px;margin:40px 0 18px}
+nav.jump{position:sticky;top:0;background:rgba(255,255,255,.95);
+  border-bottom:1px solid var(--line);padding:10px 28px;z-index:20;
+  display:flex;align-items:center;gap:18px}
+nav.jump a{color:var(--accent);text-decoration:none;font-weight:500;
+  margin-right:18px;font-size:var(--fs-meta)}
+nav.jump a:hover{text-decoration:underline}
+footer.doc{font-size:var(--fs-meta);color:var(--muted);text-align:center;
+  margin-top:40px;border-top:1px solid var(--line);padding-top:14px}
+button.printbtn{margin-left:auto;font:inherit;font-size:var(--fs-meta);
+  color:var(--accent);background:#fff;border:1px solid var(--accent);
+  border-radius:6px;padding:4px 12px;cursor:pointer}
+button.printbtn:hover{background:var(--accent-soft)}
+.fig-wrap{text-align:center;margin:10px 0}
+.fig-wrap img{max-width:320px;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}
+.fig-missing{font-size:var(--fs-meta);color:#b22;margin:6px 0}
+table.anskey{border-collapse:collapse;margin:8px 0 14px;width:100%}
+table.anskey th,table.anskey td{border:1px solid var(--line);padding:6px 4px;
+  text-align:center;font-size:var(--fs-meta);min-width:44px}
+table.anskey th{background:var(--soft);font-weight:500;color:var(--muted)}
+table.anskey td.k{font-weight:700;color:var(--accent)}
+table.xtable{border-collapse:collapse;margin:12px 0;font-size:16px}
+table.xtable th,table.xtable td{border:1px solid var(--line);padding:5px 12px;text-align:center}
+table.xtable th{background:var(--soft);font-weight:600;color:var(--muted);white-space:nowrap}
+.xtable-cap{font-weight:700;color:#33425a;margin:14px 0 2px;font-size:var(--fs-meta)}
+.anskey-sec{font-weight:700;color:#33425a;margin:16px 0 4px;font-size:var(--fs-base)}
+details.solfold{margin:4px 0 0}
+details.solfold>summary{cursor:pointer;font-weight:700;color:var(--accent);
+  font-size:var(--fs-meta);padding:8px 12px;background:var(--accent-soft);
+  border-radius:7px;list-style:none;display:inline-block;user-select:none}
+details.solfold>summary::before{content:'▸ '}
+details.solfold[open]>summary::before{content:'▾ '}
+.foldctl{font-size:var(--fs-meta);margin:0 0 16px}
+.foldctl button{font:inherit;font-size:var(--fs-meta);color:var(--accent);
+  background:#fff;border:1px solid var(--line);border-radius:6px;
+  padding:4px 12px;cursor:pointer;margin-right:8px}
+.foldctl button:hover{background:var(--accent-soft)}
+.desmos-wrap{margin:14px 0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.desmos-calc{width:100%;height:360px}
+.desmos-cap{font-size:var(--fs-meta);color:var(--muted);background:var(--soft);
+  padding:8px 14px;border-top:1px solid var(--line)}
+.desmos-cap .dlbl{font-weight:700;color:var(--accent);margin-right:6px}
+@media print{
+  @page{size:A4;margin:18mm 20mm 20mm 20mm}
+  body{font-size:11pt;line-height:1.8;color:#000;background:#fff}
+  .wrap{max-width:100%;padding:0}
+  nav.jump,button.printbtn,.desmos-wrap,.foldctl{display:none}
+  .card{break-inside:avoid;border:1px solid #ccc}
+  details.solfold{display:block}
+  details.solfold>summary{display:none}
+}
+
+html,body{height:100%;overflow:hidden}
+header.wbh{height:54px;display:flex;align-items:center;gap:16px;padding:0 22px;
+  border-bottom:1px solid var(--line);background:#fff}
+header.wbh .brand{font-weight:700;color:#184f7d;white-space:nowrap}
+header.wbh .ttl{font-size:var(--fs-meta);color:var(--muted);overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+header.wbh .ctrl{margin-left:auto;display:flex;gap:8px}
+header.wbh button{font:inherit;font-size:var(--fs-meta);color:#184f7d;background:#fff;
+  border:1px solid var(--line);border-radius:6px;padding:5px 13px;cursor:pointer;white-space:nowrap}
+header.wbh button:hover{background:var(--accent-soft)}
+.wb{display:grid;grid-template-columns:196px minmax(0,1fr);grid-template-rows:100%;
+  height:calc(100vh - 55px)}
+.wb-stage{min-width:0;min-height:0}
+.wb-nav{overflow-y:auto;border-right:1px solid var(--line);padding:16px 14px;background:var(--soft)}
+.wb-sec{font-size:16px;font-weight:700;color:#33425a;margin:14px 0 7px}
+.wb-sec:first-child{margin-top:0}
+.wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.wb-nbtn{font:inherit;font-size:16px;padding:6px 0;text-align:center;border:1px solid var(--line);
+  border-radius:7px;background:#fff;color:var(--ink);cursor:pointer}
+.wb-nbtn:hover{border-color:#184f7d}
+.wb-nbtn.on{background:#184f7d;border-color:#184f7d;color:#fff;font-weight:700}
+.wb-key{width:100%;margin:0 0 4px;font:inherit;font-size:16px;padding:7px 0;border:1px solid var(--line);
+  border-radius:7px;background:#fff;color:#184f7d;font-weight:700;cursor:pointer}
+.wb-key.on{background:#184f7d;color:#fff}
+.wb-q{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);grid-template-rows:100%;
+  height:100%;min-height:0}
+.wb-q[hidden]{display:none}
+.wb-prob{overflow-y:auto;padding:26px 30px 40px;border-right:1px solid var(--line);background:#fff}
+.wb-sol{overflow-y:auto;padding:26px 30px 60px;background:#fff}
+.wb-prob .card-head{margin-bottom:12px}
+.wb-sol .sol-head{margin-top:0}
+.wb-hint{font-size:var(--fs-meta);color:var(--muted);margin:18px 0 0}
+@media (max-width:900px){
+  html,body{overflow:auto}
+  .wb{display:block;height:auto}
+  .wb-nav{border-right:none;border-bottom:1px solid var(--line)}
+  .wb-q{display:block;height:auto}
+  .wb-prob{border-right:none;border-bottom:1px solid var(--line)}
+}
+@media print{
+  html,body{overflow:visible}
+  header.wbh .ctrl,.wb-nav{display:none}
+  .wb,.wb-q{display:block;height:auto}
+  .wb-q[hidden]{display:none}
+  .wb-prob,.wb-sol{overflow:visible}
+}
+
+a.wb-nbtn,a.wb-key{display:block;text-decoration:none}
+.wb-prob h1{font-size:21px;margin:0 0 4px;color:#184f7d}
+.wb-nav .brandline{font-size:16px;color:var(--muted);margin:0 0 10px}
+</style>
+</head>
+<body>
+<header class="wbh">
+  <span class="brand">아이워크수학 · iWork Math</span>
+  <span class="ttl">2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 풀이</span>
+  <span class="ctrl"><button type="button" onclick="window.print()">PDF 인쇄</button></span>
+</header>
+<div class="wb">
+  <aside class="wb-nav"><a class="wb-key" href="index.html">정답표·목차</a><div class="wb-sec">공통과목 (수학 Ⅰ · 수학 Ⅱ)</div><div class="wb-nums"><a class="wb-nbtn" href="common-1.html">1</a><a class="wb-nbtn" href="common-2.html">2</a><a class="wb-nbtn" href="common-3.html">3</a><a class="wb-nbtn" href="common-4.html">4</a><a class="wb-nbtn" href="common-5.html">5</a><a class="wb-nbtn" href="common-6.html">6</a><a class="wb-nbtn" href="common-7.html">7</a><a class="wb-nbtn" href="common-8.html">8</a><a class="wb-nbtn" href="common-9.html">9</a><a class="wb-nbtn" href="common-10.html">10</a><a class="wb-nbtn" href="common-11.html">11</a><a class="wb-nbtn" href="common-12.html">12</a><a class="wb-nbtn" href="common-13.html">13</a><a class="wb-nbtn" href="common-14.html">14</a><a class="wb-nbtn" href="common-15.html">15</a><a class="wb-nbtn" href="common-16.html">16</a><a class="wb-nbtn" href="common-17.html">17</a><a class="wb-nbtn" href="common-18.html">18</a><a class="wb-nbtn" href="common-19.html">19</a><a class="wb-nbtn" href="common-20.html">20</a><a class="wb-nbtn" href="common-21.html">21</a><a class="wb-nbtn" href="common-22.html">22</a></div><div class="wb-sec">확률과 통계</div><div class="wb-nums"><a class="wb-nbtn" href="prob-23.html">23</a><a class="wb-nbtn" href="prob-24.html">24</a><a class="wb-nbtn" href="prob-25.html">25</a><a class="wb-nbtn" href="prob-26.html">26</a><a class="wb-nbtn on" href="prob-27.html">27</a><a class="wb-nbtn" href="prob-28.html">28</a><a class="wb-nbtn" href="prob-29.html">29</a><a class="wb-nbtn" href="prob-30.html">30</a></div><div class="wb-sec">미적분</div><div class="wb-nums"><a class="wb-nbtn" href="calc-23.html">23</a><a class="wb-nbtn" href="calc-24.html">24</a><a class="wb-nbtn" href="calc-25.html">25</a><a class="wb-nbtn" href="calc-26.html">26</a><a class="wb-nbtn" href="calc-27.html">27</a><a class="wb-nbtn" href="calc-28.html">28</a><a class="wb-nbtn" href="calc-29.html">29</a><a class="wb-nbtn" href="calc-30.html">30</a></div><div class="wb-sec">기하</div><div class="wb-nums"><a class="wb-nbtn" href="geo-23.html">23</a><a class="wb-nbtn" href="geo-24.html">24</a><a class="wb-nbtn" href="geo-25.html">25</a><a class="wb-nbtn" href="geo-26.html">26</a><a class="wb-nbtn" href="geo-27.html">27</a><a class="wb-nbtn" href="geo-28.html">28</a><a class="wb-nbtn" href="geo-29.html">29</a><a class="wb-nbtn" href="geo-30.html">30</a></div></aside>
+  <section class="wb-stage">
+    <div class="wb-q">
+      <div class="wb-prob"><h1>2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 확률과 통계 27번 풀이·정답</h1><div class="doc-sub">확률과 통계 · 3점</div><div class="qtext" style="margin-top:14px">정규분포 \(\mathrm{N}(1,\sigma^2)\)을 따르는 확률변수 X에 대하여 \(\mathrm{P}\!\left(\dfrac{3}{2}\sigma\le X\le2\sigma\right)=0.044\)일 때, \(\mathrm{P}\!\left(X\ge\dfrac{10}{7}\right)\)의 값을 표준정규분포표를 이용하여 구한 것은? (단, \(\sigma\gt0\))</div><ul class="choices"><li>① 0.0062</li>
+<li>② 0.0228</li>
+<li>③ 0.0668</li>
+<li>④ 0.1587</li>
+<li>⑤ 0.3085</li></ul></div>
+      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>③ \(0.0668\)</div><div class="sol-head">풀이</div><ol class="steps"><li>표준화 \(Z=\dfrac{X-1}{\sigma}\): 주어진 확률은 \(\mathrm{P}\!\left(\dfrac{3}{2}-\dfrac{1}{\sigma}\le Z\le2-\dfrac{1}{\sigma}\right)=0.044\) — 길이 \(\dfrac{1}{2}\)인 구간.</li>
+<li>표에서 \(\mathrm{P}(1.5\le Z\le2)=0.4772-0.4332=0.044\). 대칭성까지 고려하면 구간은 \([-2,-1.5]\)여야 하므로 \(\dfrac{3}{2}-\dfrac{1}{\sigma}=-2\), 즉 \(\dfrac{1}{\sigma}=\dfrac{7}{2}\), \(\sigma=\dfrac{2}{7}\).</li>
+<li>(구간을 \([1.5,2]\)로 두면 \(\dfrac{1}{\sigma}=0\)이 되어 모순)</li>
+<li>\(\mathrm{P}\!\left(X\ge\dfrac{10}{7}\right)=\mathrm{P}\!\left(Z\ge\dfrac{10/7-1}{2/7}\right)=\mathrm{P}(Z\ge1.5)=0.5-0.4332=0.0668\)</li></ol><div class="desmos-wrap">
+  <div class="desmos-calc" id="dg-1" style="height:340px"></div>
+  <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -0.3, "right": 2.3, "bottom": -0.4, "top": 2.6}, "expressions": [{"latex": "s=0.286", "sliderBounds": {"min": 0.05, "max": 1, "step": 0.001}}, {"latex": "p(x)=\\frac{1}{s\\sqrt{2\\pi}}e^{-\\frac{(x-1)^2}{2s^2}}", "color": "#184f7d"}, {"latex": "0\\le y\\le p(x)\\left\\{\\frac{3}{2}s\\le x\\le2s\\right\\}", "color": "#c74440"}, {"latex": "x=1", "color": "#666666", "lineStyle": "DASHED"}, {"latex": "\\left(\\frac{3}{2}s,0\\right)", "color": "#c74440", "label": "1.5σ", "showLabel": true, "labelOrientation": "below", "dragMode": "NONE"}, {"latex": "\\left(2s,0\\right)", "color": "#c74440", "label": "2σ", "showLabel": true, "labelOrientation": "belowRight", "dragMode": "NONE"}, {"latex": "\\left(1,p(1)\\right)", "color": "#666666", "label": "평균 m=1", "showLabel": true, "labelOrientation": "above", "dragMode": "NONE"}], "degreeMode": false, "squareAxes": false, "collapsed": true}</script>
+  <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>σ를 움직여 보세요. 색칠 구간 [1.5σ, 2σ]는 σ에 따라 평균 1의 왼쪽·오른쪽으로 이동합니다. σ=2/7≈0.286일 때 구간이 표준화 척도로 [−2, −1.5]가 되어 확률이 0.044.</div>
+</div><div class="doc-note"><a href="prob-26.html">← 이전 문항</a> · <a href="index.html">전체 목차</a> · <a href="prob-28.html">다음 문항 →</a></div></div>
+    </div>
+  </section>
+</div>
+<script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  if (typeof Desmos === 'undefined') return;
+  document.querySelectorAll('script.desmos-spec').forEach(function(sp){
+    var el = document.getElementById(sp.dataset.for);
+    if (!el) return;
+    var spec = JSON.parse(sp.textContent);
+    var calc = Desmos.GraphingCalculator(el, {
+      keypad:false, settingsMenu:false,
+      // 기본: 수식 패널 접힘 (원장 2026-09-04 "왼쪽창이 미리 열려있게 하지 말자").
+      // 슬라이더를 바로 보여야 하는 그래프만 spec.collapsed=false 로 연다.
+      expressionsCollapsed:spec.collapsed!==false,
+      zoomButtons:true, border:false, fontSize:18,
+      degreeMode:spec.degreeMode||false
+    });
+    if (spec.bounds) {
+      var b = spec.bounds;
+      if (spec.squareAxes) {
+        // 등척 축: 원이 원으로, 직각이 직각으로 보이게 세로 범위를 기준으로 가로를 다시 잰다
+        var aspect = el.clientWidth / el.clientHeight;
+        var cx = (b.left + b.right) / 2, xr = (b.top - b.bottom) * aspect;
+        b = {left: cx - xr/2, right: cx + xr/2, top: b.top, bottom: b.bottom};
+      }
+      calc.setMathBounds(b);
+    }
+    calc.setExpressions(spec.expressions||[]);
+  });
+});
+</script><script>document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='prob-26.html';if(e.key==='ArrowRight')location.href='prob-28.html';});</script>
+</body>
+</html>

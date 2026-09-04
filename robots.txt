@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://randomwalk1225.github.io/iwork-blog/sitemap.xml
