@@ -166,6 +166,9 @@ a.wb-nbtn{display:block}
 .pgnav a{flex:1;text-align:center;font-size:16px;font-weight:700;
   color:var(--rule);text-decoration:none;border:1px solid var(--rule);padding:12px 8px;background:#fff}
 .pgnav a:hover{background:var(--red-soft);color:var(--red);border-color:var(--red)}
+.wb-ft{margin:34px 0 0;padding-top:14px;border-top:1px solid var(--hair);
+  font-size:16px;color:var(--wb-muted)}
+.wb-ft a{color:var(--wb-muted)}
 @media (max-width:900px){
   html,body{overflow:auto}
   header.wbh{position:sticky;top:0;z-index:30;height:52px;padding:0 14px}
@@ -213,22 +216,35 @@ a.wb-nbtn{display:block}
   <div class="desmos-calc" id="dg-1" style="height:340px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -3, "right": 5, "bottom": -2, "top": 30}, "expressions": [{"latex": "a=2.83", "sliderBounds": {"min": 1.1, "max": 5, "step": 0.01}}, {"latex": "y=16a^x", "color": "#184f7d"}, {"latex": "y=\\frac{1}{4}a^x", "color": "#388c46"}, {"latex": "y=7", "color": "#666666", "lineStyle": "DASHED"}, {"latex": "A=\\left(\\log_a\\left(\\frac{7}{16}\\right),7\\right)", "color": "#c74440", "label": "A", "showLabel": true}, {"latex": "B=\\left(\\log_a28,7\\right)", "color": "#c74440", "label": "B", "showLabel": true}], "degreeMode": false, "squareAxes": false, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>a를 움직여 보세요. 두 점 A, B의 가로 거리가 log_a 64로 일정하게 유지되다가 a=2√2≈2.83일 때 정확히 4가 됩니다.</div>
-</div><div class="pgnav"><a href="common-9.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="common-11.html">다음 문항 →</a></div></div>
+</div><div class="pgnav"><a href="common-9.html">← 이전 문항</a><a href="index.html">전체 목차</a><a href="common-11.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
-<script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function(){
-  if (typeof Desmos === 'undefined') return;
-  document.querySelectorAll('script.desmos-spec').forEach(function(sp){
+// Desmos 지연 로딩 — API(~3MB)는 그래프가 화면에 가까워질 때 처음 한 번만 받는다.
+(function(){
+  var API = 'https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6';
+  var specs = Array.prototype.slice.call(document.querySelectorAll('script.desmos-spec'));
+  if (!specs.length) return;
+  var apiState = 0, waiters = [];
+  function loadApi(cb){
+    if (window.Desmos) return cb();
+    waiters.push(cb);
+    if (apiState) return;
+    apiState = 1;
+    var sc = document.createElement('script');
+    sc.src = API;
+    sc.onload = function(){ waiters.forEach(function(w){ w(); }); waiters = []; };
+    document.head.appendChild(sc);
+  }
+  function initOne(sp){
+    if (sp.dataset.done) return;
+    sp.dataset.done = '1';
     var el = document.getElementById(sp.dataset.for);
     if (!el) return;
     var spec = JSON.parse(sp.textContent);
     var calc = Desmos.GraphingCalculator(el, {
       keypad:false, settingsMenu:false,
-      // 기본: 수식 패널 접힘 (원장 2026-09-04 "왼쪽창이 미리 열려있게 하지 말자").
-      // 슬라이더를 바로 보여야 하는 그래프만 spec.collapsed=false 로 연다.
       expressionsCollapsed:spec.collapsed!==false,
       zoomButtons:true, border:false, fontSize:18,
       degreeMode:spec.degreeMode||false
@@ -236,16 +252,32 @@ document.addEventListener('DOMContentLoaded', function(){
     if (spec.bounds) {
       var b = spec.bounds;
       if (spec.squareAxes) {
-        // 등척 축: 원이 원으로, 직각이 직각으로 보이게 세로 범위를 기준으로 가로를 다시 잰다
-        var aspect = el.clientWidth / el.clientHeight;
+        var aspect = (el.clientWidth||800) / (el.clientHeight||360);
         var cx = (b.left + b.right) / 2, xr = (b.top - b.bottom) * aspect;
         b = {left: cx - xr/2, right: cx + xr/2, top: b.top, bottom: b.bottom};
       }
       calc.setMathBounds(b);
     }
     calc.setExpressions(spec.expressions||[]);
-  });
-});
+  }
+  function arm(sp){ loadApi(function(){ initOne(sp); }); }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { io.unobserve(en.target); arm(en.target.__spec); }
+      });
+    }, {rootMargin: '500px'});
+    specs.forEach(function(sp){
+      var el = document.getElementById(sp.dataset.for);
+      if (!el) return;
+      el.__spec = sp;
+      io.observe(el);
+    });
+    // 접힌 <details>·숨긴 워크벤치 pane 안은 보이게 되는 순간 관찰이 다시 돌므로 따로 처리 불필요
+  } else {
+    specs.forEach(arm);
+  }
+})();
 </script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-9.html';if(e.key==='ArrowRight')location.href='common-11.html';});</script>
 </body>
 </html>
