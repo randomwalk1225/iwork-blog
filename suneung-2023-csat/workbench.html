@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2023학년도 수능 수학 — 해설 (워크벤치)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<script>
+window.MathJax = {
+  tex: { inlineMath:[['\\(','\\)']], displayMath:[['\\[','\\]']],
+         processEscapes:true },
+  options: { skipHtmlTags:['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+:root {
+  --accent:#184f7d; --accent-soft:#f4f8fc; --ink:#17191c; --muted:#616a74;
+  --line:#dfe3e8; --soft:#f7f9fb; --warn-bg:#fff8e6; --warn-line:#b25f00;
+  --fs-base:18px; --fs-meta:16px;
+}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+  font-size:var(--fs-base);line-height:1.88;color:var(--ink);background:#fff;margin:0}
+.wrap{max-width:920px;margin:0 auto;padding:36px 28px 80px}
+h1{font-size:26px;font-weight:700;color:var(--accent);margin:0 0 6px}
+.doc-sub{font-size:var(--fs-meta);color:var(--muted);margin:0 0 4px}
+.doc-note{font-size:var(--fs-meta);color:var(--muted);background:var(--soft);
+  border-radius:8px;padding:10px 14px;margin:14px 0 28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:18px 22px;margin:0 0 20px}
+.card-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:10px}
+.qid{font-weight:700;color:var(--accent);font-size:20px}
+.chip{font-size:var(--fs-meta);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.chip-src{background:#eef2f7;color:#3a4a5e}
+.chip-hi{background:#e8f3ec;color:#2f6f48}
+.chip-mid{background:#fdf2e2;color:#9a6712}
+.chip-lo{background:#fdecec;color:#b23b3b}
+.qtext{margin:4px 0 12px;font-size:var(--fs-base)}
+ul.choices{list-style:none;padding:0;margin:0 0 12px;display:flex;flex-wrap:wrap;gap:4px 24px}
+ul.choices li{font-size:var(--fs-base)}
+.ansbox{background:var(--accent-soft);border-radius:8px;padding:9px 14px;
+  margin:6px 0 12px;font-weight:700;color:var(--accent);font-size:var(--fs-base)}
+.ansbox .lbl{font-size:var(--fs-meta);font-weight:400;margin-right:6px;color:var(--muted)}
+.sol-head{font-weight:700;color:#33425a;margin:4px 0 4px;font-size:var(--fs-meta)}
+ol.steps{margin:0 0 6px;padding-left:1.6em}
+ol.steps li{margin:7px 0;padding-left:4px;font-size:var(--fs-base)}
+.note-box{background:var(--accent-soft);
+  padding:10px 14px;border-radius:7px;margin:10px 0;font-size:16px}
+.warn-box{background:var(--warn-bg);
+  padding:10px 14px;border-radius:7px;margin:10px 0;font-size:16px}
+.warn-box .wlbl,.note-box .nlbl{font-weight:700;font-size:var(--fs-meta);
+  margin-right:6px;display:inline}
+.warn-box .wlbl{color:var(--warn-line)}
+.note-box .nlbl{color:var(--accent)}
+.topic{font-size:var(--fs-meta);color:var(--muted);margin:2px 0 10px}
+.topic .tu{color:var(--accent);font-weight:500}
+h2.sec{font-size:22px;color:var(--accent);border-bottom:2px solid var(--line);
+  padding-bottom:6px;margin:40px 0 18px}
+nav.jump{position:sticky;top:0;background:rgba(255,255,255,.95);
+  border-bottom:1px solid var(--line);padding:10px 28px;z-index:20;
+  display:flex;align-items:center;gap:18px}
+nav.jump a{color:var(--accent);text-decoration:none;font-weight:500;
+  margin-right:18px;font-size:var(--fs-meta)}
+nav.jump a:hover{text-decoration:underline}
+footer.doc{font-size:var(--fs-meta);color:var(--muted);text-align:center;
+  margin-top:40px;border-top:1px solid var(--line);padding-top:14px}
+button.printbtn{margin-left:auto;font:inherit;font-size:var(--fs-meta);
+  color:var(--accent);background:#fff;border:1px solid var(--accent);
+  border-radius:6px;padding:4px 12px;cursor:pointer}
+button.printbtn:hover{background:var(--accent-soft)}
+.fig-wrap{text-align:center;margin:10px 0}
+.fig-wrap img{max-width:320px;width:100%;height:auto;border:1px solid var(--line);border-radius:6px}
+.fig-missing{font-size:var(--fs-meta);color:#b22;margin:6px 0}
+table.anskey{border-collapse:collapse;margin:8px 0 14px;width:100%}
+table.anskey th,table.anskey td{border:1px solid var(--line);padding:6px 4px;
+  text-align:center;font-size:var(--fs-meta);min-width:44px}
+table.anskey th{background:var(--soft);font-weight:500;color:var(--muted)}
+table.anskey td.k{font-weight:700;color:var(--accent)}
+table.xtable{border-collapse:collapse;margin:12px 0;font-size:16px}
+table.xtable th,table.xtable td{border:1px solid var(--line);padding:5px 12px;text-align:center}
+table.xtable th{background:var(--soft);font-weight:600;color:var(--muted);white-space:nowrap}
+.xtable-cap{font-weight:700;color:#33425a;margin:14px 0 2px;font-size:var(--fs-meta)}
+.anskey-sec{font-weight:700;color:#33425a;margin:16px 0 4px;font-size:var(--fs-base)}
+details.solfold{margin:4px 0 0}
+details.solfold>summary{cursor:pointer;font-weight:700;color:var(--accent);
+  font-size:var(--fs-meta);padding:8px 12px;background:var(--accent-soft);
+  border-radius:7px;list-style:none;display:inline-block;user-select:none}
+details.solfold>summary::before{content:'▸ '}
+details.solfold[open]>summary::before{content:'▾ '}
+.foldctl{font-size:var(--fs-meta);margin:0 0 16px}
+.foldctl button{font:inherit;font-size:var(--fs-meta);color:var(--accent);
+  background:#fff;border:1px solid var(--line);border-radius:6px;
+  padding:4px 12px;cursor:pointer;margin-right:8px}
+.foldctl button:hover{background:var(--accent-soft)}
+.desmos-wrap{margin:14px 0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.desmos-calc{width:100%;height:360px}
+.desmos-cap{font-size:var(--fs-meta);color:var(--muted);background:var(--soft);
+  padding:8px 14px;border-top:1px solid var(--line)}
+.desmos-cap .dlbl{font-weight:700;color:var(--accent);margin-right:6px}
+@media print{
+  @page{size:A4;margin:18mm 20mm 20mm 20mm}
+  body{font-size:11pt;line-height:1.8;color:#000;background:#fff}
+  .wrap{max-width:100%;padding:0}
+  nav.jump,button.printbtn,.desmos-wrap,.foldctl{display:none}
+  .card{break-inside:avoid;border:1px solid #ccc}
+  details.solfold{display:block}
+  details.solfold>summary{display:none}
+}
+
+:root{
+  --red:#b3271f;--red-soft:#ffdad5;--on-red-soft:#410002;
+  --rule:#221917;--wb-muted:#534341;--outline:#85736f;--hair:#e3d5d2;
+  --surf:#fff8f7;--cont-low:#fdf1ef;--cont:#f8ebe9;--cont-high:#f2e5e3
+}
+body{font-family:'Pretendard Variable',Pretendard,'Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+  background:var(--surf);color:var(--rule)}
+html,body{height:100%;overflow:hidden}
+header.wbh{height:64px;display:flex;align-items:center;gap:16px;padding:0 24px;
+  background:var(--surf)}
+header.wbh .brand{font-weight:700;font-size:18px;letter-spacing:-0.01em;
+  color:var(--rule);white-space:nowrap}
+header.wbh .ttl{font-size:16px;color:var(--wb-muted);overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+header.wbh .ctrl{margin-left:auto;display:flex;gap:8px}
+header.wbh button{font:inherit;font-size:16px;font-weight:500;color:var(--red);
+  background:none;border:1px solid var(--outline);border-radius:999px;
+  padding:8px 20px;cursor:pointer;white-space:nowrap;transition:background .15s}
+header.wbh button:hover{background:var(--red-soft)}
+.wb{display:grid;grid-template-columns:224px minmax(0,1fr);grid-template-rows:100%;
+  height:calc(100vh - 64px);background:var(--surf)}
+.wb-stage{min-width:0;min-height:0}
+.wb-nav{overflow-y:auto;padding:6px 16px 24px;background:var(--surf)}
+.wb-sec{font-size:16px;font-weight:700;color:var(--wb-muted);letter-spacing:-0.01em;
+  margin:20px 4px 10px}
+.wb-sec .ss{display:none}
+.sec-prob{--secc:#2b6cb0} .sec-calc{--secc:#2f7a4d} .sec-geo{--secc:#b45309}
+.wb-sec.sec-prob,.wb-sec.sec-calc,.wb-sec.sec-geo{color:var(--secc)}
+.wb-nums.sec-prob .wb-nbtn,.wb-nums.sec-calc .wb-nbtn,.wb-nums.sec-geo .wb-nbtn{color:var(--secc)}
+.wb-nums .wb-nbtn.on{color:#fff}
+.wb-nbtn.hard{position:relative}
+.wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
+  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+.anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
+.wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
+.wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
+  font-weight:600;line-height:1;text-align:center;border:none;border-radius:50%;
+  background:none;color:var(--rule);cursor:pointer;width:42px;height:42px;padding:0;
+  margin:0 auto;transition:background .15s}
+.wb-nbtn:hover{background:color-mix(in srgb,var(--red) 10%,transparent);color:var(--red)}
+.wb-nbtn.on{background:var(--red);color:#fff;font-weight:700}
+.wb-key{display:block;width:100%;margin:0;font-size:16px;
+  font-weight:600;padding:11px 0;border:none;border-radius:999px;
+  background:var(--red-soft);color:var(--on-red-soft);cursor:pointer;text-align:center;
+  transition:background .15s}
+.wb-key.on,.wb-key:hover{background:var(--red);color:#fff}
+a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
+.wb-q{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);grid-template-rows:100%;
+  height:100%;min-height:0;gap:14px;padding:0 16px 16px 2px}
+.wb-q[hidden]{display:none}
+.wb-prob{overflow-y:auto;padding:28px 30px 44px;background:#fff;border-radius:24px}
+.wb-sol{overflow-y:auto;padding:28px 30px 60px;background:var(--cont-low);border-radius:24px}
+.wb-prob h1{font-size:22px;font-weight:700;letter-spacing:-0.015em;line-height:1.5;
+  margin:0 0 6px;color:var(--rule)}
+.wb-prob .doc-sub{font-size:16px;color:var(--wb-muted);padding-bottom:12px;
+  border-bottom:1px solid var(--hair);margin-bottom:4px}
+.wb-prob .card-head{margin-bottom:12px}
+.qid{color:var(--rule)}
+.chip-src{background:var(--cont);color:var(--wb-muted)}
+.wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
+  color:var(--on-red-soft);font-size:19px;padding:12px 18px}
+.wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
+.wb-sol .sol-head{font-size:17px;font-weight:700;color:var(--rule);margin:20px 0 6px}
+.wb-sol h2.sec{color:var(--rule);border-bottom:1px solid var(--hair)}
+.wb-sol .note-box{background:var(--cont);border-radius:12px}
+.wb-sol .note-box .nlbl{color:var(--red)}
+.wb-sol table.anskey th,.wb-sol table.anskey td{border-color:var(--hair)}
+.wb-sol table.anskey th{background:var(--cont)}
+.wb-sol table.anskey td.k{color:var(--red)}
+.wb-sol .desmos-wrap{border-color:var(--hair);border-radius:14px}
+.wb-sol .desmos-cap{background:var(--cont);border-top-color:var(--hair)}
+.wb-sol .desmos-cap .dlbl{color:var(--red)}
+.wb-hint{font-size:16px;color:var(--wb-muted);margin:18px 0 0}
+.pgnav{display:none;gap:10px;margin:28px 0 0}
+table.anskey a{color:inherit;text-decoration:none;display:block}
+table.anskey a:hover{color:var(--red)}
+.relbox{margin:30px 0 0;background:var(--cont);border-radius:16px;padding:16px 20px}
+.relbox .rt{font-size:16px;font-weight:700;color:var(--rule);margin:0 0 8px}
+.relbox a{display:block;font-size:16px;color:var(--wb-muted);text-decoration:none;padding:5px 0}
+.relbox a:hover{color:var(--red)}
+.pgnav a,.tocnav a{flex:1;text-align:center;font-size:16px;font-weight:600;
+  color:var(--red);text-decoration:none;border:1px solid var(--outline);
+  border-radius:999px;padding:11px 8px;background:none;transition:background .15s}
+.pgnav a:hover,.tocnav a:hover{background:var(--red-soft)}
+.tocnav{display:flex;gap:10px;margin:28px 0 0}
+a.brand{text-decoration:none}
+.wb-key.sub{background:none;border:1px solid var(--hair);color:var(--wb-muted);
+  font-weight:500;margin-bottom:8px}
+.wb-key.sub:hover{background:var(--cont);color:var(--red)}
+.wb-ft{margin:34px 0 0;padding-top:14px;border-top:1px solid var(--hair);
+  font-size:16px;color:var(--wb-muted)}
+.wb-ft a{color:var(--wb-muted)}
+@media (max-width:900px){
+  html,body{overflow:auto}
+  header.wbh{position:sticky;top:0;z-index:30;height:56px;padding:0 14px}
+  header.wbh .ttl,header.wbh .ctrl{display:none}
+  .wb{display:block;height:auto}
+  .wb-stage{display:block}
+  .wb-nav{position:sticky;top:56px;z-index:29;display:flex;align-items:center;gap:4px;
+    overflow-x:auto;overflow-y:hidden;white-space:nowrap;
+    border-bottom:1px solid var(--hair);padding:8px 12px;-webkit-overflow-scrolling:touch;
+    -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent);
+    mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 34px),transparent)}
+  .wb-sec{flex:0 0 auto;margin:0 4px 0 14px;padding:0}
+  .wb-sec:first-of-type{margin-left:0}
+  .wb-sec .sf{display:none}
+  .wb-sec .ss{display:inline}
+  .wb-nums{display:flex;flex:0 0 auto;gap:4px}
+  .wb-nbtn{flex:0 0 auto;background:var(--cont);border-radius:999px;width:42px}
+  .wb-nums.sec-prob .wb-nbtn,.wb-nums.sec-calc .wb-nbtn,.wb-nums.sec-geo .wb-nbtn{
+    background:color-mix(in srgb,var(--secc) 10%,#fff)}
+  .wb-key{flex:0 0 auto;width:auto;padding:9px 18px}
+  .wb-q{display:block;height:auto;padding:12px 12px 16px;gap:0}
+  .wb-prob{padding:22px 18px 26px;margin-bottom:12px}
+  .wb-sol{padding:22px 18px 50px}
+  .pgnav{display:flex}
+}
+@media print{
+  html,body{overflow:visible}
+  header.wbh .ctrl,.wb-nav{display:none}
+  .wb,.wb-q{display:block;height:auto}
+  .wb-q[hidden]{display:none}
+  .wb-prob,.wb-sol{overflow:visible;border-radius:0;background:#fff}
+}
+</style>
+</head>
+<body>
+<header class="wbh">
+  <span class="brand">아이워크수학 · iWork Math</span>
+  <span class="ttl">2023학년도 수능 수학 — 해설 · 2023학년도 대학수학능력시험 (2022-11 시행, 홀수형)</span>
+  <span class="ctrl"><button type="button" onclick="window.print()">PDF 인쇄</button></span>
+</header>
+<div class="wb">
+  <aside class="wb-nav"><button class="wb-key" data-wbi="0">정답표</button><div class="wb-sec sec-common"><span class="sf">공통과목 (수학 Ⅰ · 수학 Ⅱ)</span><span class="ss">공통</span></div><div class="wb-nums sec-common"><button class="wb-nbtn" data-wbi="1">1</button><button class="wb-nbtn" data-wbi="2">2</button><button class="wb-nbtn" data-wbi="3">3</button><button class="wb-nbtn" data-wbi="4">4</button><button class="wb-nbtn" data-wbi="5">5</button><button class="wb-nbtn" data-wbi="6">6</button><button class="wb-nbtn" data-wbi="7">7</button><button class="wb-nbtn" data-wbi="8">8</button><button class="wb-nbtn" data-wbi="9">9</button><button class="wb-nbtn" data-wbi="10">10</button><button class="wb-nbtn" data-wbi="11">11</button><button class="wb-nbtn" data-wbi="12">12</button><button class="wb-nbtn" data-wbi="13">13</button><button class="wb-nbtn" data-wbi="14">14</button><button class="wb-nbtn" data-wbi="15">15</button><button class="wb-nbtn" data-wbi="16">16</button><button class="wb-nbtn" data-wbi="17">17</button><button class="wb-nbtn" data-wbi="18">18</button><button class="wb-nbtn" data-wbi="19">19</button><button class="wb-nbtn" data-wbi="20">20</button><button class="wb-nbtn" data-wbi="21">21</button><button class="wb-nbtn" data-wbi="22">22</button></div><div class="wb-sec sec-prob"><span class="sf">확률과 통계</span><span class="ss">확통</span></div><div class="wb-nums sec-prob"><button class="wb-nbtn" data-wbi="23">23</button><button class="wb-nbtn" data-wbi="24">24</button><button class="wb-nbtn" data-wbi="25">25</button><button class="wb-nbtn" data-wbi="26">26</button><button class="wb-nbtn" data-wbi="27">27</button><button class="wb-nbtn" data-wbi="28">28</button><button class="wb-nbtn" data-wbi="29">29</button><button class="wb-nbtn" data-wbi="30">30</button></div><div class="wb-sec sec-calc"><span class="sf">미적분</span><span class="ss">미적</span></div><div class="wb-nums sec-calc"><button class="wb-nbtn" data-wbi="31">23</button><button class="wb-nbtn" data-wbi="32">24</button><button class="wb-nbtn" data-wbi="33">25</button><button class="wb-nbtn" data-wbi="34">26</button><button class="wb-nbtn" data-wbi="35">27</button><button class="wb-nbtn" data-wbi="36">28</button><button class="wb-nbtn" data-wbi="37">29</button><button class="wb-nbtn" data-wbi="38">30</button></div><div class="wb-sec sec-geo"><span class="sf">기하</span><span class="ss">기하</span></div><div class="wb-nums sec-geo"><button class="wb-nbtn" data-wbi="39">23</button><button class="wb-nbtn" data-wbi="40">24</button><button class="wb-nbtn" data-wbi="41">25</button><button class="wb-nbtn" data-wbi="42">26</button><button class="wb-nbtn" data-wbi="43">27</button><button class="wb-nbtn" data-wbi="44">28</button><button class="wb-nbtn" data-wbi="45">29</button><button class="wb-nbtn" data-wbi="46">30</button></div></aside>
+  <section class="wb-stage" style="min-width:0"><div class="wb-q" data-q="key">
+  <div class="wb-prob"><div class="card-head"><span class="qid">정답표</span></div>
+    <div class="qtext">정답표로 먼저 채점한 뒤, 틀린 문항만 「정답·풀이 보기」를 눌러 확인하세요.</div>
+    <div class="wb-hint">키보드 ←/→ 로도 문항을 이동할 수 있습니다.</div></div>
+  <div class="wb-sol"><h2 class="sec" id="anskey">정답표</h2>
+<div class="anskey-sec sec-common">공통과목 (수학 Ⅰ · 수학 Ⅱ)</div>
+<table class="anskey"><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr><tr><td class="k">⑤</td><td class="k">④</td><td class="k">①</td><td class="k">③</td><td class="k">⑤</td><td class="k">②</td><td class="k">④</td><td class="k">④</td><td class="k">③</td><td class="k">④</td></tr></table>
+<table class="anskey"><tr><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th></tr><tr><td class="k">①</td><td class="k">②</td><td class="k">③</td><td class="k">①</td><td class="k">⑤</td><td class="k">10</td><td class="k">15</td><td class="k">22</td><td class="k">7</td><td class="k">17</td></tr></table>
+<table class="anskey"><tr><th>21</th><th>22</th></tr><tr><td class="k">33</td><td class="k">13</td></tr></table>
+<div class="anskey-sec sec-prob">확률과 통계</div>
+<table class="anskey"><tr><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th></tr><tr><td class="k">③</td><td class="k">②</td><td class="k">⑤</td><td class="k">③</td><td class="k">②</td><td class="k">④</td><td class="k">49</td><td class="k">100</td></tr></table>
+<div class="anskey-sec sec-calc">미적분</div>
+<table class="anskey"><tr><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th></tr><tr><td class="k">④</td><td class="k">③</td><td class="k">⑤</td><td class="k">④</td><td class="k">②</td><td class="k">②</td><td class="k">26</td><td class="k">31</td></tr></table>
+<div class="anskey-sec sec-geo">기하</div>
+<table class="anskey"><tr><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th></tr><tr><td class="k">⑤</td><td class="k">③</td><td class="k">④</td><td class="k">②</td><td class="k">①</td><td class="k">②</td><td class="k">12</td><td class="k">24</td></tr></table></div>
+</div><div class="wb-q" data-q="1" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">1</span><span class="chip chip-src">2점</span></div>
+    <div class="qtext">\(\left(\dfrac{4}{2^{\sqrt2}}\right)^{2+\sqrt2}\)의 값은?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{1}{4}\)</li>
+<li>② \(\dfrac{1}{2}\)</li>
+<li>③ 1</li>
+<li>④ 2</li>
+<li>⑤ 4</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>⑤ \(4\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(\dfrac{4}{2^{\sqrt2}}=2^{2-\sqrt2}\)이므로 \(2^{(2-\sqrt2)(2+\sqrt2)}=2^{4-2}=2^2=4\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="2" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">2</span><span class="chip chip-src">2점</span></div>
+    <div class="qtext">\(\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^2-2}+3x}{x+5}\)의 값은?</div>
+    
+    <ul class="choices"><li>① 1</li>
+<li>② 2</li>
+<li>③ 3</li>
+<li>④ 4</li>
+<li>⑤ 5</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>④ \(4\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>분모·분자를 \(x\)로 나누면 \(\dfrac{\sqrt{1-2/x^2}+3}{1+5/x}\to\dfrac{1+3}{1}=4\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="3" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">3</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">공비가 양수인 등비수열 \(\{a_n\}\)이 \(a_2+a_4=30,\quad a_4+a_6=\dfrac{15}{2}\)를 만족시킬 때, \(a_1\)의 값은?</div>
+    
+    <ul class="choices"><li>① 48</li>
+<li>② 56</li>
+<li>③ 64</li>
+<li>④ 72</li>
+<li>⑤ 80</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>① \(48\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(a_4+a_6=r^2(a_2+a_4)\)에서 \(r^2=\dfrac{15/2}{30}=\dfrac{1}{4}\), \(r=\dfrac{1}{2}\).</li>
+<li>\(a_2+a_4=a_1\left(\dfrac{1}{2}+\dfrac{1}{8}\right)=\dfrac{5}{8}a_1=30\).</li>
+<li>\(a_1=48\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="4" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">4</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">다항함수 \(f(x)\)에 대하여 함수 \(g(x)\)를 \(g(x)=x^2f(x)\)라 하자. \(f(2)=1\), \(f'(2)=3\)일 때, \(g'(2)\)의 값은?</div>
+    
+    <ul class="choices"><li>① 12</li>
+<li>② 14</li>
+<li>③ 16</li>
+<li>④ 18</li>
+<li>⑤ 20</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>③ \(16\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(g'(x)=2xf(x)+x^2f'(x)\).</li>
+<li>\(g'(2)=4\times1+4\times3=16\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="5" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">5</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">\(\tan\theta\lt0\)이고 \(\cos\left(\dfrac{\pi}{2}+\theta\right)=\dfrac{\sqrt5}{5}\)일 때, \(\cos\theta\)의 값은?</div>
+    
+    <ul class="choices"><li>① \(-\dfrac{2\sqrt5}{5}\)</li>
+<li>② \(-\dfrac{\sqrt5}{5}\)</li>
+<li>③ 0</li>
+<li>④ \(\dfrac{\sqrt5}{5}\)</li>
+<li>⑤ \(\dfrac{2\sqrt5}{5}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>⑤ \(\dfrac{2\sqrt5}{5}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(\cos\left(\dfrac{\pi}{2}+\theta\right)=-\sin\theta=\dfrac{\sqrt5}{5}\)에서 \(\sin\theta=-\dfrac{\sqrt5}{5}\).</li>
+<li>\(\tan\theta\lt0\), \(\sin\theta\lt0\)이므로 \(\cos\theta\gt0\).</li>
+<li>\(\cos\theta=\sqrt{1-\dfrac{1}{5}}=\dfrac{2\sqrt5}{5}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="6" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">6</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">함수 \(f(x)=2x^3-9x^2+ax+5\)는 \(x=1\)에서 극대이고, \(x=b\)에서 극소이다. \(a+b\)의 값은? (단, \(a\), \(b\)는 상수이다.)</div>
+    
+    <ul class="choices"><li>① 12</li>
+<li>② 14</li>
+<li>③ 16</li>
+<li>④ 18</li>
+<li>⑤ 20</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>② \(14\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(f'(x)=6x^2-18x+a\): \(f'(1)=6-18+a=0\)에서 \(a=12\).</li>
+<li>\(f'(x)=6(x-1)(x-2)\)이므로 극소는 \(x=2\), \(b=2\).</li>
+<li>\(a+b=14\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="7" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">7</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">모든 항이 양수이고 첫째항과 공차가 같은 등차수열 \(\{a_n\}\)이 \(\displaystyle\sum_{k=1}^{15}\frac{1}{\sqrt{a_k}+\sqrt{a_{k+1}}}=2\)를 만족시킬 때, \(a_4\)의 값은?</div>
+    
+    <ul class="choices"><li>① 6</li>
+<li>② 7</li>
+<li>③ 8</li>
+<li>④ 9</li>
+<li>⑤ 10</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>④ \(9\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(a_k=kd\): \(\dfrac{1}{\sqrt{a_k}+\sqrt{a_{k+1}}}=\dfrac{\sqrt{a_{k+1}}-\sqrt{a_k}}{d}\) — 망원급수.</li>
+<li>합 \(=\dfrac{\sqrt{16d}-\sqrt{d}}{d}=\dfrac{3}{\sqrt d}=2\)에서 \(d=\dfrac{9}{4}\).</li>
+<li>\(a_4=4d=9\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="8" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">8</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">점 \((0,4)\)에서 곡선 \(y=x^3-x+2\)에 그은 접선의 \(x\)절편은?</div>
+    
+    <ul class="choices"><li>① \(-\dfrac{1}{2}\)</li>
+<li>② −1</li>
+<li>③ \(-\dfrac{3}{2}\)</li>
+<li>④ −2</li>
+<li>⑤ \(-\dfrac{5}{2}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>④ \(-2\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>접점 \((t,t^3-t+2)\): 접선이 \((0,4)\)를 지나므로 \(4=(t^3-t+2)-t(3t^2-1)=-2t^3+2\).</li>
+<li>\(t^3=-1\), \(t=-1\): 기울기 \(3-1=2\), 접선 \(y=2x+4\).</li>
+<li>\(x\)절편 \(=-2\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="9" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">9</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">함수 \(f(x)=a-\sqrt3\tan2x\)가 닫힌구간 \(\left[-\dfrac{\pi}{6},b\right]\)에서 최댓값 \(7\), 최솟값 \(3\)을 가질 때, \(a\times b\)의 값은? (단, \(a\), \(b\)는 상수이다.)</div>
+    
+    <ul class="choices"><li>① \(\dfrac{\pi}{2}\)</li>
+<li>② \(\dfrac{5\pi}{12}\)</li>
+<li>③ \(\dfrac{\pi}{3}\)</li>
+<li>④ \(\dfrac{\pi}{4}\)</li>
+<li>⑤ \(\dfrac{\pi}{6}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>③ \(\dfrac{\pi}{3}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(f\)는 감소함수이므로 최댓값은 \(x=-\dfrac{\pi}{6}\)에서: \(a-\sqrt3\tan\left(-\dfrac{\pi}{3}\right)=a+3=7\), \(a=4\).</li>
+<li>최솟값은 \(x=b\)에서: \(4-\sqrt3\tan2b=3\), \(\tan2b=\dfrac{1}{\sqrt3}\), \(b=\dfrac{\pi}{12}\).</li>
+<li>\(a\times b=\dfrac{\pi}{3}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="10" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">10</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">양수 \(k\)에 대하여 두 곡선 \(y=x^3+x^2\), \(y=-x^2+k\)와 \(y\)축으로 둘러싸인 부분의 넓이를 \(A\), 두 곡선 \(y=x^3+x^2\), \(y=-x^2+k\)와 직선 \(x=2\)로 둘러싸인 부분의 넓이를 \(B\)라 하자. \(A=B\)일 때, 상수 \(k\)의 값은? (단, \(4\lt k\lt5\))</div>
+    
+    <ul class="choices"><li>① \(\dfrac{25}{6}\)</li>
+<li>② \(\dfrac{13}{3}\)</li>
+<li>③ \(\dfrac{9}{2}\)</li>
+<li>④ \(\dfrac{14}{3}\)</li>
+<li>⑤ \(\dfrac{29}{6}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>④ \(\dfrac{14}{3}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(A=B\)이면 두 곡선의 차를 \(0\)부터 \(2\)까지 적분한 값이 \(0\): \(\displaystyle\int_0^2\{(x^3+x^2)-(-x^2+k)\}dx=0\).</li>
+<li>\(\displaystyle\int_0^2(x^3+2x^2-k)dx=4+\frac{16}{3}-2k=0\).</li>
+<li>\(k=\dfrac{14}{3}\) (\(4\lt\dfrac{14}{3}\lt5\) ✓)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="11" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">11</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">그림과 같이 사각형 \(\mathrm{ABCD}\)가 한 원에 내접하고 \(\overline{\mathrm{AB}}=5\), \(\overline{\mathrm{AC}}=3\sqrt5\), \(\overline{\mathrm{AD}}=7\), \(\angle\mathrm{BAC}=\angle\mathrm{CAD}\)일 때, 이 원의 반지름의 길이는?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{5\sqrt2}{2}\)</li>
+<li>② \(\dfrac{8\sqrt5}{5}\)</li>
+<li>③ \(\dfrac{5\sqrt5}{3}\)</li>
+<li>④ \(\dfrac{8\sqrt2}{3}\)</li>
+<li>⑤ \(\dfrac{9\sqrt3}{4}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>① \(\dfrac{5\sqrt2}{2}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(\angle\mathrm{BAC}=\angle\mathrm{CAD}=\alpha\)이면 두 원주각이 같으므로 \(\overline{\mathrm{BC}}=\overline{\mathrm{CD}}\).</li>
+<li>코사인법칙: \(\overline{\mathrm{BC}}^2=25+45-30\sqrt5\cos\alpha\), \(\overline{\mathrm{CD}}^2=45+49-42\sqrt5\cos\alpha\) — 같다고 놓으면 \(\cos\alpha=\dfrac{2}{\sqrt5}\), \(\sin\alpha=\dfrac{1}{\sqrt5}\).</li>
+<li>\(\overline{\mathrm{BC}}^2=70-30\sqrt5\cdot\dfrac{2}{\sqrt5}=10\), \(\overline{\mathrm{BC}}=\sqrt{10}\).</li>
+<li>사인법칙: \(R=\dfrac{\overline{\mathrm{BC}}}{2\sin\alpha}=\dfrac{\sqrt{10}}{2/\sqrt5}=\dfrac{5\sqrt2}{2}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="12" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">12</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">실수 전체의 집합에서 연속인 함수 \(f(x)\)가 다음 조건을 만족시킨다.<br><b>\(n-1\le x\lt n\)일 때, \(|f(x)|=|6(x-n+1)(x-n)|\)이다. (단, \(n\)은 자연수이다.)</b><br>열린구간 \((0,4)\)에서 정의된 함수 \(g(x)=\displaystyle\int_0^x f(t)\,dt-\int_x^4 f(t)\,dt\)가 \(x=2\)에서 최솟값 \(0\)을 가질 때, \(\displaystyle\int_{\frac{1}{2}}^{4}f(x)\,dx\)의 값은?</div>
+    
+    <ul class="choices"><li>① \(-\dfrac{3}{2}\)</li>
+<li>② \(-\dfrac{1}{2}\)</li>
+<li>③ \(\dfrac{1}{2}\)</li>
+<li>④ \(\dfrac{3}{2}\)</li>
+<li>⑤ \(\dfrac{5}{2}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>② \(-\dfrac{1}{2}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(g'(x)=2f(x)\): \(x=2\)에서 최솟값이려면 \(f\)가 \(2\)의 왼쪽에서 음수, 오른쪽에서 양수.</li>
+<li>각 구간 \([n-1,n]\)에서 \(\displaystyle\int|f|=1\)이므로 구간별 적분은 \(\pm1\): \(s_2=-1\), \(s_3=+1\).</li>
+<li>\(g(2)=0\): \((s_1+s_2)-(s_3+s_4)=0\)에서 \(s_1-s_4=2\), 곧 \(s_1=1\), \(s_4=-1\).</li>
+<li>\(\displaystyle\int_{1/2}^{1}f\,dx\): \(f=-6x(x-1)\ge0\)에서 \(\dfrac{1}{2}\).</li>
+<li>\(\displaystyle\int_{1/2}^{4}f\,dx=\frac{1}{2}+(-1)+1+(-1)=-\frac{1}{2}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="13" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">13</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">자연수 \(m\,(m\ge2)\)에 대하여 \(m^{12}\)의 \(n\)제곱근 중에서 정수가 존재하도록 하는 \(2\) 이상의 자연수 \(n\)의 개수를 \(f(m)\)이라 할 때, \(\displaystyle\sum_{m=2}^{9}f(m)\)의 값은?</div>
+    
+    <ul class="choices"><li>① 37</li>
+<li>② 42</li>
+<li>③ 47</li>
+<li>④ 52</li>
+<li>⑤ 57</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>③ \(47\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(m^{12}\)의 \(n\)제곱근 중 정수가 존재 ⟺ \(m^{12/n}\)이 정수.</li>
+<li>\(m\)이 거듭제곱이 아니면(\(m=2,3,5,6,7\)) \(n\)은 12의 약수: \(n=2,3,4,6,12\) — 5개.</li>
+<li>\(m=4=2^2\), \(m=9=3^2\): \(m^{12}=2^{24},3^{24}\) — \(n\)은 24의 약수: 7개. \(m=8=2^3\): \(2^{36}\) — \(n\)은 36의 약수: 8개.</li>
+<li>합 \(=5\times5+7+8+7=47\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="14" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">14</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">다항함수 \(f(x)\)에 대하여 함수 \(g(x)\)를 다음과 같이 정의한다. \(g(x)=\begin{cases}x & (x\lt-1\ \text{또는}\ x\gt1)\\ f(x) & (-1\le x\le1)\end{cases}\) 함수 \(h(x)=\displaystyle\lim_{t\to0+}g(x+t)\times\lim_{t\to2+}g(x+t)\)에 대하여 옳은 것만을 〈보기〉에서 있는 대로 고른 것은?<br><b>ㄱ. \(h(1)=3\)<br>ㄴ. 함수 \(h(x)\)는 실수 전체의 집합에서 연속이다.<br>ㄷ. 함수 \(g(x)\)가 닫힌구간 \([-1,1]\)에서 감소하고 \(g(-1)=-2\)이면 함수 \(h(x)\)는 실수 전체의 집합에서 최솟값을 갖는다.</b></div>
+    
+    <ul class="choices"><li>① ㄱ</li>
+<li>② ㄴ</li>
+<li>③ ㄱ, ㄴ</li>
+<li>④ ㄱ, ㄷ</li>
+<li>⑤ ㄴ, ㄷ</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>① ㄱ</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>ㄱ: \(h(1)=\displaystyle\lim_{t\to0+}g(1+t)\times\lim_{t\to2+}g(1+t)=1\times3=3\) — 참.</li>
+<li>ㄴ: \(k(x)=\displaystyle\lim_{t\to0+}g(x+t)\)는 \(x=1\)에서 \(f(1)\ne1\)이면 불연속이 될 수 있다(예: \(f(x)=2\)) — 거짓.</li>
+<li>ㄷ: \(g\)가 \([-1,1]\)에서 감소하고 \(g(-1)=-2\)여도 \(h\)는 \(x\to-1^-\) 부근에서 아래로 뚫려 최솟값을 갖지 않는 반례를 만들 수 있다 — 거짓.</li>
+<li>답: ① ㄱ</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="15" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">15</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">모든 항이 자연수이고 다음 조건을 만족시키는 모든 수열 \(\{a_n\}\)에 대하여 \(a_9\)의 최댓값과 최솟값을 각각 \(M\), \(m\)이라 할 때, \(M+m\)의 값은?<br><b>(가) \(a_7=40\)<br>(나) 모든 자연수 \(n\)에 대하여 \(a_{n+2}=\begin{cases}a_{n+1}+a_n & (a_{n+1}\text{이 3의 배수가 아닌 경우})\\ \dfrac{1}{3}a_{n+1} & (a_{n+1}\text{이 3의 배수인 경우})\end{cases}\)이다.</b></div>
+    
+    <ul class="choices"><li>① 216</li>
+<li>② 218</li>
+<li>③ 220</li>
+<li>④ 222</li>
+<li>⑤ 224</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>⑤ \(224\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(a_7=40\)이 되려면 \(a_6\)이 3의 배수이고 \(\dfrac{a_6}{3}=40\)(\(a_6=120\)), 또는 \(a_6+a_5=40\)(\(a_6\le39\)).</li>
+<li>\(40\)은 3의 배수가 아니므로 \(a_8=a_7+a_6=40+a_6\), \(a_9\)는 \(a_8\)이 3의 배수면 \(\dfrac{a_8}{3}\), 아니면 \(a_8+40\).</li>
+<li>최대: \(a_6=120\)이면 \(a_8=160\)(3의 배수 아님), \(a_9=200\) — 역방향으로 \(a_5=360,\ a_4=1080,\dots\) 자연수 수열이 존재 ✓. \(M=200\).</li>
+<li>최소: \(a_8\)이 3의 배수(\(a_6\equiv2\pmod3\))가 되는 가장 작은 유효한 \(a_6\)을 찾는다. \(a_6=32\): \(a_5=8\), \(a_4=24\)(3의 배수, \(\dfrac{24}{3}=8=a_5\) ✓), \(a_3=72,\ a_2=216,\ a_1=648\) ✓ — \(a_8=72\), \(a_9=24\). 더 작은 후보(\(23,26,29\))는 역방향 규칙에 모순. \(m=24\).</li>
+<li>\(M+m=224\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="16" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">16</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">방정식 \(\log_2(3x+2)=2+\log_2(x-2)\)를 만족시키는 실수 \(x\)의 값을 구하시오.</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(10\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(3x+2=4(x-2)\)에서 \(x=10\) (진수 조건 ✓)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="17" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">17</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">함수 \(f(x)\)에 대하여 \(f'(x)=4x^3-2x\)이고 \(f(0)=3\)일 때, \(f(2)\)의 값을 구하시오.</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(15\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(f(x)=x^4-x^2+3\).</li>
+<li>\(f(2)=16-4+3=15\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="18" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">18</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">두 수열 \(\{a_n\}\), \(\{b_n\}\)에 대하여 \(\displaystyle\sum_{k=1}^{5}(3a_k+5)=55,\quad \sum_{k=1}^{5}(a_k+b_k)=32\)일 때, \(\displaystyle\sum_{k=1}^{5}b_k\)의 값을 구하시오.</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(22\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(3\displaystyle\sum a_k+25=55\)에서 \(\displaystyle\sum a_k=10\).</li>
+<li>\(\displaystyle\sum b_k=32-10=22\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="19" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">19</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">방정식 \(2x^3-6x^2+k=0\)의 서로 다른 양의 실근의 개수가 \(2\)가 되도록 하는 정수 \(k\)의 개수를 구하시오.</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(7\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(k=-2x^3+6x^2=g(x)\): \(g'=-6x(x-2)\), \(x\gt0\)에서 \(g\)는 \(0\to8\)로 증가 후 감소.</li>
+<li>양의 실근 2개 ⟺ \(0\lt k\lt8\): 정수 \(k=1,\dots,7\) — 7개</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="20" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">20</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">수직선 위를 움직이는 점 \(\mathrm{P}\)의 시각 \(t\,(t\ge0)\)에서의 속도 \(v(t)\)와 가속도 \(a(t)\)가 다음 조건을 만족시킨다.<br><b>(가) \(0\le t\le2\)일 때, \(v(t)=2t^3-8t\)이다.<br>(나) \(t\ge2\)일 때, \(a(t)=6t+4\)이다.</b><br>시각 \(t=0\)에서 \(t=3\)까지 점 \(\mathrm{P}\)가 움직인 거리를 구하시오.</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(17\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(v(2)=16-16=0\); \(t\ge2\)에서 \(v(t)=\displaystyle\int_2^t(6s+4)ds=3t^2+4t-20\).</li>
+<li>\([0,2]\)에서 \(v\le0\): 거리 \(=-\displaystyle\int_0^2(2t^3-8t)dt=-(8-16)=8\).</li>
+<li>\([2,3]\)에서 \(v\ge0\): 거리 \(=\left[t^3+2t^2-20t\right]_2^3=-15-(-24)=9\).</li>
+<li>합 \(=17\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="21" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">21</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">자연수 \(n\)에 대하여 함수 \(f(x)\)를 \(f(x)=\begin{cases}|3^{x+2}-n| & (x\lt0)\\ |\log_2(x+4)-n| & (x\ge0)\end{cases}\)이라 하자. 실수 \(t\)에 대하여 \(x\)에 대한 방정식 \(f(x)=t\)의 서로 다른 실근의 개수를 \(g(t)\)라 할 때, 함수 \(g(t)\)의 최댓값이 \(4\)가 되도록 하는 모든 자연수 \(n\)의 값의 합을 구하시오.</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(33\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(x\lt0\)에서 \(3^{x+2}\in(0,9)\): \(n\lt9\)이면 V자형 — 왼팔의 값은 \((0,n)\), 오른팔은 \((0,9-n)\)로 최대 2개의 근.</li>
+<li>\(x\ge0\)에서 \(\log_2(x+4)\in[2,\infty)\): \(n\ge3\)이면 V자형 — \(0\lt t\lt n-2\)에서 2개의 근.</li>
+<li>최댓값 4가 되려면 두 쪽 다 2개씩: \(n-2\gt0\), \(9-n\gt0\), 곧 \(3\le n\le8\). (\(n\ge9\)면 왼쪽이 단조 — 최대 3; \(n\le2\)면 오른쪽이 1개 — 최대 3.)</li>
+<li>합 \(=3+4+5+6+7+8=33\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="22" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">22</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">최고차항의 계수가 \(1\)인 삼차함수 \(f(x)\)와 실수 전체의 집합에서 연속인 함수 \(g(x)\)가 다음 조건을 만족시킬 때, \(f(4)\)의 값을 구하시오.<br><b>(가) 모든 실수 \(x\)에 대하여 \(f(x)=f(1)+(x-1)f'(g(x))\)이다.<br>(나) 함수 \(g(x)\)의 최솟값은 \(\dfrac{5}{2}\)이다.<br>(다) \(f(0)=-3\), \(f(g(1))=6\)</b></div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(13\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(f(0)=-3\)이므로 \(f(x)=x^3+ax^2+bx-3\). (가)에서 \(x\ne1\)일 때 \(f'(g(x))=\dfrac{f(x)-f(1)}{x-1}=x^2+(a+1)x+a+b+1\).</li>
+<li>\(f'(y)=3y^2+2ay+b\)를 \(y=g(x)\)에 대해 풀면 \(g(x)=\dfrac{-a+\sqrt{3\left\{\left(x+\frac{a+1}{2}\right)^2+\frac{(a+3)^2}{12}\right\}}}{3}\) (연속·최솟값 조건에서 \(+\)근).</li>
+<li>최솟값은 \(x=-\dfrac{a+1}{2}\)에서 \(\dfrac{-a+\frac{|a+3|}{2}}{3}=\dfrac{5}{2}\): 경우를 나누면 \(a=-6\).</li>
+<li>(가)를 \(x\to1\)로 보내면 \(f'(g(1))=f'(1)\): \(g(1)=k\)에 대해 \(3k^2-12k+9=0\), \(k=1\) 또는 \(3\) — 최솟값 \(\dfrac{5}{2}\)보다 작을 수 없으므로 \(g(1)=3\).</li>
+<li>(다): \(f(3)=27-54+3b-3=6\)에서 \(b=12\): \(f(x)=x^3-6x^2+12x-3\).</li>
+<li>\(f(4)=64-96+48-3=13\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="23" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">23</span><span class="chip chip-src">2점</span></div>
+    <div class="qtext">다항식 \((x^3+3)^5\)의 전개식에서 \(x^9\)의 계수는?</div>
+    
+    <ul class="choices"><li>① 30</li>
+<li>② 60</li>
+<li>③ 90</li>
+<li>④ 120</li>
+<li>⑤ 150</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>③ \(90\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>일반항 \({}_5\mathrm{C}_r(x^3)^{5-r}3^r\): \(x^9\)이려면 \(5-r=3\), \(r=2\).</li>
+<li>계수 \(={}_5\mathrm{C}_2\times3^2=10\times9=90\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="24" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">24</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">숫자 \(1,2,3,4,5\) 중에서 중복을 허락하여 \(4\)개를 택해 일렬로 나열하여 만들 수 있는 네 자리의 자연수 중 \(4000\) 이상인 홀수의 개수는?</div>
+    
+    <ul class="choices"><li>① 125</li>
+<li>② 150</li>
+<li>③ 175</li>
+<li>④ 200</li>
+<li>⑤ 225</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>② \(150\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>천의 자리: \(4,5\) — 2가지; 일의 자리: \(1,3,5\) — 3가지; 가운데 두 자리: \(5\times5\).</li>
+<li>\(2\times25\times3=150\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="25" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">25</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">흰색 마스크 \(5\)개, 검은색 마스크 \(9\)개가 들어 있는 상자에서 임의로 \(3\)개의 마스크를 동시에 꺼낼 때, 꺼낸 \(3\)개의 마스크 중에서 적어도 한 개가 흰색 마스크일 확률은?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{8}{13}\)</li>
+<li>② \(\dfrac{17}{26}\)</li>
+<li>③ \(\dfrac{9}{13}\)</li>
+<li>④ \(\dfrac{19}{26}\)</li>
+<li>⑤ \(\dfrac{10}{13}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>⑤ \(\dfrac{10}{13}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>여사건(모두 검은색): \(\dfrac{{}_9\mathrm{C}_3}{{}_{14}\mathrm{C}_3}=\dfrac{84}{364}=\dfrac{3}{13}\).</li>
+<li>구하는 확률 \(=1-\dfrac{3}{13}=\dfrac{10}{13}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="26" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">26</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">주머니에 \(1\)이 적힌 흰 공 \(1\)개, \(2\)가 적힌 흰 공 \(1\)개, \(1\)이 적힌 검은 공 \(1\)개, \(2\)가 적힌 검은 공 \(3\)개가 들어 있다. 이 주머니에서 임의로 \(3\)개의 공을 동시에 꺼내는 시행에서, 꺼낸 \(3\)개의 공 중에서 흰 공이 \(1\)개이고 검은 공이 \(2\)개인 사건을 \(A\), 꺼낸 \(3\)개의 공에 적혀 있는 수를 모두 곱한 값이 \(8\)인 사건을 \(B\)라 할 때, \(\mathrm{P}(A\cup B)\)의 값은?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{11}{20}\)</li>
+<li>② \(\dfrac{3}{5}\)</li>
+<li>③ \(\dfrac{13}{20}\)</li>
+<li>④ \(\dfrac{7}{10}\)</li>
+<li>⑤ \(\dfrac{3}{4}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>③ \(\dfrac{13}{20}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>전체 \({}_6\mathrm{C}_3=20\). \(\mathrm{P}(A)=\dfrac{{}_2\mathrm{C}_1\times{}_4\mathrm{C}_2}{20}=\dfrac{12}{20}\).</li>
+<li>곱이 8 ⟺ 세 수가 모두 2: 2가 적힌 공 4개(흰1+검3)에서 3개 — \(\mathrm{P}(B)=\dfrac{4}{20}\).</li>
+<li>\(A\cap B\): 흰 공은 2가 적힌 것, 검은 공은 2가 적힌 3개 중 2개 — \(\dfrac{3}{20}\).</li>
+<li>\(\mathrm{P}(A\cup B)=\dfrac{12+4-3}{20}=\dfrac{13}{20}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="27" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">27</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">어느 회사에서 생산하는 샴푸 \(1\)개의 용량은 정규분포 \(\mathrm{N}(m,\sigma^2)\)을 따른다고 한다. 이 회사에서 생산하는 샴푸 중에서 \(16\)개를 임의추출하여 얻은 표본평균을 이용하여 구한 \(m\)에 대한 신뢰도 \(95\%\)의 신뢰구간이 \(746.1\le m\le755.9\)이다. 이 회사에서 생산하는 샴푸 중에서 \(n\)개를 임의추출하여 얻은 표본평균을 이용하여 구하는 \(m\)에 대한 신뢰도 \(99\%\)의 신뢰구간이 \(a\le m\le b\)일 때, \(b-a\)의 값이 \(6\) 이하가 되기 위한 자연수 \(n\)의 최솟값은? (단, \(\mathrm{P}(|Z|\le1.96)=0.95\), \(\mathrm{P}(|Z|\le2.58)=0.99\)로 계산한다.)</div>
+    
+    <ul class="choices"><li>① 70</li>
+<li>② 74</li>
+<li>③ 78</li>
+<li>④ 82</li>
+<li>⑤ 86</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>② \(74\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>구간의 길이: \(2\times1.96\times\dfrac{\sigma}{4}=755.9-746.1=9.8\)에서 \(\sigma=10\).</li>
+<li>\(b-a=2\times2.58\times\dfrac{10}{\sqrt n}\le6\)에서 \(\sqrt n\ge8.6\), \(n\ge73.96\).</li>
+<li>최솟값 \(=74\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="28" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">28</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">연속확률변수 \(X\)가 갖는 값의 범위는 \(0\le X\le a\)이고, \(X\)의 확률밀도함수의 그래프는 \((0,0)\)에서 \((b,c)\)까지 직선으로 올라갔다가 \((b,c)\)에서 \((a,0)\)까지 직선으로 내려오는 모양이다. \(\mathrm{P}(X\le b)-\mathrm{P}(X\ge b)=\dfrac{1}{4}\), \(\mathrm{P}(X\le\sqrt5)=\dfrac{1}{2}\)일 때, \(a+b+c\)의 값은? (단, \(a\), \(b\), \(c\)는 상수이다.)</div>
+    
+    <ul class="choices"><li>① \(\dfrac{11}{2}\)</li>
+<li>② 6</li>
+<li>③ \(\dfrac{13}{2}\)</li>
+<li>④ 7</li>
+<li>⑤ \(\dfrac{15}{2}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>④ \(7\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>전체 넓이: \(\dfrac{1}{2}ac=1\). \(\mathrm{P}(X\le b)=\dfrac{5}{8}\) (합 1, 차 \(\dfrac{1}{4}\)), 곧 \(\dfrac{1}{2}bc=\dfrac{5}{8}\).</li>
+<li>중앙값 \(\sqrt5\lt b\): 올라가는 부분에서 \(\displaystyle\int_0^{\sqrt5}\frac{c}{b}x\,dx=\frac{5c}{2b}=\frac{1}{2}\)에서 \(b=5c\).</li>
+<li>\(bc=\dfrac{5}{4}\)와 연립: \(c=\dfrac{1}{2}\), \(b=\dfrac{5}{2}\), \(a=\dfrac{2}{c}=4\).</li>
+<li>\(a+b+c=4+\dfrac{5}{2}+\dfrac{1}{2}=7\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="29" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">29</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">앞면에는 \(1\)부터 \(6\)까지의 자연수가 하나씩 적혀 있고 뒷면에는 모두 \(0\)이 하나씩 적혀 있는 \(6\)장의 카드가 있다. 이 \(6\)장의 카드가 \(6\) 이하의 자연수 \(k\)에 대하여 \(k\)번째 자리에 자연수 \(k\)가 보이도록 놓여 있다. 주사위를 한 번 던져 나온 눈의 수가 \(k\)이면 \(k\)번째 자리에 놓여 있는 카드를 한 번 뒤집어 제자리에 놓는 시행을 \(3\)번 반복한 후 \(6\)장의 카드에 보이는 모든 수의 합이 짝수일 때, 주사위의 \(1\)의 눈이 한 번만 나왔을 확률은 \(\dfrac{q}{p}\)이다. \(p+q\)의 값을 구하시오. (단, \(p\)와 \(q\)는 서로소인 자연수이다.)</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(49\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>카드 \(k\)는 짝수 번 뒤집히면 \(k\), 홀수 번이면 \(0\)을 보인다. 처음 합 \(21\)이 짝수가 되려면 「홀수 번 뒤집힌 카드의 수의 합」이 홀수여야 한다.</li>
+<li>주사위 3번의 결과 \(6^3=216\)가지를 홀수 번 나온 눈의 집합으로 분류해 세면, 합이 짝수인 경우는 \(108\)가지.</li>
+<li>그중 1의 눈이 정확히 한 번 나온 경우를 세면 \(39\)가지: 확률 \(=\dfrac{39}{108}=\dfrac{13}{36}\).</li>
+<li>\(p+q=36+13=49\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="30" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">30</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">집합 \(X=\{x\,|\,x\text{는 10 이하의 자연수}\}\)에 대하여 다음 조건을 만족시키는 함수 \(f:X\to X\)의 개수를 구하시오.<br><b>(가) \(9\) 이하의 모든 자연수 \(x\)에 대하여 \(f(x)\le f(x+1)\)이다.<br>(나) \(1\le x\le5\)일 때 \(f(x)\le x\)이고, \(6\le x\le10\)일 때 \(f(x)\ge x\)이다.<br>(다) \(f(6)=f(5)+6\)</b></div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(100\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(f(5)\le5\), \(f(6)=f(5)+6\le10\)에서 \(f(5)\in\{1,2,3,4\}\).</li>
+<li>\(f(5)=s\)마다 앞쪽(\(f(1)\le\cdots\le f(5)=s\), \(f(x)\le x\))과 뒤쪽(\(f(6)=s+6\le f(7)\le\cdots\le f(10)\), \(f(x)\ge x\))의 개수를 곱해 더한다.</li>
+<li>\(s=1\): \(1\times35\), \(s=2\): \(3\times15\), \(s=3\): \(5\times4\)·… 전수 계산으로 각 경우를 세면 합이 \(100\).</li>
+<li>답: \(100\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="23" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">23</span><span class="chip chip-src">2점</span></div>
+    <div class="qtext">\(\displaystyle\lim_{x\to0}\frac{\ln(x+1)}{\sqrt{x+4}-2}\)의 값은?</div>
+    
+    <ul class="choices"><li>① 1</li>
+<li>② 2</li>
+<li>③ 3</li>
+<li>④ 4</li>
+<li>⑤ 5</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>④ \(4\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(\dfrac{\ln(1+x)}{x}\to1\)이고 \(\dfrac{x}{\sqrt{x+4}-2}=\sqrt{x+4}+2\to4\).</li>
+<li>곱 \(=4\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="24" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">24</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">\(\displaystyle\lim_{n\to\infty}\frac{1}{n}\sum_{k=1}^{n}\sqrt{1+\frac{3k}{n}}\)의 값은?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{4}{3}\)</li>
+<li>② \(\dfrac{13}{9}\)</li>
+<li>③ \(\dfrac{14}{9}\)</li>
+<li>④ \(\dfrac{5}{3}\)</li>
+<li>⑤ \(\dfrac{16}{9}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>③ \(\dfrac{14}{9}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>정적분 \(\displaystyle\int_0^1\sqrt{1+3x}\,dx=\left[\frac{2}{9}(1+3x)^{3/2}\right]_0^1=\frac{2}{9}(8-1)=\frac{14}{9}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="25" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">25</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">등비수열 \(\{a_n\}\)에 대하여 \(\displaystyle\lim_{n\to\infty}\frac{a_n+1}{3^n+2^{2n-1}}=3\)일 때, \(a_2\)의 값은?</div>
+    
+    <ul class="choices"><li>① 16</li>
+<li>② 18</li>
+<li>③ 20</li>
+<li>④ 22</li>
+<li>⑤ 24</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>⑤ \(24\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>분모 \(=3^n+\dfrac{4^n}{2}\)은 \(\dfrac{4^n}{2}\)이 지배 — 극한이 \(0\)이 아니려면 공비 \(r=4\).</li>
+<li>\(a_n=a\cdot4^{n-1}\): \(\dfrac{a\cdot4^{n-1}}{4^n/2}\to\dfrac{a}{2}=3\)에서 \(a=6\).</li>
+<li>\(a_2=6\times4=24\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="26" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">26</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">그림과 같이 곡선 \(y=\sqrt{\sec^2x+\tan x}\ \left(0\le x\le\dfrac{\pi}{3}\right)\)와 \(x\)축, \(y\)축 및 직선 \(x=\dfrac{\pi}{3}\)로 둘러싸인 부분을 밑면으로 하고 \(x\)축에 수직인 평면으로 자른 단면이 모두 정사각형인 입체도형의 부피는?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{\sqrt3}{2}+\dfrac{\ln2}{2}\)</li>
+<li>② \(\dfrac{\sqrt3}{2}+\ln2\)</li>
+<li>③ \(\sqrt3+\dfrac{\ln2}{2}\)</li>
+<li>④ \(\sqrt3+\ln2\)</li>
+<li>⑤ \(\sqrt3+2\ln2\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>④ \(\sqrt3+\ln2\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>부피 \(=\displaystyle\int_0^{\pi/3}(\sec^2x+\tan x)dx=\left[\tan x+\ln|\sec x|\right]_0^{\pi/3}\).</li>
+<li>\(=\sqrt3+\ln2\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="27" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">27</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">중심이 \(\mathrm{O}\), 반지름의 길이가 \(1\), 중심각 \(\dfrac{\pi}{2}\)인 부채꼴 \(\mathrm{OA_1B_1}\)에서 호 위의 점 \(\mathrm{P_1}\)과 두 반지름 위의 점 \(\mathrm{C_1}\), \(\mathrm{D_1}\)로 \(\overline{\mathrm{OC_1}}:\overline{\mathrm{OD_1}}=3:4\)인 직사각형 \(\mathrm{OC_1P_1D_1}\)을 만들고, \(\overline{\mathrm{P_1Q_1}}=\overline{\mathrm{A_1Q_1}}\), \(\angle\mathrm{P_1Q_1A_1}=\dfrac{\pi}{2}\)인 이등변삼각형 \(\mathrm{P_1Q_1A_1}\)에 색칠하여 \(R_1\)을 얻는다. 같은 방법으로 \(\overline{\mathrm{OQ_1}}\)을 반지름으로 하는 부채꼴에서 이 과정을 반복할 때, \(\displaystyle\lim_{n\to\infty}S_n\)의 값은? (\(S_n\)은 \(R_n\)에 색칠된 넓이)</div>
+    
+    <ul class="choices"><li>① \(\dfrac{9}{40}\)</li>
+<li>② \(\dfrac{1}{4}\)</li>
+<li>③ \(\dfrac{11}{40}\)</li>
+<li>④ \(\dfrac{3}{10}\)</li>
+<li>⑤ \(\dfrac{13}{40}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>② \(\dfrac{1}{4}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(\overline{\mathrm{OC_1}}=\dfrac{3}{5}\), \(\overline{\mathrm{OD_1}}=\dfrac{4}{5}\): \(\mathrm{P_1}\left(\dfrac{3}{5},\dfrac{4}{5}\right)\), \(\mathrm{A_1}(1,0)\), 빗변 \(\overline{\mathrm{P_1A_1}}=\dfrac{2\sqrt5}{5}\).</li>
+<li>직각이등변삼각형의 넓이 \(S_1=\dfrac{1}{4}\overline{\mathrm{P_1A_1}}^2=\dfrac{1}{5}\); 꼭짓점 \(\mathrm{Q_1}=\left(\dfrac{2}{5},\dfrac{1}{5}\right)\).</li>
+<li>닮음비 \(\overline{\mathrm{OQ_1}}=\dfrac{1}{\sqrt5}\) — 넓이비 \(\dfrac{1}{5}\).</li>
+<li>\(\displaystyle\lim S_n=\frac{1/5}{1-1/5}=\frac{1}{4}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="28" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">28</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">중심이 \(\mathrm{O}\)이고 길이가 \(2\)인 선분 \(\mathrm{AB}\)를 지름으로 하는 반원 위에 \(\angle\mathrm{AOC}=\dfrac{\pi}{2}\)인 점 \(\mathrm{C}\)가 있다. 호 \(\mathrm{BC}\) 위에 점 \(\mathrm{P}\), 호 \(\mathrm{CA}\) 위에 점 \(\mathrm{Q}\)를 \(\overline{\mathrm{PB}}=\overline{\mathrm{QC}}\)가 되도록 잡고, 선분 \(\mathrm{AP}\) 위에 \(\angle\mathrm{CQR}=\dfrac{\pi}{2}\)인 점 \(\mathrm{R}\)를 잡는다. 선분 \(\mathrm{AP}\)와 선분 \(\mathrm{CO}\)의 교점을 \(\mathrm{S}\)라 하자. \(\angle\mathrm{PAB}=\theta\)일 때, 삼각형 \(\mathrm{POB}\)의 넓이를 \(f(\theta)\), 사각형 \(\mathrm{CQRS}\)의 넓이를 \(g(\theta)\)라 하자. \(\displaystyle\lim_{\theta\to0+}\frac{3f(\theta)-2g(\theta)}{\theta^2}\)의 값은? (단, \(0\lt\theta\lt\dfrac{\pi}{4}\))</div>
+    
+    <ul class="choices"><li>① 1</li>
+<li>② 2</li>
+<li>③ 3</li>
+<li>④ 4</li>
+<li>⑤ 5</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>② \(2\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>원주각-중심각: \(\angle\mathrm{POB}=2\theta\)이므로 \(f(\theta)=\dfrac{1}{2}\sin2\theta=\theta-\dfrac{2}{3}\theta^3+\cdots\).</li>
+<li>\(\overline{\mathrm{PB}}=\overline{\mathrm{QC}}\)이므로 \(\mathrm{Q}\)는 \(\mathrm{C}\)에서 호를 따라 중심각 \(2\theta\)만큼 간 점: \(\mathrm{O}\)를 원점으로 \(\mathrm{P}(\cos2\theta,\sin2\theta)\), \(\mathrm{Q}(-\sin2\theta,\cos2\theta)\), \(\mathrm{A}(-1,0)\), \(\mathrm{C}(0,1)\).</li>
+<li>\(\mathrm{S}\)는 직선 \(\mathrm{AP}\)와 \(y\)축의 교점, \(\mathrm{R}\)는 \(\mathrm{AP}\) 위에서 \((\overrightarrow{\mathrm{QR}})\perp(\overrightarrow{\mathrm{QC}})\)인 점 — 신발끈 공식으로 사각형 \(\mathrm{CQRS}\)의 넓이를 \(\theta\)의 식으로 전개하면 \(g(\theta)=\dfrac{3}{2}\theta-\theta^2+o(\theta^2)\).</li>
+<li>\(\dfrac{3f(\theta)-2g(\theta)}{\theta^2}=\dfrac{(3\theta+o(\theta^2))-(3\theta-2\theta^2+o(\theta^2))}{\theta^2}\to2\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="29" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">29</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">세 상수 \(a\), \(b\), \(c\)에 대하여 함수 \(f(x)=ae^{2x}+be^x+c\)가 다음 조건을 만족시킨다.<br><b>(가) \(\displaystyle\lim_{x\to-\infty}\frac{f(x)+6}{e^x}=1\)<br>(나) \(f(\ln2)=0\)</b><br>함수 \(f(x)\)의 역함수를 \(g(x)\)라 할 때, \(\displaystyle\int_0^{14}g(x)\,dx=p+q\ln2\)이다. \(p+q\)의 값을 구하시오. (단, \(p\), \(q\)는 유리수이고, \(\ln2\)는 무리수이다.)</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(26\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>(가): \(x\to-\infty\)에서 분자가 0으로 가야 하므로 \(c=-6\); 이어 \(\dfrac{ae^{2x}+be^x}{e^x}=ae^x+b\to b=1\).</li>
+<li>(나): \(4a+2-6=0\)에서 \(a=1\): \(f(x)=e^{2x}+e^x-6\).</li>
+<li>\(f(\ln2)=0\), \(f(2\ln2)=14\): \(\displaystyle\int_0^{14}g(y)dy=2\ln2\cdot14-\ln2\cdot0-\int_{\ln2}^{2\ln2}f(x)dx\).</li>
+<li>\(\displaystyle\int_{\ln2}^{2\ln2}f\,dx=\left[\frac{e^{2x}}{2}+e^x-6x\right]_{\ln2}^{2\ln2}=(12-12\ln2)-(4-6\ln2)=8-6\ln2\).</li>
+<li>\(\displaystyle\int_0^{14}g=28\ln2-8+6\ln2=-8+34\ln2\): \(p+q=-8+34=26\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="30" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">30</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">최고차항의 계수가 양수인 삼차함수 \(f(x)\)와 함수 \(g(x)=e^{\sin\pi x}-1\)에 대하여 실수 전체의 집합에서 정의된 합성함수 \(h(x)=g(f(x))\)가 다음 조건을 만족시킨다.<br><b>(가) 함수 \(h(x)\)는 \(x=0\)에서 극댓값 \(0\)을 갖는다.<br>(나) 열린구간 \((0,3)\)에서 방정식 \(h(x)=1\)의 서로 다른 실근의 개수는 \(7\)이다.</b><br>\(f(3)=\dfrac{1}{2}\), \(f'(3)=0\)일 때, \(f(2)=\dfrac{q}{p}\)이다. \(p+q\)의 값을 구하시오. (단, \(p\)와 \(q\)는 서로소인 자연수이다.)</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(31\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(h=0\) ⟺ \(f\in\mathbb{Z}\). \(x=0\)에서 극댓값 0이려면 \(f(0)=n\)(정수)이고 \(x=0\)이 \(f\)의 극대점(양쪽에서 \(\sin\pi f\le0\)) — \(f'(0)=0\).</li>
+<li>\(f'\)의 두 근이 \(0\), \(3\): \(f'(x)=3a_0x(x-3)\), \(f(x)=a_0\left(x^3-\dfrac{9}{2}x^2\right)+n\), \(f(3)=-\dfrac{27}{2}a_0+n=\dfrac{1}{2}\).</li>
+<li>\(h=1\) ⟺ \(\sin\pi f=\ln2\) ⟺ \(f=2k+t\) 또는 \(2k+1-t\) (\(t=\dfrac{1}{\pi}\arcsin(\ln2)\in(0,\tfrac{1}{2})\)) — 수평선은 짝수 구간 \((2k,2k+1)\)에만 2개씩.</li>
+<li>\((0,3)\)에서 \(f\)는 \(n\)에서 \(\dfrac{1}{2}\)로 감소 — 구간 \(\left(\dfrac{1}{2},n\right)\)의 수평선 개수: \((0,1)\)에서 1개, \((2,3)\), \((4,5)\), \((6,7)\)에서 각 2개 — 7개가 되려면 \(n=8\).</li>
+<li>\(a_0=\dfrac{5}{9}\): \(f(2)=\dfrac{5}{9}(8-18)+8=\dfrac{22}{9}\), \(p+q=9+22=31\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="23" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">23</span><span class="chip chip-src">2점</span></div>
+    <div class="qtext">좌표공간의 점 \(\mathrm{A}(2,2,-1)\)을 \(x\)축에 대하여 대칭이동한 점을 \(\mathrm{B}\)라 하자. 점 \(\mathrm{C}(-2,1,1)\)에 대하여 선분 \(\mathrm{BC}\)의 길이는?</div>
+    
+    <ul class="choices"><li>① 1</li>
+<li>② 2</li>
+<li>③ 3</li>
+<li>④ 4</li>
+<li>⑤ 5</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>⑤ \(5\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(x\)축 대칭: \(\mathrm{B}(2,-2,1)\).</li>
+<li>\(\overline{\mathrm{BC}}=\sqrt{16+9+0}=5\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="24" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">24</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">초점이 \(\mathrm{F}\!\left(\dfrac{1}{3},0\right)\)이고 준선이 \(x=-\dfrac{1}{3}\)인 포물선이 점 \((a,2)\)를 지날 때, \(a\)의 값은?</div>
+    
+    <ul class="choices"><li>① 1</li>
+<li>② 2</li>
+<li>③ 3</li>
+<li>④ 4</li>
+<li>⑤ 5</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>③ \(3\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>포물선: \(y^2=\dfrac{4}{3}x\).</li>
+<li>\(4=\dfrac{4}{3}a\)에서 \(a=3\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="25" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">25</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">타원 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\) 위의 점 \((2,1)\)에서의 접선의 기울기가 \(-\dfrac{1}{2}\)일 때, 이 타원의 두 초점 사이의 거리는? (단, \(a\), \(b\)는 양수이다.)</div>
+    
+    <ul class="choices"><li>① \(2\sqrt3\)</li>
+<li>② 4</li>
+<li>③ \(2\sqrt5\)</li>
+<li>④ \(2\sqrt6\)</li>
+<li>⑤ \(2\sqrt7\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>④ \(2\sqrt6\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>접선 \(\dfrac{2x}{a^2}+\dfrac{y}{b^2}=1\)의 기울기 \(-\dfrac{2b^2}{a^2}=-\dfrac{1}{2}\)에서 \(a^2=4b^2\).</li>
+<li>점 대입: \(\dfrac{4}{4b^2}+\dfrac{1}{b^2}=1\)에서 \(b^2=2\), \(a^2=8\).</li>
+<li>\(c^2=8-2=6\): 두 초점 사이 거리 \(=2\sqrt6\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="26" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">26</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">좌표평면에서 세 벡터 \(\vec a=(2,4)\), \(\vec b=(2,8)\), \(\vec c=(1,0)\)에 대하여 두 벡터 \(\vec p\), \(\vec q\)가 \((\vec p-\vec a)\cdot(\vec p-\vec b)=0,\quad \vec q=\dfrac{1}{2}\vec a+t\vec c\ (t\text{는 실수})\)를 만족시킬 때, \(|\vec p-\vec q|\)의 최솟값은?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{3}{2}\)</li>
+<li>② 2</li>
+<li>③ \(\dfrac{5}{2}\)</li>
+<li>④ 3</li>
+<li>⑤ \(\dfrac{7}{2}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>② \(2\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(\vec p\)의 종점은 \(\vec a\), \(\vec b\)의 종점을 지름의 양 끝으로 하는 원: 중심 \((2,6)\), 반지름 2.</li>
+<li>\(\vec q\)의 종점은 직선 \(y=2\).</li>
+<li>최솟값 \(=(\text{중심에서 직선까지 거리})-2=4-2=2\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="27" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">27</span><span class="chip chip-src">3점</span></div>
+    <div class="qtext">좌표공간에 직선 \(\mathrm{AB}\)를 포함하는 평면 \(\alpha\)가 있다. 평면 \(\alpha\) 위에 있지 않은 점 \(\mathrm{C}\)에 대하여 직선 \(\mathrm{AB}\)와 직선 \(\mathrm{AC}\)가 이루는 예각의 크기를 \(\theta_1\)이라 할 때 \(\sin\theta_1=\dfrac{4}{5}\)이고, 직선 \(\mathrm{AC}\)와 평면 \(\alpha\)가 이루는 예각의 크기는 \(\dfrac{\pi}{2}-\theta_1\)이다. 평면 \(\mathrm{ABC}\)와 평면 \(\alpha\)가 이루는 예각의 크기를 \(\theta_2\)라 할 때, \(\cos\theta_2\)의 값은?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{\sqrt7}{4}\)</li>
+<li>② \(\dfrac{\sqrt7}{5}\)</li>
+<li>③ \(\dfrac{\sqrt7}{6}\)</li>
+<li>④ \(\dfrac{\sqrt7}{7}\)</li>
+<li>⑤ \(\dfrac{\sqrt7}{8}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>① \(\dfrac{\sqrt7}{4}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(\mathrm{C}\)의 수선의 발을 \(\mathrm{H}\): 직선 \(\mathrm{AC}\)와 \(\alpha\)의 각이 \(\dfrac{\pi}{2}-\theta_1\)이므로 \(\overline{\mathrm{CH}}=\overline{\mathrm{AC}}\cos\theta_1=\dfrac{3}{5}\overline{\mathrm{AC}}\), \(\overline{\mathrm{AH}}=\dfrac{4}{5}\overline{\mathrm{AC}}\).</li>
+<li>\(\cos(\angle\mathrm{BAH})=\dfrac{\cos\theta_1}{\overline{\mathrm{AH}}/\overline{\mathrm{AC}}}=\dfrac{3/5}{4/5}=\dfrac{3}{4}\), \(\sin(\angle\mathrm{BAH})=\dfrac{\sqrt7}{4}\).</li>
+<li>\(\mathrm{H}\)에서 \(\mathrm{AB}\)에 내린 수선의 발 \(\mathrm{F}\): \(\overline{\mathrm{HF}}=\overline{\mathrm{AH}}\sin(\angle\mathrm{BAH})=\dfrac{\sqrt7}{5}\overline{\mathrm{AC}}\).</li>
+<li>\(\tan\theta_2=\dfrac{\overline{\mathrm{CH}}}{\overline{\mathrm{HF}}}=\dfrac{3}{\sqrt7}\): \(\cos\theta_2=\dfrac{\sqrt7}{4}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="28" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">28</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">두 초점이 \(\mathrm{F}(c,0)\), \(\mathrm{F'}(-c,0)\,(c\gt0)\)인 쌍곡선 \(C\)와 \(y\)축 위의 점 \(\mathrm{A}\)가 있다. 쌍곡선 \(C\)가 선분 \(\mathrm{AF}\)와 만나는 점을 \(\mathrm{P}\), 선분 \(\mathrm{AF'}\)과 만나는 점을 \(\mathrm{P'}\)이라 하자. 직선 \(\mathrm{AF}\)는 쌍곡선 \(C\)의 한 점근선과 평행하고 \(\overline{\mathrm{AP}}:\overline{\mathrm{PP'}}=5:6,\quad \overline{\mathrm{PF}}=1\)일 때, 쌍곡선 \(C\)의 주축의 길이는?</div>
+    
+    <ul class="choices"><li>① \(\dfrac{13}{6}\)</li>
+<li>② \(\dfrac{9}{4}\)</li>
+<li>③ \(\dfrac{7}{3}\)</li>
+<li>④ \(\dfrac{29}{12}\)</li>
+<li>⑤ \(\dfrac{5}{2}\)</li></ul>
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>② \(\dfrac{9}{4}\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>대칭성에서 \(\mathrm{P'}=(-x_{\mathrm{P}},y_{\mathrm{P}})\). 직선 \(\mathrm{AF}\)의 기울기가 점근선 기울기 \(-\dfrac{b}{a}\): \(\mathrm{A}=\left(0,\dfrac{bc}{a}\right)\).</li>
+<li>\(\mathrm{AF}\) 위의 점을 \(\tau\)로 매개화하면 \(\overline{\mathrm{AP}}=\tau\dfrac{c^2}{a}\), \(\overline{\mathrm{PP'}}=2\tau c\): 비 \(5:6\)에서 \(\dfrac{2a}{c}=\dfrac{6}{5}\), \(c=\dfrac{5a}{3}\), \(b=\dfrac{4a}{3}\).</li>
+<li>\(\mathrm{P}\)를 쌍곡선에 대입하면 \(\dfrac{25}{9}(2\tau-1)=1\), \(\tau=\dfrac{17}{25}\).</li>
+<li>\(\overline{\mathrm{PF}}=(1-\tau)\dfrac{c^2}{a}=\dfrac{8}{25}\cdot\dfrac{25a}{9}=\dfrac{8a}{9}=1\)에서 \(a=\dfrac{9}{8}\).</li>
+<li>주축 \(2a=\dfrac{9}{4}\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="29" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">29</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">평면 \(\alpha\) 위에 \(\overline{\mathrm{AB}}=\overline{\mathrm{CD}}=\overline{\mathrm{AD}}=2\), \(\angle\mathrm{ABC}=\angle\mathrm{BCD}=\dfrac{\pi}{3}\)인 사다리꼴 \(\mathrm{ABCD}\)가 있다. 다음 조건을 만족시키는 평면 \(\alpha\) 위의 두 점 \(\mathrm{P}\), \(\mathrm{Q}\)에 대하여 \(\overrightarrow{\mathrm{CP}}\cdot\overrightarrow{\mathrm{DQ}}\)의 값을 구하시오.<br><b>(가) \(\overrightarrow{\mathrm{AC}}=2(\overrightarrow{\mathrm{AD}}+\overrightarrow{\mathrm{BP}})\)<br>(나) \(\overrightarrow{\mathrm{AC}}\cdot\overrightarrow{\mathrm{PQ}}=6\)<br>(다) \(2\times\angle\mathrm{BQA}=\angle\mathrm{PBQ}\lt\dfrac{\pi}{2}\)</b></div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(12\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>\(\mathrm{B}(0,0)\), \(\mathrm{C}(4,0)\), \(\mathrm{A}(1,\sqrt3)\), \(\mathrm{D}(3,\sqrt3)\)으로 놓는다.</li>
+<li>(가): \(\overrightarrow{\mathrm{AC}}=(3,-\sqrt3)=2\{(2,0)+\mathrm{P}\}\)에서 \(\mathrm{P}=\left(-\dfrac{1}{2},-\dfrac{\sqrt3}{2}\right)\).</li>
+<li>(나): \(3Q_x-\sqrt3Q_y=6\) — \(\mathrm{Q}\)는 직선 \(y=\sqrt3(x-2)\) 위: \(\mathrm{Q}=(2+u,\sqrt3u)\).</li>
+<li>(다): \(u=-1\), 곧 \(\mathrm{Q}=(1,-\sqrt3)\)일 때 \(\angle\mathrm{BQA}=\dfrac{\pi}{6}\), \(\angle\mathrm{PBQ}=\dfrac{\pi}{3}\lt\dfrac{\pi}{2}\) ✓.</li>
+<li>\(\overrightarrow{\mathrm{CP}}=\left(-\dfrac{9}{2},-\dfrac{\sqrt3}{2}\right)\), \(\overrightarrow{\mathrm{DQ}}=(-2,-2\sqrt3)\): 내적 \(=9+3=12\)</li></ol>
+    
+    
+    
+  </div>
+</div><div class="wb-q" data-q="30" hidden>
+  <div class="wb-prob">
+    <div class="card-head"><span class="qid">30</span><span class="chip chip-src">4점</span></div>
+    <div class="qtext">좌표공간에 정사면체 \(\mathrm{ABCD}\)가 있다. 정삼각형 \(\mathrm{BCD}\)의 외심을 중심으로 하고 점 \(\mathrm{B}\)를 지나는 구를 \(S\)라 하자. 구 \(S\)와 선분 \(\mathrm{AB}\), \(\mathrm{AC}\), \(\mathrm{AD}\)가 만나는 점 중 \(\mathrm{B}\), \(\mathrm{C}\), \(\mathrm{D}\)가 아닌 점을 각각 \(\mathrm{P}\), \(\mathrm{Q}\), \(\mathrm{R}\)라 하고, 점 \(\mathrm{P}\)에서 구 \(S\)에 접하는 평면을 \(\alpha\)라 하자. 구 \(S\)의 반지름의 길이가 \(6\)일 때, 삼각형 \(\mathrm{PQR}\)의 평면 \(\alpha\) 위로의 정사영의 넓이는 \(k\)이다. \(k^2\)의 값을 구하시오.</div>
+    
+    
+  </div>
+  <div class="wb-sol">
+    <div class="ansbox"><span class="lbl">정답</span>\(24\)</div>
+    <div class="sol-head">풀이</div><ol class="steps"><li>외심을 원점으로: \(\mathrm{B}(6,0,0)\), \(\mathrm{C}(-3,3\sqrt3,0)\), \(\mathrm{D}(-3,-3\sqrt3,0)\), \(\mathrm{A}(0,0,6\sqrt2)\) (한 모서리 \(6\sqrt3\)).</li>
+<li>\(\mathrm{P}\)는 \(\mathrm{B}+s(\mathrm{A}-\mathrm{B})\)가 구 위: \(108s^2=72s\)에서 \(s=\dfrac{2}{3}\): \(\mathrm{P}(2,0,4\sqrt2)\), 같은 방법으로 \(\mathrm{Q}(-1,\sqrt3,4\sqrt2)\), \(\mathrm{R}(-1,-\sqrt3,4\sqrt2)\).</li>
+<li>삼각형 \(\mathrm{PQR}\)는 평면 \(z=4\sqrt2\) 위의 정삼각형(한 변 \(2\sqrt3\)): 넓이 \(=3\sqrt3\).</li>
+<li>\(\alpha\)의 법선은 \(\overrightarrow{\mathrm{OP}}=(2,0,4\sqrt2)\) 방향: 두 평면 사이 각의 코사인 \(=\dfrac{4\sqrt2/6\cdot\!\!}{}\)… \(=\dfrac{2\sqrt2}{3}\).</li>
+<li>\(k=3\sqrt3\times\dfrac{2\sqrt2}{3}=2\sqrt6\): \(k^2=24\)</li></ol>
+    
+    
+    
+  </div>
+</div></section>
+</div>
+<script>
+(function(){
+  var qs = Array.prototype.slice.call(document.querySelectorAll('.wb-q'));
+  var btns = Array.prototype.slice.call(document.querySelectorAll('[data-wbi]'));
+  function act(i){
+    qs.forEach(function(q, j){ q.hidden = (j !== i); });
+    btns.forEach(function(b){ b.classList.toggle('on', +b.dataset.wbi === i); });
+    var q = qs[i];
+    q.querySelectorAll('.wb-prob, .wb-sol').forEach(function(p){ p.scrollTop = 0; });
+    var on = document.querySelector('.wb-nbtn.on');
+    if (on) on.scrollIntoView({block: 'nearest'});
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ act(+b.dataset.wbi); }); });
+  document.addEventListener('keydown', function(e){
+    if (e.target.closest('input,textarea,.desmos-calc')) return;
+    var cur = qs.findIndex(function(q){ return !q.hidden; });
+    if (e.key === 'ArrowRight' && cur < qs.length - 1) act(cur + 1);
+    if (e.key === 'ArrowLeft' && cur > 0) act(cur - 1);
+  });
+  act(0);
+})();
+</script><script>
+window.addEventListener('beforeprint', function(){
+  document.querySelectorAll('details.solfold:not([open])').forEach(function(d){
+    d.setAttribute('data-autoopen','1'); d.open = true;
+  });
+});
+window.addEventListener('afterprint', function(){
+  document.querySelectorAll('details.solfold[data-autoopen]').forEach(function(d){
+    d.removeAttribute('data-autoopen'); d.open = false;
+  });
+});
+</script>
+</body>
+</html>
