@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>페이지를 찾을 수 없습니다 · 아이워크수학</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+body{font-family:'Pretendard Variable',Pretendard,'Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+  background:#f7f9fc;color:#181c22;margin:0;font-size:17px;line-height:1.8}
+.wrap{max-width:640px;margin:0 auto;padding:80px 24px}
+.brand{font-weight:700;font-size:18px;letter-spacing:-0.01em;padding-bottom:16px;
+  border-bottom:1px solid #d7dde6;margin-bottom:40px}
+h1{font-size:28px;font-weight:700;letter-spacing:-0.02em;margin:0 0 12px}
+p{color:#46505c;margin:0 0 24px}
+a.home{display:inline-block;text-decoration:none;font-weight:600;color:#1a5fa8;
+  border:1px solid #1a5fa8;border-radius:999px;padding:10px 22px}
+a.home:hover{background:#d9e6f6}
+</style>
+<script>
+(function(){
+  var base = "/iwork-blog/";
+  var p = decodeURIComponent(location.pathname);
+  var m = p.match(/^((?:[A-Za-z0-9._\/-])*?)[^A-Za-z0-9._\/-].*$/);
+  if (m && m[1].length >= base.length && m[1].indexOf(base) === 0) {
+    var t = m[1];
+    if (!/\.[a-z]+$/.test(t) && !/\/$/.test(t)) t += "/";
+    location.replace(t);
+  }
+})();
+</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">아이워크수학 · iWork Math</div>
+  <h1>페이지를 찾을 수 없습니다</h1>
+  <p>주소가 바뀌었거나, 링크에 문장 부호가 섞여 들어온 경우입니다.<br>
+  아래 버튼으로 시험 목록에서 원하는 해설을 찾아 주세요.</p>
+  <a class="home" href="/iwork-blog/">해설 목록으로 가기</a>
+</div>
+</body>
+</html>
