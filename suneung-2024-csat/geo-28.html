@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -260,16 +265,16 @@ a.brand{text-decoration:none}
 <li>③ \(\dfrac{\sqrt2}{3}\)</li>
 <li>④ \(\dfrac{4\sqrt3}{15}\)</li>
 <li>⑤ \(\dfrac{2\sqrt{78}}{39}\)</li></ul></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>⑤ \(\dfrac{2\sqrt{78}}{39}\)</div><div class="sol-head">풀이</div><ol class="steps"><li>평면 \(\beta\)에 좌표를 잡는다: 교선 \(\mathrm{AB}\)를 \(x\)축, 중심 \(\mathrm{O}\)를 원점으로 — 타원의 장반축 \(9\), 초점 \(\mathrm{F}(c,0)\), \(\mathrm{F'}(-c,0)\).</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>⑤ \(\dfrac{2\sqrt{78}}{39}\)</div><div class="sol-head">풀이</div><ol class="steps"><li>평면 \(\beta\)에 좌표를 잡는다: 교선 \(\mathrm{AB}\)를 \(x\)축, 중심 \(\mathrm{O}\)를 원점으로 — 타원의 장반축 \(9\), 초점 \(\mathrm{F}(c,0)\), \(\mathrm{F'}(-c,0)\).</li>
 <li>\(\mathrm{H}\) 중심 반지름 4인 원이 직선 \(\mathrm{AB}\)에 접하므로 \(\mathrm{H}\)의 \(y\)좌표는 \(4\); \(\overline{\mathrm{HQ}}=4\).</li>
 <li>\(\angle\mathrm{HFF'}=\dfrac{\pi}{6}\)이므로 \(\mathrm{H}=\mathrm{F}+\overline{\mathrm{FH}}\left(-\dfrac{\sqrt3}{2},\dfrac{1}{2}\right)\): \(y\)좌표에서 \(\overline{\mathrm{FH}}=8\), \(\mathrm{H}=(c-4\sqrt3,\,4)\).</li>
 <li>\(\mathrm{Q}\)는 \(\mathrm{F}\)에서 \(\mathrm{H}\)방향으로 \(\overline{\mathrm{FQ}}=8+4=12\): \(\mathrm{Q}=(c-6\sqrt3,\,6)\). 타원의 정의로 \(\overline{\mathrm{QF'}}=18-12=6\).</li>
 <li>\(\overline{\mathrm{QF'}}^2=(2c-6\sqrt3)^2+36=36\)에서 \(c=3\sqrt3\), 곧 \(\mathrm{H}=(-\sqrt3,4)\).</li>
 <li>\(\mathrm{P}\)는 원 \(C_1\) 위: \(\alpha\) 안에서 \(\mathrm{P}=(p,q)\), \(p^2+q^2=81\). 수선의 발이 \(\mathrm{H}\)이므로 \(p=-\sqrt3\), \(q\cos\theta=4\).</li>
-<li>\(q^2=81-3=78\)에서 \(q=\sqrt{78}\), \(\cos\theta=\dfrac{4}{\sqrt{78}}=\dfrac{2\sqrt{78}}{39}\)</li></ol><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(공간도형) 먼저</div><a href="geo-26.html">공간도형 — 기하 26번 풀이 (3점)</a><a href="geo-29.html">이차곡선 — 기하 29번 풀이 (4점)</a><a href="geo-30.html">평면벡터 — 기하 30번 풀이 (4점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-27.html">← 이전 문항</a><a href="geo-29.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+<li>\(q^2=81-3=78\)에서 \(q=\sqrt{78}\), \(\cos\theta=\dfrac{4}{\sqrt{78}}=\dfrac{2\sqrt{78}}{39}\)</li></ol></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(공간도형) 먼저</div><a href="geo-26.html">공간도형 — 기하 26번 풀이 (3점)</a><a href="geo-29.html">이차곡선 — 기하 29번 풀이 (4점)</a><a href="geo-30.html">평면벡터 — 기하 30번 풀이 (4점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-27.html">← 이전 문항</a><a href="geo-29.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
-<script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-27.html';if(e.key==='ArrowRight')location.href='geo-29.html';});</script>
+<script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-27.html';if(e.key==='ArrowRight')location.href='geo-29.html';});</script>
 </body>
 </html>

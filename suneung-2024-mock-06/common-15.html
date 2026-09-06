@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -260,14 +265,14 @@ a.brand{text-decoration:none}
 <li>③ 18</li>
 <li>④ 22</li>
 <li>⑤ 26</li></ul></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>② \(14\)</div><div class="sol-head">풀이</div><ol class="steps"><li>\(a_1=k\gt0\)이므로 \(a_2=k-2-k=-2\), \(a_3=-2+4-k=2-k\): 각 \(k\)에 대해 항의 부호를 추적한다.</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>② \(14\)</div><div class="sol-head">풀이</div><ol class="steps"><li>\(a_1=k\gt0\)이므로 \(a_2=k-2-k=-2\), \(a_3=-2+4-k=2-k\): 각 \(k\)에 대해 항의 부호를 추적한다.</li>
 <li>\(k=3\): \(a_3=-1,\ a_4=-1+6-3=2,\ a_5=2-8-3=-9,\ a_6=-9+10-3=-2\) — 곱 \(=-36\lt0\) ✓.</li>
 <li>\(k=5\): \(a_3=-3,\ a_4=-2,\ a_5=1,\ a_6=-14\) — 곱 \(=-84\lt0\) ✓.</li>
 <li>\(k=6\): \(a_3=-4,\ a_4=-4,\ a_5=-2,\ a_6=2\) — 곱 \(=-64\lt0\) ✓ (다른 \(k\)는 곱이 0 이상).</li>
-<li>합 \(=3+5+6=14\)</li></ol><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(수열) 먼저</div><a href="common-12.html">수열 — 12번 풀이 (4점)</a><a href="common-9.html">수열 — 9번 풀이 (4점)</a><a href="common-3.html">수열 — 3번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-14.html">← 이전 문항</a><a href="common-16.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+<li>합 \(=3+5+6=14\)</li></ol></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(수열) 먼저</div><a href="common-12.html">수열 — 12번 풀이 (4점)</a><a href="common-9.html">수열 — 9번 풀이 (4점)</a><a href="common-3.html">수열 — 3번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-14.html">← 이전 문항</a><a href="common-16.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
-<script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-14.html';if(e.key==='ArrowRight')location.href='common-16.html';});</script>
+<script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-14.html';if(e.key==='ArrowRight')location.href='common-16.html';});</script>
 </body>
 </html>

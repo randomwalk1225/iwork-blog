@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -256,7 +261,7 @@ a.brand{text-decoration:none}
   <section class="wb-stage">
     <div class="wb-q">
       <div class="wb-prob"><h1>2022학년도 대학수학능력시험 9월 모의평가 (2021-09 시행) 수학 기하 30번 풀이·정답</h1><div class="doc-sub">기하 · 4점 · 평면벡터</div><div class="qtext" style="margin-top:14px">좌표평면에서 세 점 \(\mathrm A(-3,\,1)\), \(\mathrm B(0,\,2)\), \(\mathrm C(1,\,0)\)에 대하여 두 점 \(\mathrm P\), \(\mathrm Q\)가 \(\lvert\vec{\mathrm{AP}}\rvert=1,\quad \lvert\vec{\mathrm{BQ}}\rvert=2,\quad \vec{\mathrm{AP}}\cdot\vec{\mathrm{OC}}\ge\dfrac{\sqrt2}{2}\)를 만족시킬 때, \(\vec{\mathrm{AP}}\cdot\vec{\mathrm{AQ}}\)의 값이 최소가 되도록 하는 두 점 \(\mathrm P\), \(\mathrm Q\)를 각각 \(\mathrm{P_0}\), \(\mathrm{Q_0}\)이라 하자. 선분 \(\mathrm{AP_0}\) 위의 점 \(\mathrm X\)에 대하여 \(\vec{\mathrm{BX}}\cdot\vec{\mathrm{BQ_0}}\ge1\)일 때, \(\lvert\vec{\mathrm{Q_0X}}\rvert^2\)의 최댓값은 \(\dfrac qp\)이다. \(p+q\)의 값을 구하시오. (단, \(\mathrm O\)는 원점이고, \(p\)와 \(q\)는 서로소인 자연수이다.)</div></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>\(45\)</div><div class="sol-head">풀이</div><ol class="steps"><li>\(\vec{\mathrm{AP}}=(\cos\varphi,\sin\varphi)\): 조건 \(\vec{\mathrm{AP}}\cdot(1,0)=\cos\varphi\ge\dfrac{\sqrt2}{2}\)에서 \(\varphi\in[-45°,45°]\).</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>\(45\)</div><div class="sol-head">풀이</div><ol class="steps"><li>\(\vec{\mathrm{AP}}=(\cos\varphi,\sin\varphi)\): 조건 \(\vec{\mathrm{AP}}\cdot(1,0)=\cos\varphi\ge\dfrac{\sqrt2}{2}\)에서 \(\varphi\in[-45°,45°]\).</li>
 <li>\(\vec{\mathrm{AP}}\cdot\vec{\mathrm{AQ}}=\vec{\mathrm{AP}}\cdot\vec{\mathrm{AB}}+\vec{\mathrm{AP}}\cdot\vec{\mathrm{BQ}}\): \(\mathrm Q\)에 대한 최소는 \(\vec{\mathrm{BQ}}=-2\vec{\mathrm{AP}}\)일 때로, 값은 \(3\cos\varphi+\sin\varphi-2\).</li>
 <li>\(3\cos\varphi+\sin\varphi\)는 \([-45°,45°]\)에서 \(\varphi=-45°\)일 때 최소 \(\sqrt2\): \(\vec{\mathrm{AP_0}}=\left(\dfrac{\sqrt2}{2},-\dfrac{\sqrt2}{2}\right)\), \(\mathrm{Q_0}=\mathrm B-2\vec{\mathrm{AP_0}}=(-\sqrt2,\ 2+\sqrt2)\).</li>
 <li>\(\mathrm X=\mathrm A+s\,\vec{\mathrm{AP_0}}\ (0\le s\le1)\): \(\vec{\mathrm{BX}}\cdot\vec{\mathrm{BQ_0}}=2\sqrt2-2s\ge1\)에서 \(s\le\sqrt2-\dfrac12\).</li>
@@ -265,7 +270,7 @@ a.brand{text-decoration:none}
   <div class="desmos-calc" id="dg-1" style="height:380px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -6, "right": 3, "bottom": -1.5, "top": 5}, "expressions": [{"latex": "A_1=(-3,1)", "color": "#000000", "label": "A", "showLabel": true}, {"latex": "B_1=(0,2)", "color": "#000000", "label": "B", "showLabel": true}, {"latex": "(x+3)^2+(y-1)^2=1", "color": "#9ba0a8"}, {"latex": "x^2+(y-2)^2=4", "color": "#9ba0a8"}, {"latex": "P_0=(-3+\\frac{\\sqrt2}{2},1-\\frac{\\sqrt2}{2})", "color": "#c74440", "label": "P₀", "showLabel": true}, {"latex": "Q_0=(-\\sqrt2,2+\\sqrt2)", "color": "#c74440", "label": "Q₀", "showLabel": true}, {"latex": "s_1=0.9", "sliderBounds": {"min": 0, "max": 0.914, "step": 0.001}}, {"latex": "X_1=A_1+s_1(P_0-A_1)", "color": "#388c46", "label": "X", "showLabel": true}, {"latex": "\\operatorname{segment}(A_1,P_0)", "color": "#2d70b3"}, {"latex": "\\operatorname{segment}(Q_0,X_1)", "color": "#fa7e19", "lineStyle": "DASHED"}], "degreeMode": false, "squareAxes": true, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>P₀, Q₀와 선분 AP₀ 위의 X — s를 움직이며 |Q₀X|²를 확인.</div>
-</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(평면벡터) 먼저</div><a href="geo-25.html">평면벡터 — 기하 25번 풀이 (3점)</a><a href="geo-28.html">이차곡선 — 기하 28번 풀이 (4점)</a><a href="geo-26.html">이차곡선 — 기하 26번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-29.html">← 이전 문항</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(평면벡터) 먼저</div><a href="geo-25.html">평면벡터 — 기하 25번 풀이 (3점)</a><a href="geo-28.html">이차곡선 — 기하 28번 풀이 (4점)</a><a href="geo-26.html">이차곡선 — 기하 26번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-29.html">← 이전 문항</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
@@ -380,6 +385,6 @@ a.brand{text-decoration:none}
     specs.forEach(arm);
   }
 })();
-</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-29.html';});</script>
+</script><script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-29.html';});</script>
 </body>
 </html>

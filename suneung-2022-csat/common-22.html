@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -256,14 +261,14 @@ a.brand{text-decoration:none}
   <section class="wb-stage">
     <div class="wb-q">
       <div class="wb-prob"><h1>2022학년도 대학수학능력시험 (2021-11 시행, 홀수형) 수학 22번 풀이·정답</h1><div class="doc-sub">공통과목 (수학 Ⅰ · 수학 Ⅱ) · 4점 · 미분</div><div class="qtext" style="margin-top:14px">최고차항의 계수가 \(\dfrac12\)인 삼차함수 \(f(x)\)와 실수 \(t\)에 대하여 방정식 \(f'(x)=0\)이 닫힌구간 \([t,\,t+2]\)에서 갖는 실근의 개수를 \(g(t)\)라 할 때, 함수 \(g(t)\)는 다음 조건을 만족시킨다.<br>(가) 모든 실수 \(a\)에 대하여 \(\displaystyle\lim_{t\to a+}g(t)+\lim_{t\to a-}g(t)\le2\)이다.<br>(나) \(g(f(1))=g(f(4))=2,\quad g(f(0))=1\)<br>\(f(5)\)의 값을 구하시오.</div></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>\(9\)</div><div class="sol-head">풀이</div><ol class="steps"><li>\(f'(x)=0\)이 근을 갖지 않거나 중근 \(\alpha\)를 가지면 (나)의 \(g=2\)를 만들 수 없다. 서로 다른 두 근 \(\alpha\lt\beta\)를 갖는 경우, (가)는 \(g\)가 \(2\)인 구간이 한 점으로 줄어들 것을 요구하므로 \(\beta=\alpha+2\)여야 한다. 이때 \(g(t)=2\)는 \(t=\alpha\)에서만 성립한다.</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>\(9\)</div><div class="sol-head">풀이</div><ol class="steps"><li>\(f'(x)=0\)이 근을 갖지 않거나 중근 \(\alpha\)를 가지면 (나)의 \(g=2\)를 만들 수 없다. 서로 다른 두 근 \(\alpha\lt\beta\)를 갖는 경우, (가)는 \(g\)가 \(2\)인 구간이 한 점으로 줄어들 것을 요구하므로 \(\beta=\alpha+2\)여야 한다. 이때 \(g(t)=2\)는 \(t=\alpha\)에서만 성립한다.</li>
 <li>(나)에서 \(g(f(1))=g(f(4))=2\)이므로 \(f(1)=f(4)=\alpha\), 그리고 \(f'(x)=\dfrac32(x-\alpha)(x-\alpha-2)\).</li>
 <li>\(f(1)=f(4)\)를 \(f(x)=\dfrac12x^3-\dfrac32(\alpha+1)x^2+\dfrac32(\alpha^2+2\alpha)x+C\)에 적용해 정리하면 \(\alpha^2-3\alpha+2=0\), \(\alpha=1\) 또는 \(\alpha=2\).</li>
 <li>\(\alpha=1\): \(f(1)=1\)에서 \(C=-1\), \(f(0)=-1\), \(g(f(0))=g(-1)\)은 \([-1,1]\)에 근 \(1\)만 있어 \(1\) ✓. \(\alpha=2\): \(f(1)=2\)에서 \(C=-6\), \(f(0)=-6\), \(g(-6)=0\)이라 (나) 위배.</li>
-<li>따라서 \(f(x)=\dfrac12x^3-3x^2+\dfrac92x-1\)이고 \(f(5)=\dfrac{125}{2}-75+\dfrac{45}{2}-1=9\)</li></ol><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(미분) 먼저</div><a href="common-10.html">미분 — 10번 풀이 (4점)</a><a href="common-19.html">미분 — 19번 풀이 (3점)</a><a href="common-6.html">미분 — 6번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-21.html">← 이전 문항</a><a href="prob-23.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+<li>따라서 \(f(x)=\dfrac12x^3-3x^2+\dfrac92x-1\)이고 \(f(5)=\dfrac{125}{2}-75+\dfrac{45}{2}-1=9\)</li></ol></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(미분) 먼저</div><a href="common-10.html">미분 — 10번 풀이 (4점)</a><a href="common-19.html">미분 — 19번 풀이 (3점)</a><a href="common-6.html">미분 — 6번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-21.html">← 이전 문항</a><a href="prob-23.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
-<script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-21.html';if(e.key==='ArrowRight')location.href='prob-23.html';});</script>
+<script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-21.html';if(e.key==='ArrowRight')location.href='prob-23.html';});</script>
 </body>
 </html>

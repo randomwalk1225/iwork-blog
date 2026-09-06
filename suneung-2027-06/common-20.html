@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -255,8 +260,8 @@ a.brand{text-decoration:none}
   <aside class="wb-nav"><a class="wb-key sub" href="../">전체 시험 목록</a><a class="wb-key" href="index.html">정답표·목차</a><div class="wb-sec sec-common"><span class="sf">공통과목 (수학 Ⅰ · 수학 Ⅱ)</span><span class="ss">공통</span></div><div class="wb-nums sec-common"><a class="wb-nbtn" href="common-1.html">1</a><a class="wb-nbtn" href="common-2.html">2</a><a class="wb-nbtn" href="common-3.html">3</a><a class="wb-nbtn" href="common-4.html">4</a><a class="wb-nbtn" href="common-5.html">5</a><a class="wb-nbtn hard" title="오답률 27.7% (EBSi)" href="common-6.html">6<i class="wb-wr">28</i></a><a class="wb-nbtn" href="common-7.html">7</a><a class="wb-nbtn" href="common-8.html">8</a><a class="wb-nbtn hard" title="오답률 27.3% (EBSi)" href="common-9.html">9<i class="wb-wr">27</i></a><a class="wb-nbtn" href="common-10.html">10</a><a class="wb-nbtn hard" title="오답률 36.7% (EBSi)" href="common-11.html">11<i class="wb-wr">37</i></a><a class="wb-nbtn hard" title="오답률 31.2% (EBSi)" href="common-12.html">12<i class="wb-wr">31</i></a><a class="wb-nbtn hard" title="오답률 46.3% (EBSi)" href="common-13.html">13<i class="wb-wr">46</i></a><a class="wb-nbtn hard" title="오답률 53.9% (EBSi)" href="common-14.html">14<i class="wb-wr">54</i></a><a class="wb-nbtn hard" title="오답률 58.9% (EBSi)" href="common-15.html">15<i class="wb-wr">59</i></a><a class="wb-nbtn" href="common-16.html">16</a><a class="wb-nbtn" href="common-17.html">17</a><a class="wb-nbtn" href="common-18.html">18</a><a class="wb-nbtn hard" title="오답률 31.8% (EBSi)" href="common-19.html">19<i class="wb-wr">32</i></a><a class="wb-nbtn on hard" title="오답률 50.7% (EBSi)" href="common-20.html">20<i class="wb-wr">51</i></a><a class="wb-nbtn hard" title="오답률 88.1% (EBSi)" href="common-21.html">21<i class="wb-wr">88</i></a><a class="wb-nbtn hard" title="오답률 94.5% (EBSi)" href="common-22.html">22<i class="wb-wr">94</i></a></div><div class="wb-sec sec-prob"><span class="sf">확률과 통계</span><span class="ss">확통</span></div><div class="wb-nums sec-prob"><a class="wb-nbtn" href="prob-23.html">23</a><a class="wb-nbtn" href="prob-24.html">24</a><a class="wb-nbtn" href="prob-25.html">25</a><a class="wb-nbtn hard" title="오답률 42.1% (EBSi)" href="prob-26.html">26<i class="wb-wr">42</i></a><a class="wb-nbtn" href="prob-27.html">27</a><a class="wb-nbtn hard" title="오답률 72.9% (EBSi)" href="prob-28.html">28<i class="wb-wr">73</i></a><a class="wb-nbtn hard" title="오답률 77.4% (EBSi)" href="prob-29.html">29<i class="wb-wr">77</i></a><a class="wb-nbtn hard" title="오답률 95.8% (EBSi)" href="prob-30.html">30<i class="wb-wr">96</i></a></div><div class="wb-sec sec-calc"><span class="sf">미적분</span><span class="ss">미적</span></div><div class="wb-nums sec-calc"><a class="wb-nbtn" href="calc-23.html">23</a><a class="wb-nbtn" href="calc-24.html">24</a><a class="wb-nbtn" href="calc-25.html">25</a><a class="wb-nbtn" href="calc-26.html">26</a><a class="wb-nbtn hard" title="오답률 36.7% (EBSi)" href="calc-27.html">27<i class="wb-wr">37</i></a><a class="wb-nbtn hard" title="오답률 69.7% (EBSi)" href="calc-28.html">28<i class="wb-wr">70</i></a><a class="wb-nbtn hard" title="오답률 87.3% (EBSi)" href="calc-29.html">29<i class="wb-wr">87</i></a><a class="wb-nbtn hard" title="오답률 87.4% (EBSi)" href="calc-30.html">30<i class="wb-wr">87</i></a></div><div class="wb-sec sec-geo"><span class="sf">기하</span><span class="ss">기하</span></div><div class="wb-nums sec-geo"><a class="wb-nbtn" href="geo-23.html">23</a><a class="wb-nbtn" href="geo-24.html">24</a><a class="wb-nbtn hard" title="오답률 32.9% (EBSi)" href="geo-25.html">25<i class="wb-wr">33</i></a><a class="wb-nbtn hard" title="오답률 30.6% (EBSi)" href="geo-26.html">26<i class="wb-wr">31</i></a><a class="wb-nbtn hard" title="오답률 40.3% (EBSi)" href="geo-27.html">27<i class="wb-wr">40</i></a><a class="wb-nbtn hard" title="오답률 37.2% (EBSi)" href="geo-28.html">28<i class="wb-wr">37</i></a><a class="wb-nbtn hard" title="오답률 76.5% (EBSi)" href="geo-29.html">29<i class="wb-wr">76</i></a><a class="wb-nbtn hard" title="오답률 87.4% (EBSi)" href="geo-30.html">30<i class="wb-wr">87</i></a></div></aside>
   <section class="wb-stage">
     <div class="wb-q">
-      <div class="wb-prob"><h1>2027학년도 대학수학능력시험 6월 모의평가 (2026-06 시행) 수학 20번 풀이·정답</h1><div class="doc-sub">공통과목 (수학 Ⅰ · 수학 Ⅱ) · 4점 · 지수와 로그 · <span style="color:var(--red);font-weight:700">오답률 50.7%</span> <span style="color:var(--wb-muted)">(EBSi)</span></div><div class="qtext" style="margin-top:14px">1보다 큰 실수 \(b\)에 대하여 두 함수 \(f(x)=b^x\)과 \(g(x)=-\log_bx\)의 그래프가 제1사분면에서 만나는 점 P의 좌표를 \((\alpha,\beta)\)라 하자. \(\alpha\beta^3=1\)일 때 직선 OP의 기울기 \(m\)에 대하여 \(g(m)\)을 구하는 과정의 빈칸 (가), (나), (다)에 알맞은 수를 각각 \(p,\ q,\ r\)라 할 때, \((p\times q\times r)^2\)의 값을 구하시오.</div></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>\(48\)</div><div class="sol-head">풀이</div><ol class="steps"><li>P가 두 곡선 위: \(\beta=b^{\alpha},\ \beta=-\log_b\alpha\), 즉 \(\alpha=\log_b\beta\), \(-\beta=\log_b\alpha\).</li>
+      <div class="wb-prob"><h1>2027학년도 대학수학능력시험 6월 모의평가 (2026-06 시행) 수학 20번 풀이·정답</h1><div class="doc-sub">공통과목 (수학 Ⅰ · 수학 Ⅱ) · 4점 · 지수와 로그 · <span style="color:var(--wrong);font-weight:700">오답률 50.7%</span> <span style="color:var(--wb-muted)">(EBSi)</span></div><div class="qtext" style="margin-top:14px">1보다 큰 실수 \(b\)에 대하여 두 함수 \(f(x)=b^x\)과 \(g(x)=-\log_bx\)의 그래프가 제1사분면에서 만나는 점 P의 좌표를 \((\alpha,\beta)\)라 하자. \(\alpha\beta^3=1\)일 때 직선 OP의 기울기 \(m\)에 대하여 \(g(m)\)을 구하는 과정의 빈칸 (가), (나), (다)에 알맞은 수를 각각 \(p,\ q,\ r\)라 할 때, \((p\times q\times r)^2\)의 값을 구하시오.</div></div>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>\(48\)</div><div class="sol-head">풀이</div><ol class="steps"><li>P가 두 곡선 위: \(\beta=b^{\alpha},\ \beta=-\log_b\alpha\), 즉 \(\alpha=\log_b\beta\), \(-\beta=\log_b\alpha\).</li>
 <li>\(3\alpha-\beta=3\log_b\beta+\log_b\alpha=\log_b(\alpha\beta^3)=\log_b1=0\)이므로 \(\beta=3\alpha\) → \(m=\dfrac{\beta}{\alpha}=3\) — (가) \(=3\).</li>
 <li>\(\beta^4=m\alpha\beta^3=m\)이므로 \(\beta=3^{\frac{1}{4}}\) — (나) \(=3^{\frac{1}{4}}\).</li>
 <li>\(\alpha=\dfrac{\beta}{m}=3^{-\frac{3}{4}}\), \(\log_m\alpha=\log_33^{-\frac{3}{4}}=-\dfrac{3}{4}\).</li>
@@ -265,7 +270,7 @@ a.brand{text-decoration:none}
   <div class="desmos-calc" id="dg-1" style="height:360px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -0.6, "right": 3, "bottom": -1.4, "top": 2.6}, "expressions": [{"latex": "b=2.72", "sliderBounds": {"min": 1.1, "max": 6, "step": 0.01}}, {"latex": "y=b^x", "color": "#184f7d"}, {"latex": "y=-\\log_bx\\left\\{x>0\\right\\}", "color": "#388c46"}, {"latex": "(0.4387,1.3161)", "color": "#c74440", "label": "조건을 만족하는 P", "showLabel": true, "dragMode": "NONE"}], "degreeMode": false, "squareAxes": false, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>b를 움직여 보세요. 두 곡선의 제1사분면 교점이 P(α,β)입니다. 문제의 조건 αβ³=1이 되는 순간이 β=3^(1/4)≈1.316, α=3^(−3/4)≈0.439일 때입니다.</div>
-</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(지수와 로그) 먼저</div><a href="common-10.html">지수와 로그 — 10번 풀이 (4점)</a><a href="common-16.html">지수와 로그 — 16번 풀이 (3점)</a><a href="common-1.html">지수와 로그 — 1번 풀이 (2점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-19.html">← 이전 문항</a><a href="common-21.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(지수와 로그) 먼저</div><a href="common-10.html">지수와 로그 — 10번 풀이 (4점)</a><a href="common-16.html">지수와 로그 — 16번 풀이 (3점)</a><a href="common-1.html">지수와 로그 — 1번 풀이 (2점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-19.html">← 이전 문항</a><a href="common-21.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
@@ -327,6 +332,6 @@ a.brand{text-decoration:none}
     specs.forEach(arm);
   }
 })();
-</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-19.html';if(e.key==='ArrowRight')location.href='common-21.html';});</script>
+</script><script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-19.html';if(e.key==='ArrowRight')location.href='common-21.html';});</script>
 </body>
 </html>

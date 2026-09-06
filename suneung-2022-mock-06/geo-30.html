@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -256,14 +261,14 @@ a.brand{text-decoration:none}
   <section class="wb-stage">
     <div class="wb-q">
       <div class="wb-prob"><h1>2022학년도 대학수학능력시험 6월 모의평가 (2021-06 시행) 수학 기하 30번 풀이·정답</h1><div class="doc-sub">기하 · 4점 · 평면벡터</div><div class="qtext" style="margin-top:14px">좌표평면 위의 네 점 \(\mathrm A(2,\,0)\), \(\mathrm B(0,\,2)\), \(\mathrm C(-2,\,0)\), \(\mathrm D(0,\,-2)\)를 꼭짓점으로 하는 정사각형 \(\mathrm{ABCD}\)의 네 변 위의 두 점 \(\mathrm P\), \(\mathrm Q\)가 다음 조건을 만족시킨다.<br>(가) \(\left(\vec{\mathrm{PQ}}\cdot\vec{\mathrm{AB}}\right)\left(\vec{\mathrm{PQ}}\cdot\vec{\mathrm{AD}}\right)=0\)<br>(나) \(\vec{\mathrm{OA}}\cdot\vec{\mathrm{OP}}\ge-2\)이고 \(\vec{\mathrm{OB}}\cdot\vec{\mathrm{OP}}\ge0\)이다.<br>(다) \(\vec{\mathrm{OA}}\cdot\vec{\mathrm{OQ}}\ge-2\)이고 \(\vec{\mathrm{OB}}\cdot\vec{\mathrm{OQ}}\le0\)이다.<br>점 \(\mathrm R(4,\,4)\)에 대하여 \(\vec{\mathrm{RP}}\cdot\vec{\mathrm{RQ}}\)의 최댓값을 \(M\), 최솟값을 \(m\)이라 할 때, \(M+m\)의 값을 구하시오. (단, \(\mathrm O\)는 원점이다.)</div></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>\(48\)</div><div class="sol-head">풀이</div><ol class="steps"><li>(가): \(\vec{\mathrm{PQ}}\)가 \(\vec{\mathrm{AB}}=(-2,2)\)에 수직이거나 \(\vec{\mathrm{AD}}=(-2,-2)\)에 수직 — 즉 \(\mathrm{PQ}\)는 정사각형의 어느 변과 평행하다.</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>\(48\)</div><div class="sol-head">풀이</div><ol class="steps"><li>(가): \(\vec{\mathrm{PQ}}\)가 \(\vec{\mathrm{AB}}=(-2,2)\)에 수직이거나 \(\vec{\mathrm{AD}}=(-2,-2)\)에 수직 — 즉 \(\mathrm{PQ}\)는 정사각형의 어느 변과 평행하다.</li>
 <li>(나): \(2P_x\ge-2\)(즉 \(P_x\ge-1\))이고 \(2P_y\ge0\); (다): \(Q_x\ge-1\), \(Q_y\le0\) — \(\mathrm P\)는 윗변 쪽, \(\mathrm Q\)는 아랫변 쪽 일부 구간으로 제한된다.</li>
 <li>\(\vec{\mathrm{RP}}\cdot\vec{\mathrm{RQ}}\)를 조건을 만족하는 모든 \((\mathrm P,\mathrm Q)\)에 대해 살피면(변 위 격자 전수조사로 검산) 최댓값 \(M=32\), 최솟값 \(m=16\).</li>
 <li>\(M+m=48\)</li></ol><div class="desmos-wrap">
   <div class="desmos-calc" id="dg-1" style="height:380px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -3.5, "right": 5.5, "bottom": -3.5, "top": 5.5}, "expressions": [{"latex": "\\operatorname{polygon}((2,0),(0,2),(-2,0),(0,-2))", "color": "#9ba0a8"}, {"latex": "R_1=(4,4)", "color": "#000000", "label": "R", "showLabel": true}, {"latex": "x=-1\\{-1\\le y\\le1\\}", "color": "#c74440", "lineStyle": "DASHED"}, {"latex": "(1,1)", "color": "#2d70b3", "label": "P 후보", "showLabel": true}, {"latex": "(1,-1)", "color": "#388c46", "label": "Q 후보", "showLabel": true}], "degreeMode": false, "squareAxes": true, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>정사각형 변 위의 P(윗쪽 허용 구간), Q(아랫쪽 허용 구간)와 점 R(4,4).</div>
-</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(평면벡터) 먼저</div><a href="geo-26.html">평면벡터 — 기하 26번 풀이 (3점)</a><a href="geo-25.html">평면벡터 — 기하 25번 풀이 (3점)</a><a href="geo-23.html">평면벡터 — 기하 23번 풀이 (2점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-29.html">← 이전 문항</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(평면벡터) 먼저</div><a href="geo-26.html">평면벡터 — 기하 26번 풀이 (3점)</a><a href="geo-25.html">평면벡터 — 기하 25번 풀이 (3점)</a><a href="geo-23.html">평면벡터 — 기하 23번 풀이 (2점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-29.html">← 이전 문항</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
@@ -325,6 +330,6 @@ a.brand{text-decoration:none}
     specs.forEach(arm);
   }
 })();
-</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-29.html';});</script>
+</script><script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-29.html';});</script>
 </body>
 </html>

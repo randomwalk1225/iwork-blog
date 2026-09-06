@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -256,14 +261,14 @@ a.brand{text-decoration:none}
   <section class="wb-stage">
     <div class="wb-q">
       <div class="wb-prob"><h1>2024학년도 대학수학능력시험 (2023-11 시행, 홀수형) 수학 22번 풀이·정답</h1><div class="doc-sub">공통과목 (수학 Ⅰ · 수학 Ⅱ) · 4점 · 미분</div><div class="qtext" style="margin-top:14px">최고차항의 계수가 \(1\)인 삼차함수 \(f(x)\)가 다음 조건을 만족시킨다.<br><b>함수 \(f(x)\)에 대하여 \(f(k-1)f(k+1)\lt0\)을 만족시키는 정수 \(k\)는 존재하지 않는다.</b><br>\(f'\!\left(-\dfrac{1}{4}\right)=-\dfrac{1}{4}\), \(f'\!\left(\dfrac{1}{4}\right)\lt0\)일 때, \(f(8)\)의 값을 구하시오.</div></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>\(483\)</div><div class="sol-head">풀이</div><ol class="steps"><li>조건은 「모든 정수 \(k\)에 대해 \(f(k-1)f(k+1)\ge0\)」. 삼차함수는 단순근에서 부호가 바뀌므로, 단순근 \(\alpha\)가 정수가 아니면 \(\alpha\)를 사이에 두는 정수 쌍 \((k-1,k+1)\)에서 곱이 음수가 되는 일이 생긴다 — 이를 막으려면 그 정수들에서 \(f=0\)이어야 하므로 부호 변화는 정수 근에 묶인다.</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>\(483\)</div><div class="sol-head">풀이</div><ol class="steps"><li>조건은 「모든 정수 \(k\)에 대해 \(f(k-1)f(k+1)\ge0\)」. 삼차함수는 단순근에서 부호가 바뀌므로, 단순근 \(\alpha\)가 정수가 아니면 \(\alpha\)를 사이에 두는 정수 쌍 \((k-1,k+1)\)에서 곱이 음수가 되는 일이 생긴다 — 이를 막으려면 그 정수들에서 \(f=0\)이어야 하므로 부호 변화는 정수 근에 묶인다.</li>
 <li>\(f'\!\left(-\dfrac{1}{4}\right)=-\dfrac{1}{4}\lt0\), \(f'\!\left(\dfrac{1}{4}\right)\lt0\)이므로 \(f\)는 \(0\) 근방에서 감소 — 감소 구간이 \(0\)을 포함하도록 근을 배치하면 \(0\)과 \(1\)이 근이고 나머지 근 \(-c\)가 \((-1,0)\) 안에 있는 꼴: \(f(x)=x(x-1)(x+c)\), \(0\lt c\lt1\). (이때 정수점의 \(f\) 값이 근 양옆에서 \(0\)이 되어 조건이 성립한다.)</li>
 <li>\(f'(x)=3x^2+2(c-1)x-c\)에 \(x=-\dfrac{1}{4}\) 대입: \(\dfrac{3}{16}-\dfrac{c-1}{2}-c=\dfrac{11}{16}-\dfrac{3}{2}c=-\dfrac{1}{4}\)에서 \(c=\dfrac{5}{8}\).</li>
 <li>확인: \(f'\!\left(\dfrac{1}{4}\right)=\dfrac{3}{16}+\dfrac{c-1}{2}-c=-\dfrac{5}{16}-\dfrac{5}{16}=-\dfrac{5}{8}\lt0\) ✓, 근 \(-\dfrac{5}{8}\in(-1,0)\) ✓.</li>
-<li>\(f(8)=8\times7\times\left(8+\dfrac{5}{8}\right)=56\times\dfrac{69}{8}=7\times69=483\)</li></ol><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(미분) 먼저</div><a href="common-20.html">미분 — 20번 풀이 (4점)</a><a href="common-17.html">미분 — 17번 풀이 (3점)</a><a href="common-7.html">미분 — 7번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-21.html">← 이전 문항</a><a href="prob-23.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+<li>\(f(8)=8\times7\times\left(8+\dfrac{5}{8}\right)=56\times\dfrac{69}{8}=7\times69=483\)</li></ol></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(미분) 먼저</div><a href="common-20.html">미분 — 20번 풀이 (4점)</a><a href="common-17.html">미분 — 17번 풀이 (3점)</a><a href="common-7.html">미분 — 7번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-21.html">← 이전 문항</a><a href="prob-23.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
-<script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-21.html';if(e.key==='ArrowRight')location.href='prob-23.html';});</script>
+<script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-21.html';if(e.key==='ArrowRight')location.href='prob-23.html';});</script>
 </body>
 </html>

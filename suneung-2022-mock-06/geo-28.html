@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -260,14 +265,14 @@ a.brand{text-decoration:none}
 <li>③ \(\sqrt3-1\)</li>
 <li>④ \(2\sqrt2-2\)</li>
 <li>⑤ \(\dfrac{\sqrt3}{2}\)</li></ul></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>③ \(\sqrt3-1\)</div><div class="sol-head">풀이</div><ol class="steps"><li>타원을 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (b\gt0)\)로 놓고, 원의 중심을 장축 꼭짓점 \(\mathrm A(-a,0)\)로 잡으면 원은 단축의 두 꼭짓점 \((0,\pm b)\)와 초점 \(\mathrm F(c,0)\)을 지난다.</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>③ \(\sqrt3-1\)</div><div class="sol-head">풀이</div><ol class="steps"><li>타원을 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (b\gt0)\)로 놓고, 원의 중심을 장축 꼭짓점 \(\mathrm A(-a,0)\)로 잡으면 원은 단축의 두 꼭짓점 \((0,\pm b)\)와 초점 \(\mathrm F(c,0)\)을 지난다.</li>
 <li>\(\overline{\mathrm{AB}}=1\): \(a^2+b^2=1\). \(\overline{\mathrm{AF}}=1\): \(a+c=1\) \((c=\sqrt{a^2-b^2})\).</li>
 <li>\(b^2=1-a^2\)를 넣으면 \(\sqrt{2a^2-1}=1-a\): 제곱해 정리하면 \(a^2+2a-2=0\).</li>
 <li>\(a\gt0\)이므로 \(a=-1+\sqrt3\)</li></ol><div class="desmos-wrap">
   <div class="desmos-calc" id="dg-1" style="height:340px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -2.2, "right": 1.6, "bottom": -1.4, "top": 1.4}, "expressions": [{"latex": "a_1=\\sqrt{3}-1", "hidden": true}, {"latex": "\\frac{x^2}{a_1^2}+\\frac{y^2}{1-a_1^2}=1", "color": "#2d70b3"}, {"latex": "(x+a_1)^2+y^2=1", "color": "#388c46"}, {"latex": "(\\sqrt{2a_1^2-1},0)", "color": "#c74440", "label": "F", "showLabel": true}, {"latex": "(-a_1,0)", "color": "#000000", "label": "A", "showLabel": true}], "degreeMode": false, "squareAxes": true, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>a=√3−1일 때 — 꼭짓점 중심의 단위원이 두 꼭짓점과 초점을 지난다.</div>
-</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(이차곡선) 먼저</div><a href="geo-29.html">이차곡선 — 기하 29번 풀이 (4점)</a><a href="geo-27.html">이차곡선 — 기하 27번 풀이 (3점)</a><a href="geo-24.html">이차곡선 — 기하 24번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-27.html">← 이전 문항</a><a href="geo-29.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(이차곡선) 먼저</div><a href="geo-29.html">이차곡선 — 기하 29번 풀이 (4점)</a><a href="geo-27.html">이차곡선 — 기하 27번 풀이 (3점)</a><a href="geo-24.html">이차곡선 — 기하 24번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-27.html">← 이전 문항</a><a href="geo-29.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
@@ -329,6 +334,6 @@ a.brand{text-decoration:none}
     specs.forEach(arm);
   }
 })();
-</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-27.html';if(e.key==='ArrowRight')location.href='geo-29.html';});</script>
+</script><script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-27.html';if(e.key==='ArrowRight')location.href='geo-29.html';});</script>
 </body>
 </html>

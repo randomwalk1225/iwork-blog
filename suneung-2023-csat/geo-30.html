@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -256,14 +261,14 @@ a.brand{text-decoration:none}
   <section class="wb-stage">
     <div class="wb-q">
       <div class="wb-prob"><h1>2023학년도 대학수학능력시험 (2022-11 시행, 홀수형) 수학 기하 30번 풀이·정답</h1><div class="doc-sub">기하 · 4점 · 공간도형</div><div class="qtext" style="margin-top:14px">좌표공간에 정사면체 \(\mathrm{ABCD}\)가 있다. 정삼각형 \(\mathrm{BCD}\)의 외심을 중심으로 하고 점 \(\mathrm{B}\)를 지나는 구를 \(S\)라 하자. 구 \(S\)와 선분 \(\mathrm{AB}\), \(\mathrm{AC}\), \(\mathrm{AD}\)가 만나는 점 중 \(\mathrm{B}\), \(\mathrm{C}\), \(\mathrm{D}\)가 아닌 점을 각각 \(\mathrm{P}\), \(\mathrm{Q}\), \(\mathrm{R}\)라 하고, 점 \(\mathrm{P}\)에서 구 \(S\)에 접하는 평면을 \(\alpha\)라 하자. 구 \(S\)의 반지름의 길이가 \(6\)일 때, 삼각형 \(\mathrm{PQR}\)의 평면 \(\alpha\) 위로의 정사영의 넓이는 \(k\)이다. \(k^2\)의 값을 구하시오.</div></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>\(24\)</div><div class="sol-head">풀이</div><ol class="steps"><li>외심을 원점으로: \(\mathrm{B}(6,0,0)\), \(\mathrm{C}(-3,3\sqrt3,0)\), \(\mathrm{D}(-3,-3\sqrt3,0)\), \(\mathrm{A}(0,0,6\sqrt2)\) (한 모서리 \(6\sqrt3\)).</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>\(24\)</div><div class="sol-head">풀이</div><ol class="steps"><li>외심을 원점으로: \(\mathrm{B}(6,0,0)\), \(\mathrm{C}(-3,3\sqrt3,0)\), \(\mathrm{D}(-3,-3\sqrt3,0)\), \(\mathrm{A}(0,0,6\sqrt2)\) (한 모서리 \(6\sqrt3\)).</li>
 <li>\(\mathrm{P}\)는 \(\mathrm{B}+s(\mathrm{A}-\mathrm{B})\)가 구 위: \(108s^2=72s\)에서 \(s=\dfrac{2}{3}\): \(\mathrm{P}(2,0,4\sqrt2)\), 같은 방법으로 \(\mathrm{Q}(-1,\sqrt3,4\sqrt2)\), \(\mathrm{R}(-1,-\sqrt3,4\sqrt2)\).</li>
 <li>삼각형 \(\mathrm{PQR}\)는 평면 \(z=4\sqrt2\) 위의 정삼각형(한 변 \(2\sqrt3\)): 넓이 \(=3\sqrt3\).</li>
 <li>\(\alpha\)의 법선은 \(\overrightarrow{\mathrm{OP}}=(2,0,4\sqrt2)\) 방향: 두 평면 사이 각의 코사인 \(=\dfrac{4\sqrt2/6\cdot\!\!}{}\)… \(=\dfrac{2\sqrt2}{3}\).</li>
-<li>\(k=3\sqrt3\times\dfrac{2\sqrt2}{3}=2\sqrt6\): \(k^2=24\)</li></ol><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(공간도형) 먼저</div><a href="geo-27.html">공간도형 — 기하 27번 풀이 (3점)</a><a href="geo-29.html">평면벡터 — 기하 29번 풀이 (4점)</a><a href="geo-28.html">이차곡선 — 기하 28번 풀이 (4점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-29.html">← 이전 문항</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+<li>\(k=3\sqrt3\times\dfrac{2\sqrt2}{3}=2\sqrt6\): \(k^2=24\)</li></ol></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(공간도형) 먼저</div><a href="geo-27.html">공간도형 — 기하 27번 풀이 (3점)</a><a href="geo-29.html">평면벡터 — 기하 29번 풀이 (4점)</a><a href="geo-28.html">이차곡선 — 기하 28번 풀이 (4점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="geo-29.html">← 이전 문항</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
-<script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-29.html';});</script>
+<script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='geo-29.html';});</script>
 </body>
 </html>

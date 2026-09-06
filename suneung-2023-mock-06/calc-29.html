@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -256,13 +261,13 @@ a.brand{text-decoration:none}
   <section class="wb-stage">
     <div class="wb-q">
       <div class="wb-prob"><h1>2023학년도 대학수학능력시험 6월 모의평가 (2022-06 시행) 수학 미적분 29번 풀이·정답</h1><div class="doc-sub">미적분 · 4점 · 미분법</div><div class="qtext" style="margin-top:14px">그림과 같이 반지름의 길이가 \(1\)이고 중심각의 크기가 \(\dfrac{\pi}{2}\)인 부채꼴 \(\mathrm{OAB}\)가 있다. 호 \(\mathrm{AB}\) 위의 점 \(\mathrm{P}\)에서 선분 \(\mathrm{OA}\)에 내린 수선의 발을 \(\mathrm{H}\)라 하고, \(\angle\mathrm{OAP}\)를 이등분하는 직선과 세 선분 \(\mathrm{HP}\), \(\mathrm{OP}\), \(\mathrm{OB}\)의 교점을 각각 \(\mathrm{Q}\), \(\mathrm{R}\), \(\mathrm{S}\)라 하자. \(\angle\mathrm{APH}=\theta\)일 때, 삼각형 \(\mathrm{AQH}\)의 넓이를 \(f(\theta)\), 삼각형 \(\mathrm{PSR}\)의 넓이를 \(g(\theta)\)라 하자. \(\displaystyle\lim_{\theta\to0+}\frac{\theta^3\times g(\theta)}{f(\theta)}=k\)일 때, \(100k\)의 값을 구하시오. (단, \(0\lt\theta\lt\dfrac{\pi}{4}\))</div></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>\(50\)</div><div class="sol-head">풀이</div><ol class="steps"><li>\(\angle\mathrm{AOP}=\varphi\)라 하면 \(\tan\theta=\dfrac{1-\cos\varphi}{\sin\varphi}=\tan\dfrac{\varphi}{2}\), 곧 \(\varphi=2\theta\).</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>\(50\)</div><div class="sol-head">풀이</div><ol class="steps"><li>\(\angle\mathrm{AOP}=\varphi\)라 하면 \(\tan\theta=\dfrac{1-\cos\varphi}{\sin\varphi}=\tan\dfrac{\varphi}{2}\), 곧 \(\varphi=2\theta\).</li>
 <li>\(\overline{\mathrm{AH}}=1-\cos2\theta\), 이등분선의 기울기에서 \(f(\theta)=\dfrac{1}{2}(1-\cos2\theta)^2\tan\left(\dfrac{\pi}{4}-\dfrac{\theta}{2}\right)\sim2\theta^4\).</li>
 <li>\(g(\theta)\)를 좌표로 전개하면 \(\dfrac{g(\theta)}{\theta}\to1\).</li>
-<li>\(\dfrac{\theta^3g}{f}=\dfrac{g}{\theta}\cdot\dfrac{\theta^4}{f}\to1\times\dfrac{1}{2}=\dfrac{1}{2}\): \(100k=50\)</li></ol><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(미분법) 먼저</div><a href="calc-28.html">미분법 — 미적분 28번 풀이 (4점)</a><a href="calc-30.html">미분법 — 미적분 30번 풀이 (4점)</a><a href="calc-25.html">미분법 — 미적분 25번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="calc-28.html">← 이전 문항</a><a href="calc-30.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+<li>\(\dfrac{\theta^3g}{f}=\dfrac{g}{\theta}\cdot\dfrac{\theta^4}{f}\to1\times\dfrac{1}{2}=\dfrac{1}{2}\): \(100k=50\)</li></ol></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(미분법) 먼저</div><a href="calc-28.html">미분법 — 미적분 28번 풀이 (4점)</a><a href="calc-30.html">미분법 — 미적분 30번 풀이 (4점)</a><a href="calc-25.html">미분법 — 미적분 25번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="calc-28.html">← 이전 문항</a><a href="calc-30.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
-<script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='calc-28.html';if(e.key==='ArrowRight')location.href='calc-30.html';});</script>
+<script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='calc-28.html';if(e.key==='ArrowRight')location.href='calc-30.html';});</script>
 </body>
 </html>

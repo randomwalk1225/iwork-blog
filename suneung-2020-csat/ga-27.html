@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -256,14 +261,14 @@ a.brand{text-decoration:none}
   <section class="wb-stage">
     <div class="wb-q">
       <div class="wb-prob"><h1>2020학년도 대학수학능력시험 (2019-11 시행, 홀수형, 가형·나형) 수학 가형 27번 풀이·정답</h1><div class="doc-sub">가형 · 4점 · 공간도형</div><div class="qtext" style="margin-top:14px">한 변의 길이가 \(4\)이고 \(\angle\mathrm{BAD}=\dfrac{\pi}3\)인 마름모 \(\mathrm{ABCD}\) 모양의 종이가 있다. 변 \(\mathrm{BC}\)와 변 \(\mathrm{CD}\)의 중점을 각각 \(\mathrm M\)과 \(\mathrm N\)이라 할 때, 세 선분 \(\mathrm{AM}\), \(\mathrm{AN}\), \(\mathrm{MN}\)을 접는 선으로 하여 사면체 \(\mathrm{PAMN}\)이 되도록 종이를 접었다. 삼각형 \(\mathrm{AMN}\)의 평면 \(\mathrm{PAM}\) 위로의 정사영의 넓이는 \(\dfrac qp\sqrt3\)이다. \(p+q\)의 값을 구하시오. (단, \(\mathrm P\)는 세 점 \(\mathrm B\), \(\mathrm C\), \(\mathrm D\)가 합쳐지는 점이고, \(p\)와 \(q\)는 서로소인 자연수이다.)</div></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>\(8\)</div><div class="sol-head">풀이</div><ol class="steps"><li>접기 전 길이에서 사면체의 모서리: \(\mathrm{PA}=4\), \(\mathrm{PM}=\mathrm{PN}=2\), \(\mathrm{AM}=\mathrm{AN}=2\sqrt7\), \(\mathrm{MN}=2\).</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>\(8\)</div><div class="sol-head">풀이</div><ol class="steps"><li>접기 전 길이에서 사면체의 모서리: \(\mathrm{PA}=4\), \(\mathrm{PM}=\mathrm{PN}=2\), \(\mathrm{AM}=\mathrm{AN}=2\sqrt7\), \(\mathrm{MN}=2\).</li>
 <li>좌표를 \(\mathrm P(0,0,0)\), \(\mathrm M(2,0,0)\), \(\mathrm N(1,\sqrt3,0)\)으로 잡으면 \(\mathrm A=\left(-2,\ -\dfrac2{\sqrt3},\ \sqrt{\dfrac{32}3}\right)\).</li>
 <li>삼각형 \(\mathrm{AMN}\)의 넓이와 두 평면 사이 각으로 정사영 넓이 \(=\dfrac{5\sqrt3}3\) (수치 계산).</li>
 <li>\(p=3,\ q=5\)이므로 \(p+q=8\)</li></ol><div class="desmos-wrap ggb-wrap">
   <div class="ggb-app" id="gg-1" style="height:440px"></div>
   <script type="application/json" class="ggb-spec" data-for="gg-1">{"app": "3d", "height": 440, "commands": ["P=(0,0,0)", "M=(2,0,0)", "N=(1,sqrt(3),0)", "A=(-2,-2/sqrt(3),sqrt(32/3))", "t1=Polygon(P,M,N)", "SetColor(t1,150,150,150)", "t2=Polygon(A,M,N)", "SetColor(t2,250,126,25)", "t3=Polygon(P,A,M)", "SetColor(t3,45,112,179)", "s1=Segment(A,P)", "ShowLabel(A,true)", "ShowLabel(P,true)", "ShowLabel(M,true)", "ShowLabel(N,true)"]}</script>
   <div class="desmos-cap"><span class="dlbl">직접 돌려 보기</span>접어 만든 사면체 PAMN — 돌려 보며 정사영 구조를 확인.</div>
-</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(공간도형) 먼저</div><a href="ga-29.html">공간도형 — 가형 29번 풀이 (4점)</a><a href="ga-17.html">이차곡선 — 가형 17번 풀이 (4점)</a><a href="ga-13.html">이차곡선 — 가형 13번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="ga-26.html">← 이전 문항</a><a href="ga-28.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(공간도형) 먼저</div><a href="ga-29.html">공간도형 — 가형 29번 풀이 (4점)</a><a href="ga-17.html">이차곡선 — 가형 17번 풀이 (4점)</a><a href="ga-13.html">이차곡선 — 가형 13번 풀이 (3점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="ga-26.html">← 이전 문항</a><a href="ga-28.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
@@ -320,6 +325,6 @@ a.brand{text-decoration:none}
     specs.forEach(arm);
   }
 })();
-</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='ga-26.html';if(e.key==='ArrowRight')location.href='ga-28.html';});</script>
+</script><script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='ga-26.html';if(e.key==='ArrowRight')location.href='ga-28.html';});</script>
 </body>
 </html>

@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -255,19 +260,19 @@ a.brand{text-decoration:none}
   <aside class="wb-nav"><a class="wb-key sub" href="../">전체 시험 목록</a><a class="wb-key" href="index.html">정답표·목차</a><div class="wb-sec sec-common"><span class="sf">공통과목 (수학 Ⅰ · 수학 Ⅱ)</span><span class="ss">공통</span></div><div class="wb-nums sec-common"><a class="wb-nbtn" href="common-1.html">1</a><a class="wb-nbtn" href="common-2.html">2</a><a class="wb-nbtn" href="common-3.html">3</a><a class="wb-nbtn" href="common-4.html">4</a><a class="wb-nbtn" href="common-5.html">5</a><a class="wb-nbtn" href="common-6.html">6</a><a class="wb-nbtn" href="common-7.html">7</a><a class="wb-nbtn" href="common-8.html">8</a><a class="wb-nbtn" href="common-9.html">9</a><a class="wb-nbtn" href="common-10.html">10</a><a class="wb-nbtn hard" title="오답률 31.4% (EBSi)" href="common-11.html">11<i class="wb-wr">31</i></a><a class="wb-nbtn on hard" title="오답률 29.1% (EBSi)" href="common-12.html">12<i class="wb-wr">29</i></a><a class="wb-nbtn hard" title="오답률 43.1% (EBSi)" href="common-13.html">13<i class="wb-wr">43</i></a><a class="wb-nbtn hard" title="오답률 55.1% (EBSi)" href="common-14.html">14<i class="wb-wr">55</i></a><a class="wb-nbtn hard" title="오답률 62.0% (EBSi)" href="common-15.html">15<i class="wb-wr">62</i></a><a class="wb-nbtn" href="common-16.html">16</a><a class="wb-nbtn" href="common-17.html">17</a><a class="wb-nbtn hard" title="오답률 36.3% (EBSi)" href="common-18.html">18<i class="wb-wr">36</i></a><a class="wb-nbtn hard" title="오답률 40.4% (EBSi)" href="common-19.html">19<i class="wb-wr">40</i></a><a class="wb-nbtn hard" title="오답률 63.2% (EBSi)" href="common-20.html">20<i class="wb-wr">63</i></a><a class="wb-nbtn hard" title="오답률 89.9% (EBSi)" href="common-21.html">21<i class="wb-wr">90</i></a><a class="wb-nbtn hard" title="오답률 95.5% (EBSi)" href="common-22.html">22<i class="wb-wr">96</i></a></div><div class="wb-sec sec-prob"><span class="sf">확률과 통계</span><span class="ss">확통</span></div><div class="wb-nums sec-prob"><a class="wb-nbtn" href="prob-23.html">23</a><a class="wb-nbtn" href="prob-24.html">24</a><a class="wb-nbtn" href="prob-25.html">25</a><a class="wb-nbtn hard" title="오답률 38.4% (EBSi)" href="prob-26.html">26<i class="wb-wr">38</i></a><a class="wb-nbtn hard" title="오답률 42.9% (EBSi)" href="prob-27.html">27<i class="wb-wr">43</i></a><a class="wb-nbtn hard" title="오답률 79.0% (EBSi)" href="prob-28.html">28<i class="wb-wr">79</i></a><a class="wb-nbtn hard" title="오답률 89.9% (EBSi)" href="prob-29.html">29<i class="wb-wr">90</i></a><a class="wb-nbtn hard" title="오답률 94.0% (EBSi)" href="prob-30.html">30<i class="wb-wr">94</i></a></div><div class="wb-sec sec-calc"><span class="sf">미적분</span><span class="ss">미적</span></div><div class="wb-nums sec-calc"><a class="wb-nbtn" href="calc-23.html">23</a><a class="wb-nbtn" href="calc-24.html">24</a><a class="wb-nbtn" href="calc-25.html">25</a><a class="wb-nbtn hard" title="오답률 32.1% (EBSi)" href="calc-26.html">26<i class="wb-wr">32</i></a><a class="wb-nbtn hard" title="오답률 43.7% (EBSi)" href="calc-27.html">27<i class="wb-wr">44</i></a><a class="wb-nbtn hard" title="오답률 71.8% (EBSi)" href="calc-28.html">28<i class="wb-wr">72</i></a><a class="wb-nbtn hard" title="오답률 73.9% (EBSi)" href="calc-29.html">29<i class="wb-wr">74</i></a><a class="wb-nbtn hard" title="오답률 90.7% (EBSi)" href="calc-30.html">30<i class="wb-wr">91</i></a></div><div class="wb-sec sec-geo"><span class="sf">기하</span><span class="ss">기하</span></div><div class="wb-nums sec-geo"><a class="wb-nbtn" href="geo-23.html">23</a><a class="wb-nbtn" href="geo-24.html">24</a><a class="wb-nbtn" href="geo-25.html">25</a><a class="wb-nbtn hard" title="오답률 37.3% (EBSi)" href="geo-26.html">26<i class="wb-wr">37</i></a><a class="wb-nbtn hard" title="오답률 28.2% (EBSi)" href="geo-27.html">27<i class="wb-wr">28</i></a><a class="wb-nbtn hard" title="오답률 65.3% (EBSi)" href="geo-28.html">28<i class="wb-wr">65</i></a><a class="wb-nbtn hard" title="오답률 81.7% (EBSi)" href="geo-29.html">29<i class="wb-wr">82</i></a><a class="wb-nbtn hard" title="오답률 90.7% (EBSi)" href="geo-30.html">30<i class="wb-wr">91</i></a></div></aside>
   <section class="wb-stage">
     <div class="wb-q">
-      <div class="wb-prob"><h1>2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 12번 풀이·정답</h1><div class="doc-sub">공통과목 (수학 Ⅰ · 수학 Ⅱ) · 4점 · 삼각함수 · <span style="color:var(--red);font-weight:700">오답률 29.1%</span> <span style="color:var(--wb-muted)">(EBSi)</span></div><div class="qtext" style="margin-top:14px">\(\overline{\mathrm{AB}}=4,\ \overline{\mathrm{AC}}=5,\ \cos(\angle\mathrm{BAC})=\dfrac{1}{8}\)인 삼각형 ABC의 외접원에서, 점 A를 포함하지 않는 호 BC 위에 점 D가 있다. \(\sin(\angle\mathrm{BCD})=\dfrac{\sqrt{14}}{4}\)일 때, 선분 BD의 길이는?</div><ul class="choices"><li>① \(2\sqrt{7}\)</li>
+      <div class="wb-prob"><h1>2027학년도 대학수학능력시험 9월 모의평가 (2026-09 시행) 수학 12번 풀이·정답</h1><div class="doc-sub">공통과목 (수학 Ⅰ · 수학 Ⅱ) · 4점 · 삼각함수 · <span style="color:var(--wrong);font-weight:700">오답률 29.1%</span> <span style="color:var(--wb-muted)">(EBSi)</span></div><div class="qtext" style="margin-top:14px">\(\overline{\mathrm{AB}}=4,\ \overline{\mathrm{AC}}=5,\ \cos(\angle\mathrm{BAC})=\dfrac{1}{8}\)인 삼각형 ABC의 외접원에서, 점 A를 포함하지 않는 호 BC 위에 점 D가 있다. \(\sin(\angle\mathrm{BCD})=\dfrac{\sqrt{14}}{4}\)일 때, 선분 BD의 길이는?</div><ul class="choices"><li>① \(2\sqrt{7}\)</li>
 <li>② \(\dfrac{12\sqrt{5}}{5}\)</li>
 <li>③ \(\dfrac{7\sqrt{10}}{4}\)</li>
 <li>④ \(4\sqrt{2}\)</li>
 <li>⑤ \(\dfrac{9\sqrt{10}}{5}\)</li></ul></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>④ \(4\sqrt{2}\)</div><div class="sol-head">풀이</div><ol class="steps"><li>코사인법칙: \(\overline{\mathrm{BC}}^2=16+25-2\cdot4\cdot5\cdot\dfrac{1}{8}=36\), \(\overline{\mathrm{BC}}=6\).</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>④ \(4\sqrt{2}\)</div><div class="sol-head">풀이</div><ol class="steps"><li>코사인법칙: \(\overline{\mathrm{BC}}^2=16+25-2\cdot4\cdot5\cdot\dfrac{1}{8}=36\), \(\overline{\mathrm{BC}}=6\).</li>
 <li>\(\sin(\angle\mathrm{BAC})=\sqrt{1-\dfrac{1}{64}}=\dfrac{3\sqrt{7}}{8}\).</li>
 <li>사인법칙으로 외접원의 지름: \(2R=\dfrac{\overline{\mathrm{BC}}}{\sin(\angle\mathrm{BAC})}=\dfrac{6}{3\sqrt{7}/8}=\dfrac{16}{\sqrt{7}}\).</li>
 <li>삼각형 BCD도 같은 외접원을 가지므로 \(\overline{\mathrm{BD}}=2R\sin(\angle\mathrm{BCD})=\dfrac{16}{\sqrt{7}}\cdot\dfrac{\sqrt{14}}{4}=4\sqrt{2}\)</li></ol><div class="desmos-wrap">
   <div class="desmos-calc" id="dg-1" style="height:400px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -4.2, "right": 4.2, "bottom": -3.6, "top": 4}, "expressions": [{"latex": "x^2+y^2=\\frac{64}{7}", "color": "#666666"}, {"latex": "R_0=\\frac{8}{\\sqrt{7}}", "hidden": true}, {"latex": "A=(-0.75,2.9292)", "color": "#184f7d", "label": "A", "showLabel": true, "dragMode": "NONE"}, {"latex": "B=(-3,-0.37796)", "color": "#184f7d", "label": "B", "showLabel": true, "dragMode": "NONE"}, {"latex": "C=(3,-0.37796)", "color": "#184f7d", "label": "C", "showLabel": true, "dragMode": "NONE"}, {"latex": "u=-0.5975", "sliderBounds": {"min": -1.35, "max": -0.15, "step": 0.005}}, {"latex": "D=(R_0\\cos u,R_0\\sin u)", "color": "#c74440", "label": "D", "showLabel": true}, {"latex": "\\operatorname{polygon}(A,B,C)", "color": "#184f7d"}, {"latex": "\\operatorname{segment}(B,D)", "color": "#c74440"}, {"latex": "\\operatorname{segment}(C,D)", "color": "#c74440", "lineStyle": "DASHED"}], "degreeMode": false, "squareAxes": true, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>u 슬라이더로 D를 호 BC 위에서 움직여 보세요. D가 어디에 있든 삼각형 BCD의 외접원은 같은 원이라 BD와 sin∠BCD가 함께 변하며 그 비(=2R)가 일정합니다. u≈−0.60이 문제의 위치(BD=4√2)입니다.</div>
-</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(삼각함수) 먼저</div><a href="common-20.html">삼각함수 — 20번 풀이 (4점)</a><a href="common-6.html">삼각함수 — 6번 풀이 (3점)</a><a href="common-13.html">적분 — 13번 풀이 (4점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-11.html">← 이전 문항</a><a href="common-13.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(삼각함수) 먼저</div><a href="common-20.html">삼각함수 — 20번 풀이 (4점)</a><a href="common-6.html">삼각함수 — 6번 풀이 (3점)</a><a href="common-13.html">적분 — 13번 풀이 (4점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="common-11.html">← 이전 문항</a><a href="common-13.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
@@ -329,6 +334,6 @@ a.brand{text-decoration:none}
     specs.forEach(arm);
   }
 })();
-</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-11.html';if(e.key==='ArrowRight')location.href='common-13.html';});</script>
+</script><script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='common-11.html';if(e.key==='ArrowRight')location.href='common-13.html';});</script>
 </body>
 </html>

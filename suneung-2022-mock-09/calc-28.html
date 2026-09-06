@@ -120,7 +120,7 @@ details.solfold[open]>summary::before{content:'▾ '}
 }
 
 :root{
-  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;
+  --red:#1a5fa8;--red-soft:#d9e6f6;--on-red-soft:#0b2a4a;--wrong:#c62828;
   --rule:#181c22;--wb-muted:#46505c;--outline:#73808f;--hair:#d7dde6;
   --surf:#f7f9fc;--cont-low:#f0f4f9;--cont:#e9eff7;--cont-high:#e1e9f3
 }
@@ -151,7 +151,7 @@ header.wbh button:hover{background:var(--red-soft)}
 .wb-nums .wb-nbtn.on{color:#fff}
 .wb-nbtn.hard{position:relative}
 .wb-nbtn .wb-wr{position:absolute;top:-4px;right:-4px;font-style:normal;font-size:10px;
-  font-weight:700;line-height:1;color:var(--red);letter-spacing:-0.02em}
+  font-weight:700;line-height:1;color:var(--wrong);letter-spacing:-0.02em}
 .anskey-sec.sec-prob,.anskey-sec.sec-calc,.anskey-sec.sec-geo{color:var(--secc)}
 .wb-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 2px}
 .wb-nbtn{display:flex;align-items:center;justify-content:center;font-size:16px;
@@ -178,6 +178,11 @@ a.wb-nbtn,a.wb-key{text-decoration:none;box-sizing:border-box}
 .wb-prob .card-head{margin-bottom:12px}
 .qid{color:var(--rule)}
 .chip-src{background:var(--cont);color:var(--wb-muted)}
+.soltog{font:inherit;font-size:15px;font-weight:600;color:var(--red);background:var(--cont);
+  border:none;border-radius:999px;padding:8px 18px;cursor:pointer;display:block;margin:0 0 14px}
+.soltog:hover{background:var(--red-soft)}
+.solwrap.hid{display:none}
+@media print{.solwrap{display:block!important}.soltog{display:none}}
 .wb-sol .ansbox{background:var(--red-soft);border:none;border-radius:14px;
   color:var(--on-red-soft);font-size:19px;padding:12px 18px}
 .wb-sol .ansbox .lbl{color:var(--on-red-soft);font-weight:500;opacity:.75}
@@ -260,14 +265,14 @@ a.brand{text-decoration:none}
 <li>③ \(\dfrac{3\sqrt3-3}{2}\)</li>
 <li>④ \(\dfrac{2\sqrt3-1}{2}\)</li>
 <li>⑤ \(\dfrac{4\sqrt3-3}{2}\)</li></ul></div>
-      <div class="wb-sol"><div class="ansbox"><span class="lbl">정답</span>① \(\dfrac{2\sqrt3-3}{2}\)</div><div class="sol-head">풀이</div><ol class="steps"><li>원주각 성질로 \(\mathrm P\)는 중심각 \(270°-2\theta\) 위치: \(\mathrm P(-2\sin2\theta,\,-2\cos2\theta)\).</li>
+      <div class="wb-sol"><button type="button" class="soltog">풀이 숨기기</button><div class="solwrap"><div class="ansbox"><span class="lbl">정답</span>① \(\dfrac{2\sqrt3-3}{2}\)</div><div class="sol-head">풀이</div><ol class="steps"><li>원주각 성질로 \(\mathrm P\)는 중심각 \(270°-2\theta\) 위치: \(\mathrm P(-2\sin2\theta,\,-2\cos2\theta)\).</li>
 <li>\(\overline{\mathrm{BP}}\)는 지름 \(\mathrm B\mathrm B'\)에 대한 원주각을 이용하면 \(\overline{\mathrm{BP}}=4\cos\theta\) (∠PBB'... 계산으로 확인).</li>
 <li>직선 \(\mathrm{BP}\) 위에서 \(\overline{\mathrm{BQ}}=2+2\cos\theta\cdots\) 대신 좌표로 계산하면 \(f(\theta)=\overline{\mathrm{PR}}=\overline{\mathrm{BP}}-\overline{\mathrm{BR}}=4\cos\theta-(2\cos\theta+2\cos^2\theta-\cdots)\) — 정리하면 \(f(\theta)=2\cos\theta-2\cos2\theta\cdot\cos\theta-\cdots\) (좌표 계산이 빠르다).</li>
 <li>수치·기호 적분으로 \(\displaystyle\int_{\pi/6}^{\pi/3}f(\theta)d\theta=\frac{2\sqrt3-3}{2}\) — verify.py에서 좌표 정의 그대로 수치적분해 선택지 ①과 일치함을 확인했다.</li></ol><div class="desmos-wrap">
   <div class="desmos-calc" id="dg-1" style="height:380px"></div>
   <script type="application/json" class="desmos-spec" data-for="dg-1">{"bounds": {"left": -3, "right": 3, "bottom": -3, "top": 3}, "expressions": [{"latex": "t_h=0.8", "sliderBounds": {"min": 0.53, "max": 1.04, "step": 0.01}}, {"latex": "x^2+y^2=4", "color": "#9ba0a8"}, {"latex": "A_1=(2,0)", "color": "#000000", "label": "A", "showLabel": true}, {"latex": "B_1=(0,-2)", "color": "#000000", "label": "B", "showLabel": true}, {"latex": "P_1=(-2\\sin(2t_h),-2\\cos(2t_h))", "color": "#c74440", "label": "P", "showLabel": true}, {"latex": "Q_1=(0,2\\cos(t_h))", "color": "#388c46", "label": "Q", "showLabel": true}, {"latex": "R_1=B_1+\\frac{(Q_1-B_1).(P_1-B_1)}{(P_1-B_1).(P_1-B_1)}(P_1-B_1)", "color": "#2d70b3", "label": "R", "showLabel": true}, {"latex": "\\operatorname{segment}(B_1,P_1)", "color": "#2d70b3"}, {"latex": "\\operatorname{segment}(Q_1,R_1)", "color": "#388c46", "lineStyle": "DASHED"}, {"latex": "\\operatorname{segment}(P_1,R_1)", "color": "#c74440"}], "degreeMode": false, "squareAxes": true, "collapsed": true}</script>
   <div class="desmos-cap"><span class="dlbl">직접 움직여 보기</span>θ를 움직이면 P, Q, R가 함께 움직인다. PR 길이가 f(θ).</div>
-</div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(적분법) 먼저</div><a href="calc-30.html">적분법 — 미적분 30번 풀이 (4점)</a><a href="calc-26.html">적분법 — 미적분 26번 풀이 (3점)</a><a href="calc-29.html">미분법 — 미적분 29번 풀이 (4점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="calc-27.html">← 이전 문항</a><a href="calc-29.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
+</div></div><div class="relbox"><div class="rt">함께 보면 좋은 풀이 · 같은 개념(적분법) 먼저</div><a href="calc-30.html">적분법 — 미적분 30번 풀이 (4점)</a><a href="calc-26.html">적분법 — 미적분 26번 풀이 (3점)</a><a href="calc-29.html">미분법 — 미적분 29번 풀이 (4점)</a></div><div class="tocnav"><a href="index.html">정답표·목차로 돌아가기</a><a href="../">전체 시험 목록</a></div><div class="pgnav"><a href="calc-27.html">← 이전 문항</a><a href="calc-29.html">다음 문항 →</a></div><footer class="wb-ft">아이워크수학 · iWork Math · 문의 <a href="mailto:randomwalk1225@gmail.com">randomwalk1225@gmail.com</a></footer></div>
     </div>
   </section>
 </div>
@@ -329,6 +334,6 @@ a.brand{text-decoration:none}
     specs.forEach(arm);
   }
 })();
-</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='calc-27.html';if(e.key==='ArrowRight')location.href='calc-29.html';});</script>
+</script><script>(function(){var hid=false;try{hid=localStorage.getItem('iwork_sol_hidden')==='1'}catch(e){}function apply(){document.querySelectorAll('.solwrap').forEach(function(w){w.classList.toggle('hid',hid)});document.querySelectorAll('.soltog').forEach(function(b){b.textContent=hid?'풀이 보기':'풀이 숨기기'});}document.addEventListener('click',function(e){var t=e.target;while(t&&t!==document&&!(t.classList&&t.classList.contains('soltog')))t=t.parentNode;if(!t||t===document)return;hid=!hid;try{localStorage.setItem('iwork_sol_hidden',hid?'1':'0')}catch(e2){}apply();});document.addEventListener('DOMContentLoaded',apply);})();</script><script>document.addEventListener('DOMContentLoaded',function(){var on=document.querySelector('.wb-nav .on'),nav=document.querySelector('.wb-nav');if(on&&nav)nav.scrollLeft=on.offsetLeft-nav.clientWidth/2;});document.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')location.href='calc-27.html';if(e.key==='ArrowRight')location.href='calc-29.html';});</script>
 </body>
 </html>
